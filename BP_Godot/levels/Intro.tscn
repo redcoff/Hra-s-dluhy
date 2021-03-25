@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://levels/Intro.gd" type="Script" id=2]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.901961, 0.901961, 0.901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

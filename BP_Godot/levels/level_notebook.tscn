@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/GFX/Background/notebook/notebook prázdný.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/GFX/Background/notebook/Bezpoplatku.png" type="Texture" id=2]
+[ext_resource path="res://assets/GFX/Background/notebook/Alfabeta.png" type="Texture" id=3]
+[ext_resource path="res://assets/GFX/Background/notebook/Nekrademe.png" type="Texture" id=4]
+
+[node name="level_notebook" type="Node2D"]
+
+[node name="notebook_bg" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bezpoplatku" type="TextureButton" parent="notebook_bg"]
+margin_left = 546.0
+margin_top = 349.0
+margin_right = 1389.0
+margin_bottom = 479.0
+rect_scale = Vector2( 0.603234, 0.66129 )
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nekrademe" type="TextureButton" parent="."]
+margin_left = 543.27
+margin_top = 435.0
+margin_right = 1396.27
+margin_bottom = 565.0
+rect_scale = Vector2( 0.58779, 0.757421 )
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="alfabeta" type="TextureButton" parent="."]
+margin_left = 538.711
+margin_top = 530.386
+margin_right = 1381.71
+margin_bottom = 662.386
+rect_scale = Vector2( 0.599262, 0.764174 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

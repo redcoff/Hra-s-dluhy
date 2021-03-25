@@ -1,0 +1,28 @@
+﻿
+{
+	"Door": [
+		"Hmm, tam teď nepotřebuji.",
+		"Co bych tam dělal?",
+		"Tam teď nechci."
+		],
+	"Clock": [
+		"Ještě že tu ty hodiny jsou. Jinak bych si nehlídal čas jít domů.",
+		"Budiž hodiny."
+	],
+	"Notebook": [
+		"V dnešní době je počítač kamarád každého.",
+		"Tenhle noťas jsme kupovali před rokem.",
+		"Stále frčí jak novej.",
+		"Děcka na něm někdy hrajou takovou tu kostičkovanou hru.. Myslím že Majnkroft, nebo tak něco."
+	],
+	"Domu": [
+		"Šak teď jsem odtud vyletl!",
+		"Zpátky nejdu.",
+		"Proč bych se vracel?",
+	],
+	"Prace": [
+		"Co bych tam teď dělal?",
+		"Teď pracovat nemusím.",
+		"Nemám teď pracovní dobu.",
+	]
+}

@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/GFX/Background/peněženka2.png" type="Texture" id=1]
+[ext_resource path="res://assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://menu_wallet.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="menu_wallet" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="finance_label" type="Label" parent="."]
+margin_left = 294.0
+margin_top = 193.888
+margin_right = 654.0
+margin_bottom = 246.888
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.188235, 0.164706, 0.164706, 1 )
+text = "Rodinné finance"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hotovost_label" type="Label" parent="."]
+margin_left = 294.488
+margin_top = 439.845
+margin_right = 510.488
+margin_bottom = 492.845
+rect_pivot_offset = Vector2( 285.96, 69.6628 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.137255, 0.133333, 0.133333, 1 )
+text = "Hotovost:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hotovost_number_label" type="Label" parent="."]
+margin_left = 538.008
+margin_top = 439.845
+margin_right = 634.008
+margin_bottom = 492.845
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.215686, 0.0823529, 0.0823529, 1 )
+text = "2000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1366.73
+margin_top = 807.956
+margin_right = 1558.73
+margin_bottom = 889.956
+custom_fonts/font = SubResource( 4 )
+text = "zavřít"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

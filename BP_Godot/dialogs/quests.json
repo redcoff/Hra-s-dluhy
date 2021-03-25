@@ -1,0 +1,20 @@
+﻿[
+	{
+		"chapter": "0",
+		"level": "level_obyvak",
+		"quest_name": "Najdi peněženku",
+		"target": ["Wallet"]
+	},
+	{
+		"chapter": "0",
+		"level": "level_obyvak",
+		"quest_name": "Podívej se do peněženky.",
+		"target": ["Wallet"]
+	},
+	{
+		"chapter": "0",
+		"level": "level_obyvak",
+		"quest_name": "Jdi do hospody.",
+		"target": ["Door", "Door"]
+	}
+]

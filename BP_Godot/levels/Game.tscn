@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Game.gd" type="Script" id=1]
+[ext_resource path="res://levels/Level_obyvak.tscn" type="PackedScene" id=2]
+[ext_resource path="res://levels/Level_hospoda.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/Level_ulice.tscn" type="PackedScene" id=4]
+[ext_resource path="res://levels/level_obyvak.gd" type="Script" id=5]
+[ext_resource path="res://levels/Intro.tscn" type="PackedScene" id=6]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/Shaders/from_center.png" type="Texture" id=8]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+render_mode unshaded;
+
+uniform float cutoff : hint_range(0.0, 1.0);
+uniform float smooth_size : hint_range(0.0, 1.0);
+uniform sampler2D mask : hint_albedo;
+
+void fragment()
+{
+	float value = texture(mask, UV).r;
+	float alpha = smoothstep(cutoff, cutoff + smooth_size, value * (1.0 - smooth_size) + smooth_size);
+	COLOR = vec4(COLOR.rgb, alpha);
+	/*if(value < cutoff){
+		COLOR = vec4(COLOR.rgb, 1.0);
+	} else if(value < cutoff + 0.1){
+		COLOR = vec4(COLOR.rgb, (cutoff + 0.1 - value) / 0.1);
+	} else {
+		COLOR = vec4(COLOR.rgb, 0.0)
+	}*/
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/cutoff = 1.0
+shader_param/smooth_size = 0.313
+shader_param/mask = ExtResource( 8 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "transition_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 1 )
+levels = [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ]
+
+[node name="HUD" parent="." instance=ExtResource( 7 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+
+[node name="Transition" type="ColorRect" parent="."]
+material = SubResource( 2 )
+margin_right = 1932.0
+margin_bottom = 1079.0
+color = Color( 0.0156863, 0.0156863, 0.0156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayerTransition" type="AnimationPlayer" parent="Transition"]
+anims/transition_in = SubResource( 3 )

@@ -1,0 +1,441 @@
+﻿[	
+	{
+		"chapter":  0,
+		"level": "Intro",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "beard_normal",
+				"say": 
+				[
+				  "Čau...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_smile",
+				"say": 
+				[
+				  "Já jsem Marek. Marek Novotný.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_suprised",
+				"say": 
+				[
+				  "A mám rád.. pivo.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_sad",
+				"say": 
+				[
+				  "No nejsem moc dobrý ve seznamování. Sorry.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_smile",
+				"say": 
+				[
+				  "Ale mám rodinu. S moji ženou Petrou vychováváme dvě děti, Šimona a Káťu. Všichni jsou skvělí.",
+				  "No, jsem tady od toho, abych ti povyprávěl svůj příběh.. Teda než abych ho vyprávěl, ty si ho prožiješ semnou.",
+				  "Začalo to tak jednoho podvečera, co jsem přišel z práce...",
+				]
+			}
+				
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_obyvak",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "suprised",
+				"say": [
+				  "... Dneska to byla fuška."
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "worry",
+				"say": [
+				  "Já byla s Káťou na rovnátkách. Je na mě naštvaná, že jsem jí tam dotáhla.",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "sad",
+				"say": [
+				  "Jinak se ceny rovnátek v dnešní době zvedly...",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "worry2",
+				"say": [
+				  "Stálo to kolem čtyř tisíc."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "suprised",
+				"say": [
+				  "Kolikže? Za to bych mohl mít kolem... 110 piv!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile",
+				"say": [
+				  "Což mi připomíná, málem bych zapomněl, dneska jdu s Liborem na pivko."
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "suprised",
+				"say": [
+				  "To už zase? Vždyť chodíš skoro každý druhý den a vždycky tam necháš tolik peněz!"
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile",
+				"say": [
+				  "Ale ne, tak předtím jsme slavili, žejo.",
+				  "Dneska si dem jenom pokecat."
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "worry",
+				"say": [
+				  "Fajn, ale přijď brzo."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile",
+				"say": [
+				  "Neboj se.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile",
+				"say": [
+				  "Tak bych měl mít všechno.. Ne počkat.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "suprised",
+				"say": [
+				  "Kde jsem nechal peněženku?"
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_obyvak",
+		"texts":
+		[
+			{
+				"char": "Marek",
+					"emotion": "",
+					"say": 
+					[
+					  "Tak tu je.",
+					  "Snad v ní ještě něco je."
+					]
+			}
+		],
+	},
+	{
+		"chapter":  0,
+		"level": "Level_obyvak",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"say": 
+				[
+					"Jo, to určo vystačí.",
+					"Vzhůru do baru!"
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_ulice",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"say": 
+				[
+					 "Támhle jsou dveře do baru.",
+					 "Ještě že to mám tak blízko.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_hospoda",
+		"texts":
+		[
+			{
+				"char": "",
+				"emotion": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal",
+				"say": 
+				[
+					 "Čáu, Máro!",
+					 "Už jsem ti tu objednal jedno pivko.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"say": 
+				[
+					 "No zdar Libore! ",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile",
+				"say": 
+				[
+					 "To je skvělý, díky! Tak jak se máš?",
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "thinking",
+				"say": 
+				[
+					 "Hele jako ujde to, jen tyjo, neuvěříš, co se stalo.",
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "suprised",
+				"say": 
+				[
+					 "Hej šli jsme dneska s manželkou do obchodu a tam...",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_hospoda",
+		"texts":
+		[
+			{
+				"char": "",
+				"emotion": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"say": 
+				[
+					 "Ještě jedno, pane barman!"
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal",
+				"say": 
+				[
+					 "No a to jako nepochopíš, oni tam ...",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_hospoda",
+		"texts":
+		[
+			{
+				"char": "",
+				"emotion": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"say": 
+				[
+					 "Hahaha a já sem Káťu odvezl.. jakože víškam, ne, a ona tam jako nevěděla co má dělat.",
+					 "Heele a ona to nakonec jakože zjistila, na to bych si připil, pane barman!"
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_hospoda",
+		"texts":
+		[
+			{
+				"char": "",
+				"emotion": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"say": 
+				[
+					 "*hic* a znáš támhleten hehe v..vtip..",
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal",
+				"say": 
+				[
+					 "Voe o čem to mlvuíš?",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"say": 
+				[
+					 "Ta jakožžže.. ta stránka.. no ta stránka..",
+					 "tten.. mejbůk.. sejbsůk... dejbůk..",
+					 "tak jakože to je jako sušák.. pračka... ne počkej, lednička to byla.",
+					 "že jakože tam chodíš co chvilu.. hehehe... i když víš, žžže tam nic není!!!"
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal",
+				"say": 
+				[
+					 "hehee... Ty už radši nepij, Máro."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"say": 
+				[
+					 "Ko.. Kolik je vůbec hodin?"
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal",
+				"say": 
+				[
+					 "tam sou hodiny! akorát já na ně nevidím..."
+				]
+			},
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_hospoda",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"say": 
+				[
+					 "Tyvoe Libore, ono už jsou 3 hodiny!",
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal",
+				"say": 
+				[
+					 "Nojo! to tu sme zas dluho!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"say": 
+				[
+					 "Mě Petra pžř.. pžžž.. pžizabije!",
+					 "hele Libčo, já ttě zvu. Pane bbarman, platím! Aj tady za Libču!"
+				]
+			},
+			{
+				"char": "Barman",
+				"emotion": "normal",
+				"say": 
+				[
+					 "Prosím tedy pěkně pane, bude to 1 750 korun."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"say": 
+				[
+					 "No jasan, tu máte aj dýško!",
+					 "Tak dík, Libčo, seš kámoš."
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal",
+				"say": 
+				[
+					 "voe, si pozval ty mě, já ti mám děkk.. děkovat. Tak mazej radči."
+				]
+			},
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_ulice",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"say": 
+				[
+					 "hhm.. kde to vlastně bydlím??",
+				]
+			}
+		]
+	}
+]

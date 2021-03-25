@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/GFX/Background/ulice/dvere.png" type="Texture" id=1]
+[ext_resource path="res://assets/GFX/Background/ulice/do_prace_button.png" type="Texture" id=2]
+[ext_resource path="res://assets/GFX/Background/ulice/domu_button.png" type="Texture" id=3]
+[ext_resource path="res://assets/GFX/Background/ulice/ulice_den.jpg" type="Texture" id=4]
+[ext_resource path="res://levels/level_ulice.gd" type="Script" id=5]
+
+[node name="Level_ulice" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Door" type="TextureButton" parent="Background"]
+margin_left = 185.836
+margin_top = 263.661
+margin_right = 404.836
+margin_bottom = 652.661
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prace" type="TextureButton" parent="Buttons"]
+margin_left = 1600.68
+margin_top = 817.557
+margin_right = 1921.68
+margin_bottom = 969.557
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Domu" type="TextureButton" parent="Buttons"]
+margin_left = 3.19073
+margin_top = 825.83
+margin_right = 270.191
+margin_bottom = 959.83
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Background/Door" to="." method="_on_dvere_pressed"]
+[connection signal="pressed" from="Buttons/Prace" to="." method="_on_do_prace_pressed"]
+[connection signal="pressed" from="Buttons/Domu" to="." method="_on_domu_pressed"]
