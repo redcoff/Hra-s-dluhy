@@ -24,6 +24,7 @@ func switch_level(new_level, is_initial):
 		current_level.disconnect("start_dialog",$HUD,"_on_Intro_start_dialog")
 		$HUD.disconnect("texts_finished", current_level, "_on_HUD_texts_finished")
 		current_level.disconnect("wallet_taken", $HUD, "_on_wallet_taken")
+		hide_character_if_shown()
 	var levelPath = new_level.get_path()
 	current_level = load(levelPath).instance()
 	Global.scene = current_level
@@ -33,6 +34,12 @@ func switch_level(new_level, is_initial):
 	add_child(current_level) #add next level
 	move_child(current_level, 0)
 	$Transition/AnimationPlayerTransition.play("transition_in")
+
+func hide_character_if_shown():
+	if $HUD/Character.visible:
+		$HUD/Character.hide()
+	if $HUD/Character2.visible:
+		$HUD/Character2.hide()
 
 func back():
 	if history.size() > 0:

@@ -1,74 +1,49 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://levels/Level_obyvak.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/Level_hospoda.tscn" type="PackedScene" id=3]
 [ext_resource path="res://levels/Level_ulice.tscn" type="PackedScene" id=4]
-[ext_resource path="res://levels/level_obyvak.gd" type="Script" id=5]
+[ext_resource path="res://levels/Level_prace.tscn" type="PackedScene" id=5]
 [ext_resource path="res://levels/Intro.tscn" type="PackedScene" id=6]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/Shaders/from_center.png" type="Texture" id=8]
+[ext_resource path="res://Transition.tscn" type="PackedScene" id=8]
+[ext_resource path="res://levels/level_ulice.gd" type="Script" id=9]
+[ext_resource path="res://assets/GFX/Background/ulice/do_prace_button.png" type="Texture" id=10]
+[ext_resource path="res://assets/GFX/Background/ulice/domu_button.png" type="Texture" id=11]
+[ext_resource path="res://assets/GFX/Background/ulice/dvere.png" type="Texture" id=12]
+[ext_resource path="res://assets/GFX/Background/ulice/ulice_den.jpg" type="Texture" id=13]
+[ext_resource path="res://Family_budget.tscn" type="PackedScene" id=14]
 
-[sub_resource type="Shader" id=1]
-code = "shader_type canvas_item;
-render_mode unshaded;
-
-uniform float cutoff : hint_range(0.0, 1.0);
-uniform float smooth_size : hint_range(0.0, 1.0);
-uniform sampler2D mask : hint_albedo;
-
-void fragment()
-{
-	float value = texture(mask, UV).r;
-	float alpha = smoothstep(cutoff, cutoff + smooth_size, value * (1.0 - smooth_size) + smooth_size);
-	COLOR = vec4(COLOR.rgb, alpha);
-	/*if(value < cutoff){
-		COLOR = vec4(COLOR.rgb, 1.0);
-	} else if(value < cutoff + 0.1){
-		COLOR = vec4(COLOR.rgb, (cutoff + 0.1 - value) / 0.1);
-	} else {
-		COLOR = vec4(COLOR.rgb, 0.0)
-	}*/
-	
-}"
-
-[sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
-shader_param/cutoff = 1.0
-shader_param/smooth_size = 0.313
-shader_param/mask = ExtResource( 8 )
-
-[sub_resource type="Animation" id=3]
-resource_name = "transition_in"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:material:shader_param/cutoff")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
+[sub_resource type="PackedScene" id=1]
+_bundled = {
+"conn_count": 3,
+"conns": PoolIntArray( 1073741830, 1073741829, 41, 40, 2, 0, 1073741832, 1073741831, 43, 42, 2, 0, 1073741834, 1073741833, 45, 44, 2, 0 ),
+"editable_instances": [  ],
+"names": PoolStringArray( "Level_ulice", "Node2D", "script", "Background", "TextureRect", "anchor_right", "anchor_bottom", "margin_right", "margin_bottom", "texture", "__meta__", "Door", "TextureButton", "margin_left", "margin_top", "margin_right", "margin_bottom", "texture_normal", "__meta__", "Buttons", "Control", "anchor_right", "anchor_bottom", "__meta__", "Prace", "TextureButton", "margin_left", "margin_top", "margin_right", "margin_bottom", "texture_normal", "__meta__", "Domu", "TextureButton", "margin_left", "margin_top", "margin_right", "margin_bottom", "texture_normal", "__meta__", "_on_dvere_pressed", "pressed", "_on_do_prace_pressed", "pressed", "_on_domu_pressed", "pressed" ),
+"node_count": 6,
+"node_paths": [ NodePath("."), NodePath("./Background"), NodePath("."), NodePath("./Buttons"), NodePath("./Buttons"), NodePath("."), NodePath("Background/Door"), NodePath("."), NodePath("Buttons/Prace"), NodePath("."), NodePath("Buttons/Domu") ],
+"nodes": PoolIntArray( -1, -1, 1, 0, -1, 1, 2, 0, 0, 1073741824, 0, 4, 3, -1, 6, 5, 1, 6, 2, 7, 3, 8, 4, 9, 5, 10, 6, 0, 1073741825, 0, 12, 11, -1, 6, 13, 7, 14, 8, 15, 9, 16, 10, 17, 11, 18, 12, 0, 1073741826, 0, 20, 19, -1, 3, 21, 13, 22, 14, 23, 15, 0, 1073741827, 0, 25, 24, -1, 6, 26, 16, 27, 17, 28, 18, 29, 19, 30, 20, 31, 21, 0, 1073741828, 0, 33, 32, -1, 6, 34, 22, 35, 23, 36, 24, 37, 25, 38, 26, 39, 27, 0 ),
+"variants": [ ExtResource( 9 ), 1.0, 1.0, 1920.0, 1080.0, ExtResource( 13 ), {
+"_edit_use_anchors_": false
+}, 185.836, 263.661, 404.836, 652.661, ExtResource( 12 ), {
+"_edit_use_anchors_": false
+}, 1.0, 1.0, {
+"_edit_use_anchors_": false
+}, 1600.68, 817.557, 1921.68, 969.557, ExtResource( 10 ), {
+"_edit_use_anchors_": false
+}, 3.19073, 825.83, 270.191, 959.83, ExtResource( 11 ), {
+"_edit_use_anchors_": false
+} ],
+"version": 2
 }
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
-levels = [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ]
+levels = [ ExtResource( 6 ), ExtResource( 2 ), SubResource( 1 ), ExtResource( 3 ), SubResource( 1 ), ExtResource( 2 ), SubResource( 1 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 14 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ]
+
+[node name="Transition" parent="." instance=ExtResource( 8 )]
 
 [node name="HUD" parent="." instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-
-[node name="Transition" type="ColorRect" parent="."]
-material = SubResource( 2 )
-margin_right = 1932.0
-margin_bottom = 1079.0
-color = Color( 0.0156863, 0.0156863, 0.0156863, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AnimationPlayerTransition" type="AnimationPlayer" parent="Transition"]
-anims/transition_in = SubResource( 3 )

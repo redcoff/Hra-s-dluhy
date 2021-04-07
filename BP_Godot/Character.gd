@@ -1,21 +1,30 @@
 extends Node2D
 
+signal character_image_changed
+signal character_second_image_changed
 
 func _ready():
-	$char_sprite.visible = false
+	visible = false
 
 
 
 func _on_DialogBox_character_changed(name, emotion):
-	var texture_dict = 'assets/GFX/Characters/' + name + "/"
-	var image = load(texture_dict + name + "_" + emotion + '.png')
-	
-	print(texture_dict + name + "_" + emotion + '.png')
-	print(image)
-	#image.load(texture_dict + name + '.jpg')
-	$char_sprite.set_texture(image)
-	$char_sprite.visible = true
+	var loaded = load_character(name, emotion)
+	if loaded: emit_signal("character_image_changed", $char_sprite.texture.get_size())
 
 
 func _on_DialogBox_all_texts_finished():
-	$char_sprite.visible = false
+	visible = false
+
+func load_character(name, emotion):
+	if emotion != "" and name != "..." and name != "Barman":
+		var texture_dict = 'assets/GFX/Characters/' + name + "/"
+		var image = load(texture_dict + name + "_" + emotion + '.png')
+		$char_sprite.set_texture(image)
+		visible = true
+		return true
+	return false
+
+func _on_DialogBox_character_second_changed(name, emotion):
+	var loaded = load_character(name, emotion)
+	if loaded: emit_signal("character_second_image_changed", $char_sprite.texture.get_size())

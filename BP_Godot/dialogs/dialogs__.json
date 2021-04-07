@@ -1,0 +1,206 @@
+﻿[	
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+				  "Tak.. Asi začneme s příjmy.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+				  "Sepíšeme si, kolik vyděláváš ty a já peněz.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+				  "A kolik to je dohromady.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+				  "Pak si sepíšeme kolik čeho potřebujeme pravidelně zaplatit..",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+				  "Za nájem musíme každý měsíc dát 17 400 Kč.",
+				  "Za energii a další služby musíme platit 4 500 Kč.",
+				  "To jsou věci, díky kterých můžeme v klidu bydlet v teple s horkou vodou a elektřinou.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+					"A teď si rozepíšeme co je potřeba zaplatit. To jsou výdaje.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+				  "Musíme zaplatit pravidelné výdaje, tedy nájem, energie a služby.",
+				  "Koukej, budeme je psát jako procenta. Vedle procent se vypočítá, kolik je to z našich peněz.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+				  "Pak musíme samozřejmě něco jíst.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+				  "Nemáme auto, ale do práce to já ani děti nemáme blízko, proto musíme platit jízdenky.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+				  "Děti rostou docela rychle, takže z oblečení, co mají teď, vyrostou a je potřeba koupit nové. I já bych ráda si koupila něco na sebe.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+				  "A pak samozřejmě náš nejoblíběnější výdaj - volný čas. Tady zahrneme tvoje piva, moje kafe, pro děti hry na playstation a podobně."
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+					"A budeme si kontrolovat, kolik procent z příjmu jsme si rozdělili do výdajů.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"say": 
+				[
+					"Bylo by skvělé, kdyby hodnota využitých peněz byla co nejmenší.",
+					"Nevyužité peníze bychom si dali bokem, abychom si něco našetřili.",
+					"Ale zároveň musíme zaplatit všechny potřebné výdaje.",
+					"A zároveň abychom si taky udělali radost.",
+					"Jak naše příjmy rozdělíš?",
+					"Napiš jednotlivá procenta do příslušných políček.",
+					"Dávám ti na to 3 pokusy."
+				]
+			},
+		]
+	},
+]

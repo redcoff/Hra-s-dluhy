@@ -17,8 +17,10 @@ func _on_Door_pressed():
 	if canExit:
 		parent.next_level()
 
-
 func _on_Clock_pressed():
 	var toTrigger = Global.target_check($Background/Clock)
 	if toTrigger:
-		pass
+		emit_signal("start_dialog")
+		
+func _on_HUD_texts_finished():
+	pass

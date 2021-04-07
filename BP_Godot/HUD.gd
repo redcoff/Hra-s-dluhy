@@ -9,12 +9,14 @@ var wallet_built = false
 var firstime_open = true
 var micromenu_position
 
+
 func _ready():
 	$micromenu.visible = false
-	current_quest = Global.get_next_quest() #very first quest
+	current_quest = Global.get_next_quest()
 	$micromenu/Wallet.visible = false
 	parent = get_parent()
 	
+#todo predelat, hruza
 func _process(delta):
 	if Global.current_quest_target.empty():
 		_on_quest_complete()
@@ -73,5 +75,5 @@ func build_wallet():
 	firstime_open = false
 	_on_start_dialog()
 	var wallet_window = load("res://menu_wallet.tscn").instance()
-	parent.add_child(wallet_window)
-	parent.move_child(wallet_window, 1)
+	add_child(wallet_window)
+	move_child(wallet_window, 2)

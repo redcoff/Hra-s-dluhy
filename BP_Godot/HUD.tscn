@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/GFX/HUD/text_spaceA.png" type="Texture" id=2]
@@ -7,16 +7,25 @@
 [ext_resource path="res://assets/GFX/Items/peněženka malá.png" type="Texture" id=5]
 [ext_resource path="res://HUD.gd" type="Script" id=6]
 [ext_resource path="res://assets/GFX/HUD/sipka_pressed.png" type="Texture" id=7]
+[ext_resource path="res://Transition.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
-size = 30
+size = 45
 font_data = ExtResource( 1 )
 
-[sub_resource type="StreamTexture" id=2]
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 45
+font_data = ExtResource( 1 )
+
+[sub_resource type="StreamTexture" id=4]
 flags = 4
 load_path = "res://.import/sipka.png-47b0d06d471135c61efa50f770d239c1.stex"
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=5]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -31,16 +40,8 @@ tracks/0/keys = {
 "values": [ Vector2( -100, -50 ), Vector2( -78, -50 ) ]
 }
 
-[sub_resource type="DynamicFont" id=4]
-size = 30
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=5]
-size = 40
-font_data = ExtResource( 1 )
-
 [sub_resource type="DynamicFont" id=6]
-size = 40
+size = 45
 font_data = ExtResource( 1 )
 
 [sub_resource type="Animation" id=7]
@@ -66,91 +67,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Character2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1345, 243.202 )
+
 [node name="Character" parent="." instance=ExtResource( 4 )]
-position = Vector2( 820.319, 207.422 )
-
-[node name="DialogBox" type="Control" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextSpace" type="TextureRect" parent="DialogBox"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -673.5
-margin_top = -493.0
-margin_right = 673.5
-rect_min_size = Vector2( 1024, 400 )
-rect_pivot_offset = Vector2( 55.2236, 52.8873 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CharText" type="RichTextLabel" parent="DialogBox/TextSpace"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -600.0
-margin_top = -100.0
-margin_right = 600.0
-margin_bottom = 60.0
-custom_fonts/normal_font = SubResource( 1 )
-bbcode_enabled = true
-bbcode_text = "Ahoj, já jsem Marek, pracuju v továrně na výrobu čipů. Toto je naše krásná rodina. A toto je placeholder btw."
-text = "Ahoj, já jsem Marek, pracuju v továrně na výrobu čipů. Toto je naše krásná rodina. A toto je placeholder btw."
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Tween" type="Tween" parent="DialogBox/TextSpace"]
-
-[node name="Next" type="Control" parent="DialogBox/TextSpace"]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -100.0
-margin_top = -100.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="NextButton" type="TextureButton" parent="DialogBox/TextSpace/Next"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -145.56
-margin_top = -150.0
-margin_right = 5.43956
-margin_bottom = -54.0
-texture_normal = SubResource( 2 )
-texture_pressed = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/TextSpace/Next/NextButton"]
-autoplay = "IDLE"
-anims/IDLE = SubResource( 3 )
-
-[node name="CharName" type="Label" parent="DialogBox/TextSpace"]
-margin_left = 29.6985
-margin_top = 35.3553
-margin_right = 119.698
-margin_bottom = 76.3553
-custom_fonts/font = SubResource( 4 )
-text = "Jméno"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+position = Vector2( 442.426, 241.608 )
 
 [node name="micromenu" type="Control" parent="."]
 anchor_right = 1.0
@@ -194,32 +115,133 @@ __meta__ = {
 }
 
 [node name="QuestLabel" type="Label" parent="micromenu/QuestContainer"]
-margin_top = 3.0
-margin_right = 144.0
-margin_bottom = 56.0
-custom_fonts/font = SubResource( 5 )
+margin_right = 162.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
 text = "Úkol: "
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="QuestNameLabel" type="Label" parent="micromenu/QuestContainer"]
-margin_left = 148.0
-margin_top = 3.0
-margin_right = 796.0
-margin_bottom = 56.0
-custom_fonts/font = SubResource( 6 )
+margin_left = 166.0
+margin_right = 895.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 2 )
 text = "Placeholder bla bla bla bla"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="DialogBox" type="Control" parent="."]
+light_mask = -2147483647
+margin_right = 1920.0
+margin_bottom = 1080.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Transition" parent="DialogBox" instance=ExtResource( 8 )]
+
+[node name="TextSpace" type="TextureRect" parent="DialogBox"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -673.5
+margin_top = -493.0
+margin_right = 673.5
+rect_min_size = Vector2( 1024, 400 )
+rect_pivot_offset = Vector2( 55.2236, 52.8873 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharText" type="RichTextLabel" parent="DialogBox/TextSpace"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -599.5
+margin_top = -99.5
+margin_right = 600.5
+margin_bottom = 172.5
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Ahoj, já jsem Marek, pracuju v továrně na výrobu čipů. Toto je naše krásná rodina. A toto je placeholder btw."
+text = "Ahoj, já jsem Marek, pracuju v továrně na výrobu čipů. Toto je naše krásná rodina. A toto je placeholder btw."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="DialogBox/TextSpace"]
+
+[node name="Next" type="Control" parent="DialogBox/TextSpace"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="TextureButton" parent="DialogBox/TextSpace/Next"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -145.56
+margin_top = -150.0
+margin_right = 5.43956
+margin_bottom = -54.0
+texture_normal = SubResource( 4 )
+texture_pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/TextSpace/Next/NextButton"]
+autoplay = "IDLE"
+anims/IDLE = SubResource( 5 )
+
+[node name="CharName" type="Label" parent="DialogBox/TextSpace"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_right = -30.0
+grow_horizontal = 0
+custom_fonts/font = SubResource( 6 )
+text = "Jméno"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeakAudio1" type="AudioStreamPlayer2D" parent="DialogBox"]
+position = Vector2( 953.744, 863.364 )
+attenuation = 0.0853775
+
+[node name="SpeakAudio2" type="AudioStreamPlayer2D" parent="DialogBox"]
+position = Vector2( 953.744, 863.364 )
+attenuation = 0.0853775
+
+[node name="SpeakAudio3" type="AudioStreamPlayer2D" parent="DialogBox"]
+position = Vector2( 953.744, 863.364 )
+attenuation = 0.0853775
+
 [node name="AnimationPlayerMicromenu" type="AnimationPlayer" parent="."]
 anims/show_microbar = SubResource( 7 )
 [connection signal="start_dialog" from="." to="DialogBox" method="_on_HUD_start_dialog"]
-[connection signal="all_texts_finished" from="DialogBox" to="Character" method="_on_DialogBox_all_texts_finished"]
-[connection signal="all_texts_finished" from="DialogBox" to="." method="_on_DialogBox_all_texts_finished"]
-[connection signal="character_changed" from="DialogBox" to="Character" method="_on_DialogBox_character_changed"]
-[connection signal="tween_completed" from="DialogBox/TextSpace/Tween" to="DialogBox" method="_on_Tween_tween_completed"]
-[connection signal="pressed" from="DialogBox/TextSpace/Next/NextButton" to="DialogBox" method="_on_NextButton_pressed"]
+[connection signal="character_image_changed" from="Character2" to="DialogBox" method="_on_Character_character_image_changed"]
+[connection signal="character_second_image_changed" from="Character2" to="DialogBox" method="_on_Character2_character_second_image_changed"]
+[connection signal="character_image_changed" from="Character" to="DialogBox" method="_on_Character_character_image_changed"]
 [connection signal="pressed" from="micromenu/Wallet" to="." method="_on_penezenka_pressed"]
+[connection signal="all_texts_finished" from="DialogBox" to="." method="_on_DialogBox_all_texts_finished"]
+[connection signal="all_texts_finished" from="DialogBox" to="Character" method="_on_DialogBox_all_texts_finished"]
+[connection signal="character_changed" from="DialogBox" to="Character" method="_on_DialogBox_character_changed"]
+[connection signal="character_second_changed" from="DialogBox" to="Character2" method="_on_DialogBox_character_second_changed"]
+[connection signal="tween_completed" from="DialogBox/TextSpace/Tween" to="DialogBox" method="_on_Tween_tween_completed"]
+[connection signal="tween_step" from="DialogBox/TextSpace/Tween" to="DialogBox" method="_on_Tween_tween_step"]
+[connection signal="pressed" from="DialogBox/TextSpace/Next/NextButton" to="DialogBox" method="_on_NextButton_pressed"]

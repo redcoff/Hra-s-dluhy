@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/GFX/Characters/Marek.png" type="Texture" id=1]
+[ext_resource path="res://assets/GFX/Characters/marek/Marek_normal.png" type="Texture" id=1]
 [ext_resource path="res://Character.gd" type="Script" id=2]
 
 [node name="Character" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="char_sprite" type="Sprite" parent="."]
-position = Vector2( 101.156, 424 )
 texture = ExtResource( 1 )
+centered = false

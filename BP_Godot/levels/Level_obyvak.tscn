@@ -2,18 +2,15 @@
 
 [ext_resource path="res://levels/level_obyvak.gd" type="Script" id=1]
 [ext_resource path="res://assets/GFX/Items/peněženka malá.png" type="Texture" id=2]
+[ext_resource path="res://assets/GFX/Background/obyvak/obyvak.png" type="Texture" id=3]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
-load_path = "res://.import/obyvak.jpg-19a5fdf4ffaceb097ced4df8a9c4684a.stex"
+load_path = "res://.import/notebook.png-24d4635c8e39c69d0a71cc27c088292f.stex"
 
 [sub_resource type="StreamTexture" id=2]
 flags = 4
 load_path = "res://.import/dvere_obyvak.png-fbd0084df0afe92ee431c7339df2a1cb.stex"
-
-[sub_resource type="StreamTexture" id=3]
-flags = 4
-load_path = "res://.import/notebook.png-24d4635c8e39c69d0a71cc27c088292f.stex"
 
 [node name="Level_obyvak" type="Node2D"]
 script = ExtResource( 1 )
@@ -21,8 +18,22 @@ script = ExtResource( 1 )
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 1 )
+mouse_filter = 2
+texture = ExtResource( 3 )
 stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notebook" type="TextureButton" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1528.0
+margin_top = 415.0
+margin_right = -178.0
+margin_bottom = -520.0
+mouse_default_cursor_shape = 2
+texture_normal = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -32,35 +43,35 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 119.351
 margin_top = 220.51
-margin_right = -1484.65
+margin_right = -1482.65
 margin_bottom = -337.49
+mouse_default_cursor_shape = 2
 texture_normal = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Notebook" type="TextureButton" parent="Background"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 1527.75
-margin_top = 415.31
-margin_right = -178.254
-margin_bottom = -519.69
-texture_normal = SubResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Sofa" type="Area2D" parent="."]
+space_override = 3
+
+[node name="Sofa_CollisionPolygon2D" type="CollisionPolygon2D" parent="Sofa"]
+polygon = PoolVector2Array( 713.221, 702.118, 711.634, 682.275, 710.84, 647.352, 715.602, 629.097, 798.941, 576.713, 805.291, 517.186, 821.958, 499.724, 1029.91, 503.693, 1045.78, 522.742, 1067.21, 506.074, 1266.43, 502.105, 1290.24, 521.948, 1289.45, 567.189, 1360.09, 633.86, 1368.02, 731.485, 1364.85, 774.345, 1310.08, 778.313, 1061.66, 780.694, 922.758, 782.282, 925.933, 762.439, 917.996, 737.041, 899.741, 729.104, 825.133, 720.373, 773.542, 717.198, 712.428, 722.754 )
 
 [node name="Wallet" type="TextureButton" parent="."]
-margin_left = 718.0
-margin_top = 704.0
-margin_right = 1098.0
-margin_bottom = 995.0
+margin_left = 688.816
+margin_top = 708.49
+margin_right = 1068.82
+margin_bottom = 999.49
 rect_scale = Vector2( 0.3, 0.3 )
+mouse_filter = 1
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Background/Door" to="." method="_on_door_pressed"]
 [connection signal="pressed" from="Background/Notebook" to="." method="_on_notebook_pressed"]
+[connection signal="pressed" from="Background/Door" to="." method="_on_door_pressed"]
+[connection signal="input_event" from="Sofa" to="." method="_on_Sofa_input_event"]
+[connection signal="mouse_entered" from="Sofa" to="." method="_on_Sofa_mouse_entered"]
+[connection signal="mouse_exited" from="Sofa" to="." method="_on_Sofa_mouse_exited"]
 [connection signal="pressed" from="Wallet" to="." method="_on_Wallet_pressed"]

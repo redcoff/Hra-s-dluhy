@@ -1,0 +1,650 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://family_budget.gd" type="Script" id=2]
+[ext_resource path="res://assets/Fonts/Indie_Flower/IndieFlower-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/GFX/Background/family_budget/paper_background.png" type="Texture" id=4]
+[ext_resource path="res://lineedit.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+outline_color = Color( 0.996078, 0.968627, 0.996078, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2824]
+size = 50
+extra_spacing_bottom = -20
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=2825]
+bg_color = Color( 0.870588, 0.870588, 0.870588, 0.556863 )
+draw_center = false
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_detail = 1
+shadow_color = Color( 0, 0, 0, 0.45098 )
+
+[sub_resource type="DynamicFont" id=1452]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1453]
+size = 80
+font_data = ExtResource( 3 )
+
+[sub_resource type="Curve" id=1454]
+_data = [ Vector2( 0.00770713, 0.209091 ), 0.0, 0.0, 0, 0, Vector2( 0.146435, 0.572727 ), 2.76937, 0.0, 0, 0, Vector2( 0.304432, 0.409091 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="DynamicFont" id=2823]
+size = 50
+font_data = ExtResource( 1 )
+
+[node name="Family_budget" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FamilybudgetLabel" type="Label" parent="."]
+margin_left = 227.782
+margin_top = 58.1471
+margin_right = 1270.78
+margin_bottom = 176.147
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Náš rodinný rozpočet na měsíc"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RevenuesContainer" type="VBoxContainer" parent="."]
+margin_left = 100.29
+margin_top = 171.65
+margin_right = 428.29
+margin_bottom = 416.65
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RevenuesLabel" type="Label" parent="RevenuesContainer"]
+margin_right = 328.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.431373, 0.65098, 0.396078, 1 )
+text = "Příjmy"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarekContainer" type="HBoxContainer" parent="RevenuesContainer"]
+margin_top = 93.0
+margin_right = 328.0
+margin_bottom = 167.0
+
+[node name="MarekNameLabel" type="Label" parent="RevenuesContainer/MarekContainer"]
+margin_right = 119.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Marek:"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarekRevLabel" type="Label" parent="RevenuesContainer/MarekContainer"]
+margin_left = 123.0
+margin_right = 328.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "25 432 Kč"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PetraContainer" type="HBoxContainer" parent="RevenuesContainer"]
+margin_top = 171.0
+margin_right = 328.0
+margin_bottom = 245.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PetraNameLabel" type="Label" parent="RevenuesContainer/PetraContainer"]
+margin_right = 119.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Petra:"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PetraRevLabel" type="Label" parent="RevenuesContainer/PetraContainer"]
+margin_left = 123.0
+margin_right = 308.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "24 980 Kč"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TotalRevContainer" type="HBoxContainer" parent="."]
+margin_left = 536.154
+margin_top = 308.726
+margin_right = 882.154
+margin_bottom = 382.726
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TotalRevNameLabel" type="Label" parent="TotalRevContainer"]
+margin_right = 146.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Celkem:"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TotalRevLabel" type="Label" parent="TotalRevContainer"]
+margin_left = 156.0
+margin_right = 352.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "50 412 Kč"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NeedToPayContainer" type="VBoxContainer" parent="."]
+margin_left = 63.2945
+margin_top = 524.617
+margin_right = 603.294
+margin_bottom = 861.617
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NeedToPayLabel" type="Label" parent="NeedToPayContainer"]
+margin_right = 540.0
+margin_bottom = 181.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.443137, 0.466667, 0.815686, 1 )
+text = "Co je potřeba zaplatit
+každý měsíc?"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RentToPayContainer" type="HBoxContainer" parent="NeedToPayContainer"]
+margin_top = 185.0
+margin_right = 540.0
+margin_bottom = 259.0
+custom_constants/separation = 10
+
+[node name="RentToPayNameLabel" type="Label" parent="NeedToPayContainer/RentToPayContainer"]
+margin_right = 133.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Nájem:"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RentToPayLabel" type="Label" parent="NeedToPayContainer/RentToPayContainer"]
+margin_left = 143.0
+margin_right = 328.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "17 400 Kč"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnergyToPayContainer" type="HBoxContainer" parent="NeedToPayContainer"]
+margin_top = 263.0
+margin_right = 540.0
+margin_bottom = 337.0
+custom_constants/separation = 10
+
+[node name="EnergyToPayNameLabel" type="Label" parent="NeedToPayContainer/EnergyToPayContainer"]
+margin_right = 341.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Energie a služby:"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnergyToPayLabel" type="Label" parent="NeedToPayContainer/EnergyToPayContainer"]
+margin_left = 351.0
+margin_right = 509.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "4500 Kč"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExpensesContainer" type="VBoxContainer" parent="."]
+margin_left = 1090.99
+margin_top = 214.868
+margin_right = 1620.99
+margin_bottom = 717.869
+custom_constants/separation = 10
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExpensesLabel" type="Label" parent="ExpensesContainer"]
+margin_right = 530.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.286275, 0.0588235, 0.0588235, 1 )
+text = "Výdaje"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RentContainer" type="HBoxContainer" parent="ExpensesContainer"]
+margin_top = 99.0
+margin_right = 530.0
+margin_bottom = 158.0
+custom_constants/separation = 20
+
+[node name="RentName" type="Label" parent="ExpensesContainer/RentContainer"]
+margin_top = 2.0
+margin_right = 133.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Nájem:"
+percent_visible = 0.0
+
+[node name="RentValue" type="LineEdit" parent="ExpensesContainer/RentContainer"]
+visible = false
+margin_left = 153.0
+margin_right = 210.0
+margin_bottom = 59.0
+custom_styles/normal = SubResource( 2825 )
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/minimum_spaces = 3
+align = 1
+max_length = 2
+script = ExtResource( 5 )
+
+[node name="RentPercentage" type="Label" parent="ExpensesContainer/RentContainer"]
+margin_left = 153.0
+margin_top = 2.0
+margin_right = 204.0
+margin_bottom = 56.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = " %"
+percent_visible = 0.0
+
+[node name="RentLabel" type="Label" parent="ExpensesContainer/RentContainer"]
+margin_left = 224.0
+margin_right = 322.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1452 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "(0 Kč)"
+align = 2
+valign = 1
+percent_visible = 0.0
+
+[node name="EnergyContainer" type="HBoxContainer" parent="ExpensesContainer"]
+margin_top = 168.0
+margin_right = 530.0
+margin_bottom = 227.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnergyName" type="Label" parent="ExpensesContainer/EnergyContainer"]
+margin_top = 2.0
+margin_right = 341.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Energie a služby:"
+percent_visible = 0.0
+
+[node name="EnergyValue" type="LineEdit" parent="ExpensesContainer/EnergyContainer"]
+visible = false
+margin_left = 361.0
+margin_right = 418.0
+margin_bottom = 59.0
+custom_styles/normal = SubResource( 2825 )
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/minimum_spaces = 3
+align = 1
+max_length = 2
+
+[node name="EnergyPercentage" type="Label" parent="ExpensesContainer/EnergyContainer"]
+margin_left = 361.0
+margin_top = 2.0
+margin_right = 412.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = " %"
+percent_visible = 0.0
+
+[node name="EnergyLabel" type="Label" parent="ExpensesContainer/EnergyContainer"]
+margin_left = 432.0
+margin_right = 530.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1452 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "(0 Kč)"
+percent_visible = 0.0
+
+[node name="FoodContainer" type="HBoxContainer" parent="ExpensesContainer"]
+margin_top = 237.0
+margin_right = 530.0
+margin_bottom = 296.0
+custom_constants/separation = 20
+
+[node name="FoodName" type="Label" parent="ExpensesContainer/FoodContainer"]
+margin_top = 2.0
+margin_right = 91.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Jídlo:"
+percent_visible = 0.0
+
+[node name="FoodValue" type="LineEdit" parent="ExpensesContainer/FoodContainer"]
+visible = false
+margin_left = 361.0
+margin_right = 418.0
+margin_bottom = 59.0
+custom_styles/normal = SubResource( 2825 )
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/minimum_spaces = 3
+align = 1
+max_length = 2
+
+[node name="FoodPercentage" type="Label" parent="ExpensesContainer/FoodContainer"]
+margin_left = 111.0
+margin_top = 2.0
+margin_right = 162.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = " %"
+percent_visible = 0.0
+
+[node name="FoodLabel" type="Label" parent="ExpensesContainer/FoodContainer"]
+margin_left = 182.0
+margin_right = 280.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1452 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "(0 Kč)"
+percent_visible = 0.0
+
+[node name="TransportContainer" type="HBoxContainer" parent="ExpensesContainer"]
+margin_top = 306.0
+margin_right = 530.0
+margin_bottom = 365.0
+custom_constants/separation = 20
+
+[node name="TransportName" type="Label" parent="ExpensesContainer/TransportContainer"]
+margin_top = 2.0
+margin_right = 177.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Doprava:"
+percent_visible = 0.0
+
+[node name="TransportValue" type="LineEdit" parent="ExpensesContainer/TransportContainer"]
+visible = false
+margin_left = 361.0
+margin_right = 418.0
+margin_bottom = 59.0
+custom_styles/normal = SubResource( 2825 )
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/minimum_spaces = 3
+align = 1
+max_length = 2
+
+[node name="TransportPercentage" type="Label" parent="ExpensesContainer/TransportContainer"]
+margin_left = 197.0
+margin_top = 2.0
+margin_right = 248.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = " %"
+percent_visible = 0.0
+
+[node name="TransportLabel" type="Label" parent="ExpensesContainer/TransportContainer"]
+margin_left = 268.0
+margin_right = 366.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1452 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "(0 Kč)"
+percent_visible = 0.0
+
+[node name="ClothesContainer" type="HBoxContainer" parent="ExpensesContainer"]
+margin_top = 375.0
+margin_right = 530.0
+margin_bottom = 434.0
+custom_constants/separation = 20
+
+[node name="ClothesName" type="Label" parent="ExpensesContainer/ClothesContainer"]
+margin_top = 2.0
+margin_right = 171.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Oblečení:"
+percent_visible = 0.0
+
+[node name="ClothesValue" type="LineEdit" parent="ExpensesContainer/ClothesContainer"]
+visible = false
+margin_left = 361.0
+margin_right = 418.0
+margin_bottom = 59.0
+custom_styles/normal = SubResource( 2825 )
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/minimum_spaces = 3
+align = 1
+max_length = 2
+
+[node name="ClothesPercentage" type="Label" parent="ExpensesContainer/ClothesContainer"]
+margin_left = 191.0
+margin_top = 2.0
+margin_right = 242.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = " %"
+percent_visible = 0.0
+
+[node name="ClothesLabel" type="Label" parent="ExpensesContainer/ClothesContainer"]
+margin_left = 262.0
+margin_right = 360.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1452 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "(0 Kč)"
+percent_visible = 0.0
+
+[node name="FreetimeContainer" type="HBoxContainer" parent="ExpensesContainer"]
+margin_top = 444.0
+margin_right = 530.0
+margin_bottom = 503.0
+custom_constants/separation = 20
+
+[node name="FreetimeName" type="Label" parent="ExpensesContainer/FreetimeContainer"]
+margin_top = 2.0
+margin_right = 194.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Volný čas:"
+percent_visible = 0.0
+
+[node name="FreetimeValue" type="LineEdit" parent="ExpensesContainer/FreetimeContainer"]
+visible = false
+margin_left = 361.0
+margin_right = 418.0
+margin_bottom = 59.0
+custom_styles/normal = SubResource( 2825 )
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/minimum_spaces = 3
+align = 1
+max_length = 2
+
+[node name="FreetimePercentage" type="Label" parent="ExpensesContainer/FreetimeContainer"]
+margin_left = 214.0
+margin_top = 2.0
+margin_right = 265.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2824 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = " %"
+percent_visible = 0.0
+
+[node name="FreetimeLabel" type="Label" parent="ExpensesContainer/FreetimeContainer"]
+margin_left = 285.0
+margin_right = 383.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1452 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "(0 Kč)"
+percent_visible = 0.0
+
+[node name="TotalContainer" type="HBoxContainer" parent="."]
+margin_left = 445.522
+margin_top = 919.158
+margin_right = 1079.52
+margin_bottom = 1037.16
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TotalLabel" type="Label" parent="TotalContainer"]
+margin_right = 480.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 1453 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Využité peníze:"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AllPercentage_label" type="Label" parent="TotalContainer"]
+margin_left = 490.0
+margin_right = 605.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 1453 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "0 %"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineMarek" type="Line2D" parent="."]
+visible = false
+position = Vector2( 465.459, 299.892 )
+points = PoolVector2Array( -24.419, 12.935, 23.581, 4.435, 52.081, 32.435 )
+width_curve = SubResource( 1454 )
+default_color = Color( 0, 0, 0, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="LinePetra" type="Line2D" parent="."]
+visible = false
+position = Vector2( 467.283, 344.971 )
+points = PoolVector2Array( -30.2431, 27.8564, 15.7569, 33.8564, 48.7569, 4.85645 )
+width_curve = SubResource( 1454 )
+default_color = Color( 0, 0, 0, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Done" type="Button" parent="."]
+visible = false
+margin_left = 1631.57
+margin_top = 964.111
+margin_right = 1853.57
+margin_bottom = 1037.11
+custom_fonts/font = SubResource( 2823 )
+text = "Hotovo!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+[connection signal="text_changed" from="ExpensesContainer/RentContainer/RentValue" to="." method="_on_RentValue_text_changed"]
+[connection signal="text_changed" from="ExpensesContainer/RentContainer/RentValue" to="ExpensesContainer/RentContainer/RentValue" method="_on_RentValue_text_changed"]
+[connection signal="text_changed" from="ExpensesContainer/EnergyContainer/EnergyValue" to="." method="_on_EnergyValue_text_changed"]
+[connection signal="text_changed" from="ExpensesContainer/FoodContainer/FoodValue" to="." method="_on_FoodValue_text_changed"]
+[connection signal="text_changed" from="ExpensesContainer/TransportContainer/TransportValue" to="." method="_on_TransportValue_text_changed"]
+[connection signal="text_changed" from="ExpensesContainer/ClothesContainer/ClothesValue" to="." method="_on_ClothesValue_text_changed"]
+[connection signal="text_changed" from="ExpensesContainer/FreetimeContainer/FreetimeValue" to="." method="_on_FreetimeValue_text_changed"]
+[connection signal="pressed" from="Done" to="." method="_on_Done_pressed"]

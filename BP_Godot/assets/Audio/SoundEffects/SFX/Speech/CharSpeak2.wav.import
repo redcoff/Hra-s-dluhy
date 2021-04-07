@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/CharSpeak2.wav-9a1dac3dd22efa758e3e10ebfcd73293.sample"
+
+[deps]
+
+source_file="res://assets/Audio/SoundEffects/SFX/Speech/CharSpeak2.wav"
+dest_files=[ "res://.import/CharSpeak2.wav-9a1dac3dd22efa758e3e10ebfcd73293.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
