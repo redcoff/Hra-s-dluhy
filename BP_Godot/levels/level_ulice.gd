@@ -22,3 +22,6 @@ func _on_dvere_pressed():
 
 func _on_do_prace_pressed():
 	exit($Buttons/Prace)
+	
+func _on_set_environment(par):
+	$Background.texture = load("res://assets/GFX/Background/ulice/" + par + ".png")

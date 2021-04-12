@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/káťa_suprised.png-17b9c7b75d1fb3d95ef986c74efcbcd9.stex"
+path="res://.import/Káťa_suprised.png-1c83a19f4b770537a51085dd0ab5ab2f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/káťa/káťa_suprised.png"
-dest_files=[ "res://.import/káťa_suprised.png-17b9c7b75d1fb3d95ef986c74efcbcd9.stex" ]
+source_file="res://assets/GFX/Characters/Káťa/Káťa_suprised.png"
+dest_files=[ "res://.import/Káťa_suprised.png-1c83a19f4b770537a51085dd0ab5ab2f.stex" ]
 
 [params]
 

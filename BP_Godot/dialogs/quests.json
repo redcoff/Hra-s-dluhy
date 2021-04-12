@@ -14,7 +14,7 @@
 	{
 		"chapter": "0",
 		"level": "Level_obyvak",
-		"quest_name": "Jdi do hospody.",
+		"quest_name": "Jdi do baru.",
 		"target": ["Door", "Door"]
 	},
 	{
@@ -74,26 +74,44 @@
 	{
 		"chapter": "3",
 		"level": "Level_obyvak",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
+	{
+		"chapter": "3",
+		"level": "Level_obyvak",
 		"quest_name": "Zaplať výdaje.",
-		"target": ["Done"]
+		"target": ["Wallet", "Paied"]
+	},
+	{
+		"chapter": "4",
+		"level": "Level_obyvak",
+		"quest_name": "",
+		"target": ["Sleep"]
 	},
 	{
 		"chapter": "4",
 		"level": "Level_obyvak",
 		"quest_name": "Zaplať výdaje.",
-		"target": ["Done"]
+		"target": ["Wallet", "Paied"]
 	},
 	{
 		"chapter": "4",
 		"level": "Level_obyvak",
 		"quest_name": "Zařiď si půjčku.",
-		"target": ["Done"]
+		"target": ["Notebook", "Loan"]
 	},
 	{
 		"chapter": "4",
 		"level": "Level_obyvak",
 		"quest_name": "Zaplať výdaje.",
-		"target": ["Done"]
-	}
+		"target": ["Paied"]
+	},
+	{
+		"chapter": "5",
+		"level": "Level_obyvak",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
 	
 ]

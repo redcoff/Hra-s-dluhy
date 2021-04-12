@@ -1,0 +1,1899 @@
+﻿[	
+	{
+		"chapter":  0,
+		"level": "Intro",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "beard_normal",
+				"position": "center",
+				"command": "",
+				"say": 
+				[
+				  "Ahoj...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_smile",
+				"position": "center",
+				"command": "",
+				"say": 
+				[
+				  "Jmenuji se Marek... Marek Novotný."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_suprised",
+				"position": "center",
+				"command": "",
+				"say": 
+				[
+				  "A mám rád.. pivo.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_sad",
+				"position": "center",
+				"command": "",
+				"say": 
+				[
+				  "Nejsem moc dobrý v seznamování, tak budu stručný. Sorry.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_smile",
+				"position": "center",
+				"command": "",
+				"say": 
+				[
+				  "Mám rodinu. S moji ženou Petrou vychováváme dvě děti. Šimonka a Káťu. Máme se rádi a je nám dobře.",
+				  "No, jsem tady od toho, abych ti povyprávěl svůj příběh. Nejsem ale dobrý vypravěč, tak pojď si ho spíš prožít semnou.",
+				  "Začalo to tady, jednou jsem tak přišel z práce a...",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_obyvak",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": [
+				  "... Ahoj zlato, dnes to byla v práci dřina."
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "worry_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": [
+				  "Ani mi nemluv, já byla dnes s Káťou na rovnátkách, zlobí se na mě za to ještě teď, ale jednou mi poděkuje.",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "sad_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": [
+				  "Akorát Máro, byla jsem dost překvapená z té ceny",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "worry2_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": [
+				  "Stálo to přes čtyři tisíce."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "suprised",
+				"position": "left",
+				"command": "",
+				"say": [
+				  "Tolik? Vždyť to je hromada peněz, za to bychom měli jídlo na dva týdny, možná déle!",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "worry2_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": [
+				  "Já vím, ale je to potřeba."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile",
+				"position": "left",
+				"command": "",
+				"say": [
+				  "No nic, jdu to rozdýchat s Liborem na pivo, to je taky potřeba."
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": [
+				  "Už zase? Nechodíš ty teď nějak často? Přijď brzy a neutrať moc."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile",
+				"position": "left",
+				"command": "",
+				"say": [
+				  "Neboj se.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile",
+				"position": "left",
+				"command": "",
+				"say": [
+				  "Tak bych měl mít všechno.. Ne počkat.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "suprised",
+				"position": "left",
+				"command": "",
+				"say": [
+				  "Kde jsem nechal peněženku?"
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_obyvak",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+					[
+					  "Tak tu je.",
+					  "Snad v ní ještě něco je."
+					]
+			}
+		],
+	},
+	{
+		"chapter":  0,
+		"level": "Level_obyvak",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Jo, to určo vystačí.",
+					"Hola hola, bar volá!"
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_ulice",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Támhle jsou dveře do baru.",
+					 "Ještě že to mám tak blízko.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_hospoda",
+		"texts":
+		[
+			{
+				"char": "Libor",
+				"emotion": "normal",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Čáu, Máro!",
+					 "Už jsem ti tu objednal jedno pivko.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "No zdar Libore! ",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "To je skvělý, díky! Tak jak se máš?",
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "thinking_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Hele jako ujde to, jen tyjo, neuvěříš, co se stalo.",
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "suprised_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Noo šli jsme dneska s manželkou do obchodu a tam...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "O nějakou dobu později...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ještě jedno, pane barman!"
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "No a to jako nepochopíš, oni tam ...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "O pár piv později...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "A chápeš to, rovnátka, čtyři tisíce, no chápeš to, já mám jednu kapsu prázdnou, druhou vysypanou a ono to stojí čtyři tisíce.",
+					 "Liboreeeee, čtyři tisíce, na to se napijem!"
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "O několik hodin později...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "*hic* a znáš támhleten hehe v..vtip..",
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "O čem to mlvuíš?",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ta jakožžže.. ta stránka.. no ta stránka..",
+					 "tten.. mejbůk.. sejbsůk... dejbůk..",
+					 "tak jakože to je jako sušák.. pračka... ne počkej, lednička to byla.",
+					 "že jakože tam chodíš co chvilu.. hehehe... i když víš, žžže tam nic není!!!"
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "hehee... Ty už radši nepij, Máro."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ko.. Kolik je vůbec hodin?"
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Tam sou hodiny! akorát já na ně nevidím..."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Hmmm.. Podívám se..."
+				]
+			},
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_hospoda",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Hm Libore, ono už jsou 3 hodiny!",
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Nojo! to tu sme zas dluho!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Mě Petra pžř.. pžžž.. pžizabije!",
+					 "hele Libčo, já ttě zvu. Pane bbarman, platím! Aj tady za Libču!"
+				]
+			},
+			{
+				"char": "Barman",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Prosím tedy pěkně pane, bude to 1 750 korun."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "No jasan, tu máte aj dýško!",
+					 "Tak dík, Libčo, seš kámoš."
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Co, si pozval ty mě, já ti mám děkk.. děkovat. Tak mazej radči."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Co, si pozval ty mě, já ti mám děkk.. děkovat. Tak mazej radči."
+				]
+			},
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_ulice",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "hhm.. kde to vlastně bydlím??",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  0,
+		"level": "Level_obyvak",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "set_enviro(obyvak_dark_light_off)",
+				"say": 
+				[
+					 "Ššššš... Musím potišku.",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "angry_eyes_left",
+				"position": "right",
+				"command": "set_enviro(obyvak_dark_light_on)",
+				"say": 
+				[
+					 "Takže takhle se brzo vracíš domů?",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "suprised",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ježiši žžženská! Sem se lekl!",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "angry_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "A ty jsi vzbudil celý barák!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "suprised",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Nnno, nne!! To ty tu budíš celý barák! HA!",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "angry_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "suprised",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "suprised",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ja du rači spát.. Ddddobrou.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Level_obyvak",
+		"texts":
+		[
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "set_enviro(obyvak)",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ráno, 8 hodin a 30 minut.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Chrrr.... Chrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr....",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "mad_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Máro! Vstávej!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Eahmmemm.. Chrrrrrrr...",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "mad_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Máááro! Za půl hodiny máš být v práci!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Chrrrrrrr...",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "mad_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Že já zavolám tvoji matce!!!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "suprised",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Co? co? co se děje? co se děje? co?",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "mad_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Vstávej, ožralče! Děcka už jsou dávno ve škole a ty se tu povaluješ! Máš být za půl hodiny v práci!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "sad",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ježiši já to včera přehnal...",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "mad_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "No o tom si popovídáme, až dojdeš domů z práce. Já už taky musím jít, tak hlavně neusni. Pa.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Jo.. jo.. jo, pa.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "mad",
+				"position": "left",
+				"command": "hide_cache",
+				"say": 
+				[
+					 "Ježiš mě bolí hlava. Kolik jsem toho včera vypil?",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "sad",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ugh, musím do práce.. Musím se nějak sebrat. Uf, uf. No. Jdu!",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Level_ulice",
+		"texts":
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Jenom co ten bar vidím, je mi zle.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Level_prace",
+		"texts":
+		[
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "O pár hodin později...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Teda, mě je špatně. A vůbec jsem se nevyspal. Možná že bych si tady mohl na chvíli zdřímnout.. Nikdo tu není.. Jenom.. na pár minutek... ",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Na konci pracovní doby...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Chrrr.. Uf.. Huh.. Coto?",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ježiši já to tu celý prospal!",
+					 "Snad mě nikdo nepotřeboval.. Nebo neviděl..",
+					 "A snad se nic nestalo.",
+					 "No, co už. Stane se.",
+					 "Jde se domů.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Level_obyvak",
+		"texts":
+		[
+			{
+				"char": "Káťa",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Taťka je domaaa! Ahoj, tati!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "No ahoj, prcku.",
+				]
+			},
+			{
+				"char": "Káťa",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Dneska jsem dostala ve školce jedničku z matiky!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Tak to je skvělý!",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Ahoj, Máro. Potřebuju s tebou něco probrat.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "mad",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ahoj, zlato, promiň, moc se omlouvám za včerejšek, jsem to přehnal..",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "worry_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "No to že jsi to včera přehnal je jedna věc, ale kolik tě to proboha stálo?",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "suprised",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Eh.. To se radši ani neptej.",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "mad_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Takhle to dál nejde, potřebujeme s tím něco udělat. Zítra jde Šimonek pro brýle.",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "worry2_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Ty nejsou o nic moc dražší než tvoje pití. A to je co říct.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "sad",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Dobře, dobře, jsem osel.. Co s tím ale budeme dělat? Víš že takhle tolik vždycky nepiju, většinou to jsou fakt jedno nebo dvě piva a jdeme s Liborem domů...",
+					"Je to dobrý kamarád..."
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "mad_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "No můžeš si tam dát třeba vodu. A nepít alkohol vůbec...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Haha, jedině, pokud ty přestaneš pít kafe.",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "suprised_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Tak na to zapomeň. Ale místo toho bychom si mohli rozplánovat peníze, co myslíš? Četla jsem na internetu článek, že je dobré si vytvořit takzvaný.. Rodinný rozpočet.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Rodinný rozpočet? To je nějaké zaklínadlo?",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Vtipný. Rodinný rozpočet je plán, kolik peněz budeme dávat třeba na nájem, jídla, do oblečení, do kafe a piva a podobně.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "suprised",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Hmm, to nezní špatně. Jak to teda provedem?",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Tak nejprve si asi vezmem tužku a papír. Co myslíš?",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "normal",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Dává smysl.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+				  "Tak.. Asi začneme s příjmy.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+				  "Sepíšeme si, kolik vyděláváš ty a já peněz.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+				  "A kolik to je dohromady.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+				  "Pak si sepíšeme kolik čeho potřebujeme pravidelně zaplatit..",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+				  "Za nájem musíme každý měsíc dát 14 800 Kč.",
+				  "Za energii a další služby musíme platit 4 000 Kč.",
+				  "To jsou věci, díky kterých můžeme v klidu bydlet v teple s horkou vodou a elektřinou.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"A teď si rozepíšeme co je potřeba zaplatit. To jsou výdaje.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+				  "Musíme zaplatit pravidelné výdaje, tedy nájem, energie a služby.",
+				  "Koukej, budeme je psát jako procenta. Vedle procent se vypočítá, kolik je to z našich peněz.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+				  "Pak musíme samozřejmě něco jíst.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+				  "Nemáme auto, ale do práce to já ani děti nemáme blízko, proto musíme platit jízdenky.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+				  "Děti rostou docela rychle, takže z oblečení, co mají teď, vyrostou a je potřeba koupit nové. I já bych ráda si koupila něco na sebe.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+				  "A pak samozřejmě náš nejoblíběnější výdaj - volný čas. Tady zahrneme tvoje piva, moje kafe, pro děti na kroužky a podobně."
+				]
+			}
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"A budeme si kontrolovat, kolik procent z příjmu jsme si rozdělili do výdajů.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Family_budget",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"Bylo by skvělé, kdyby hodnota využitých peněz byla co nejmenší.",
+					"Nevyužité peníze bychom si dali bokem, abychom si něco našetřili.",
+					"Ale zároveň musíme zaplatit všechny potřebné výdaje.",
+					"A zároveň abychom si taky udělali radost.",
+					"Jak naše příjmy rozdělíš?",
+					"Napiš jednotlivá procenta do příslušných políček.",
+					"Dávám ti na to 3 pokusy."
+				]
+			},
+		]
+	},
+	{
+		"chapter":  1,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "Petra",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"Tak, nebylo to tak těžké, ne?",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Docela to je sranda.",
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"Hehe. Jdu vyzvednout Šimonka, bude za 20 minut končit v kroužku.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Dobře.",
+					"Tak, já si jdu lehnout. Jsem utahaný jak pes.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  2,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ráno, 7 hodin.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Uaaah. Tak dobře jsem se vyspal!",
+					"Čas do práce!",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  2,
+		"level": "Level_prace",
+		"texts": 
+		[
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "Šéf",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Marek Novotný!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Ano, šéfe?",
+				]
+			},
+			{
+				"char": "Šéf",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Zkontroloval jsi včera při odchodnu všechno? Včera večer začal pípat hlavní stroj..",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Jasně, určitě jsem ho při odchodu vypnul.",
+				]
+			},
+			{
+				"char": "Šéf",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Dobře, však víš, co by se stalo, kdyby to tak nebylo.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Jojo, šéfe, to by nebylo pěkné...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"*BOOOOOM*",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Poplach! Výbuch!",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Poplach! Poplach! Evakuace!",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"O pár hodin později...",
+				]
+			},
+			{
+				"char": "Šéf",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"Marku, máš okamžitě vyhazov!!!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Ale já to určitě kontroloval!",
+				]
+			},
+			{
+				"char": "Šéf",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"Ty jsi včera celou směnu prospal! A ještě navíc je to vidět na kamerách!",
+					"A ani jsi nic nezkontroloval!",
+					"Máš okamžitou výpověď!",
+					"A škoda bude vyplacená z tvé poslední výplaty!"
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  2,
+		"level": "Level_ulice",
+		"texts": 
+		[
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "O několik hodin později...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Neuvěřitelné...",
+					 "Ještě dnes ráno bylo všechno v pořádku.",
+					 "Ráno jsem byl pracující člověk.",
+					 "A teď...",
+					 "Jsem nezaměstnaný.",
+					 "Co jen teď budu dělat?",
+					 "Jak to jen vysvětlím doma?"
+				]
+			}
+		]
+	},
+	{
+		"chapter":  2,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "sad",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Jsem doma, rodinko..."
+				]
+			},
+			{
+				"char": "Šimon",
+				"emotion": "normal_glasses",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Ahoj, tatii! Kukej, mám brýle!"
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "sad",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Máš je moc pěkné, Šimonku. Mamka je doma?"
+				]
+			},
+			{
+				"char": "Šimon",
+				"emotion": "normal_glasses",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Jojo, jsou s Káťou v pokojíčku."
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Ahoj, Máro! Stalo se něco? Vypadáš smutně.."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "sad",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Já.. Nedokážu ani popsat, co se stalo..."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "sad",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ale... Vyhodili mě z práce. Protože jsem nedával pozor na směně.. A dnes byl výbuch..."
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "suprised_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "To snad ne! Nestalo se ti nic? Nestalo se nikomu nic?"
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "sad",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Jsem v pořádku a nikdo nebyl raněn... Ale to není všechno... Celková škoda musí být zaplacena z mojí výplaty.."
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "worry2_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Hlavně že se nikomu nic nestalo!",
+					 "Marku, to zvládnem... To musíme zvládnout!",
+					 "Začneš si co nejdříve hledat novou práci?"
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "sad",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Jo budu muset... Zvládneme to, rodinko.."
+				]
+			},
+			{
+				"char": "Šimon",
+				"emotion": "suprised_glasses",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Zvládneme to, tati!!"
+				]
+			},
+			{
+				"char": "Káťa",
+				"emotion": "suprised_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Tati, jsme tu pro tebe!"
+				]
+			},
+		]
+	},
+	{
+		"chapter":  3,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "O měsíc později...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Stále jsem si nenašel práci.",
+					 "Je teď špatná doba.",
+					 "A protože já práci nemám a poslední výplata šla na vyplacení škod, co jsem provedl...",
+					 "Tak žijeme teď pouze z výplaty Petry.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  3,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Práci sice nemám, ale to bohužel nebrzdí nijak naše výdaje.",
+					 "Z toho, co máme, musíme výdaje vyplatit."
+				]
+			}
+		]
+	},
+	{
+		"chapter":  3,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "No, mohlo by to být i horší.",
+					 "Za pár dní jdu na pohovor. Tak snad to výjde."
+				]
+			}
+		]
+	},
+	{
+		"chapter":  4,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "O další měsíc později...",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Už dva měsíce jsem nezaměstnaný.",
+					 "Cítím se špatně. Peníze nám opravdu začínají docházet.",
+					 "Jak se to jen mohlo stát?",
+					 "Musím ale zaplatit výdaje."
+				]
+			}
+		]
+	},
+	{
+		"chapter":  4,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "To je zlé, to je velmi zlé...",
+					 "Nemáme na zaplacení výdajů.. Hlavně potřebujeme na nájem, energie, služby a jídlo.",
+					 "To je hodně špatné..",
+					 "Vypadá to, že si budeme muset půjčit.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  4,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Nikdy jsem si žádnou půjčku ještě nebral.",
+					 "Snad to půjde online a rychle, použiju tady náš notebook.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  4,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Zadal jsem do vyhledávače Roodle.cz, že chci půjčku.",
+					 "Vyplivlo to tyhlety odkazy. Mrknu na ně.",
+				]
+			}
+		]
+	},
+]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/věřitel_suprised.png-75add9357259e323a0cea0246ab932cc.stex"
+path="res://.import/Věřitel_suprised.png-4e3f30009e10e5f02d17a4abe7567673.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/věřitel/věřitel_suprised.png"
-dest_files=[ "res://.import/věřitel_suprised.png-75add9357259e323a0cea0246ab932cc.stex" ]
+source_file="res://assets/GFX/Characters/Věřitel/Věřitel_suprised.png"
+dest_files=[ "res://.import/Věřitel_suprised.png-4e3f30009e10e5f02d17a4abe7567673.stex" ]
 
 [params]
 

@@ -18,7 +18,8 @@ func _on_DialogBox_all_texts_finished():
 
 func load_character(name, emotion):
 	if emotion != "" and name != "..." and name != "Barman":
-		var texture_dict = 'assets/GFX/Characters/' + name + "/"
+		var texture_dict = "res://assets/GFX/Characters/" + name + "/"
+		print(texture_dict)
 		var image = load(texture_dict + name + "_" + emotion + '.png')
 		$char_sprite.set_texture(image)
 		visible = true
@@ -28,3 +29,7 @@ func load_character(name, emotion):
 func _on_DialogBox_character_second_changed(name, emotion):
 	var loaded = load_character(name, emotion)
 	if loaded: emit_signal("character_second_image_changed", $char_sprite.texture.get_size())
+
+
+func _on_DialogBox_character_third_changed(name, emotion):
+	load_character(name, emotion)

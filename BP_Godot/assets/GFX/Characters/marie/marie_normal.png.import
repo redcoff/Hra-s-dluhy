@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/marie_normal.png-f3b1906e55d414f9e10a8198bbf809df.stex"
+path="res://.import/Marie_normal.png-2335c895b61ef6f044fc95d0fadb28f2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/marie/marie_normal.png"
-dest_files=[ "res://.import/marie_normal.png-f3b1906e55d414f9e10a8198bbf809df.stex" ]
+source_file="res://assets/GFX/Characters/Marie/Marie_normal.png"
+dest_files=[ "res://.import/Marie_normal.png-2335c895b61ef6f044fc95d0fadb28f2.stex" ]
 
 [params]
 

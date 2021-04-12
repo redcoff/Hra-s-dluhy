@@ -2,6 +2,7 @@ extends Control
 
 signal texts_finished
 signal start_dialog
+signal set_environment
 
 var current_quest = null
 var parent
@@ -13,7 +14,7 @@ var micromenu_position
 func _ready():
 	$micromenu.visible = false
 	current_quest = Global.get_next_quest()
-	$micromenu/Wallet.visible = false
+	$micromenu/Wallet.visible = true
 	parent = get_parent()
 	
 #todo predelat, hruza
@@ -66,14 +67,25 @@ func hide_micromenu():
 
 
 func _on_penezenka_pressed():
-	Global.target_check($micromenu/Wallet)
-	if !parent.has_node('menu_wallet'):
+	var canTarget = Global.target_check($micromenu/Wallet)
+	if (!parent.has_node('Menu_wallet') and canTarget) or (!parent.has_node('Menu_wallet') and Global.chapter < 3):
 		build_wallet()
 	
 func build_wallet():
+	$micromenu/Wallet.hide()
 	wallet_built = true
 	firstime_open = false
 	_on_start_dialog()
-	var wallet_window = load("res://menu_wallet.tscn").instance()
+	var wallet_window = load("res://Menu_wallet.tscn").instance()
+	wallet_window.connect("wallet_exit", self, "_on_wallet_exit")
 	add_child(wallet_window)
 	move_child(wallet_window, 2)
+
+func _on_DialogBox_set_environment(par):
+	emit_signal("set_environment", par)
+	
+func _on_wallet_exit():
+	$micromenu/Wallet.show()
+	if Global.chapter > 2: _on_start_dialog()
+
+

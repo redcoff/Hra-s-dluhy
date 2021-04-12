@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/exekutor_normal.png-e9c7c09a41dcaa6f6fde82c6c20f1c03.stex"
+path="res://.import/Exekutor_normal.png-45b9d603b14d80cb50805d14caaa25c3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/exekutor/exekutor_normal.png"
-dest_files=[ "res://.import/exekutor_normal.png-e9c7c09a41dcaa6f6fde82c6c20f1c03.stex" ]
+source_file="res://assets/GFX/Characters/Exekutor/Exekutor_normal.png"
+dest_files=[ "res://.import/Exekutor_normal.png-45b9d603b14d80cb50805d14caaa25c3.stex" ]
 
 [params]
 

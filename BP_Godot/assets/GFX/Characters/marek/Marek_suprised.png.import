@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Marek_suprised.png-83473313da07f296b67f1f6e47855ee6.stex"
+path="res://.import/Marek_suprised.png-c146267a2486a2b8e04fb42dcdb8d22d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/marek/Marek_suprised.png"
-dest_files=[ "res://.import/Marek_suprised.png-83473313da07f296b67f1f6e47855ee6.stex" ]
+source_file="res://assets/GFX/Characters/Marek/Marek_suprised.png"
+dest_files=[ "res://.import/Marek_suprised.png-c146267a2486a2b8e04fb42dcdb8d22d.stex" ]
 
 [params]
 

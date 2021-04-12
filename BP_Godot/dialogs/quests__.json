@@ -1,0 +1,39 @@
+﻿[
+	{
+		"chapter": "3",
+		"level": "Level_obyvak",
+		"quest_name": "Zaplať výdaje.",
+		"target": ["Wallet", "Paied"]
+	},
+	{
+		"chapter": "4",
+		"level": "Level_obyvak",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
+	{
+		"chapter": "4",
+		"level": "Level_obyvak",
+		"quest_name": "Zaplať výdaje.",
+		"target": ["Wallet", "Paied"]
+	},
+	{
+		"chapter": "4",
+		"level": "Level_obyvak",
+		"quest_name": "Zařiď si půjčku.",
+		"target": ["Notebook", "Loan"]
+	},
+	{
+		"chapter": "4",
+		"level": "Level_obyvak",
+		"quest_name": "Zaplať výdaje.",
+		"target": ["Paied"]
+	},
+	{
+		"chapter": "5",
+		"level": "Level_obyvak",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
+	
+]

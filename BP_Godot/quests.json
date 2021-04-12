@@ -1,0 +1,117 @@
+﻿[
+	{
+		"chapter": "0",
+		"level": "Level_obyvak",
+		"quest_name": "Najdi peněženku",
+		"target": ["Wallet"]
+	},
+	{
+		"chapter": "0",
+		"level": "Level_obyvak",
+		"quest_name": "Podívej se do peněženky.",
+		"target": ["Wallet"]
+	},
+	{
+		"chapter": "0",
+		"level": "Level_obyvak",
+		"quest_name": "Jdi do hospody.",
+		"target": ["Door", "Door"]
+	},
+	{
+		"chapter": "0",
+		"level": "Level_hospoda",
+		"quest_name": "Podívej se kolik je hodin.",
+		"target": ["Clock"]
+	},
+	{
+		"chapter": "0",
+		"level": "Level_obyvak",
+		"quest_name": "Dostaň se domů.",
+		"target": ["Door", "Domu"]
+	},
+	{
+		"chapter": "0",
+		"level": "Level_obyvak",
+		"quest_name": "Vyval se na pohovku.",
+		"target": ["Sofa"]
+	},
+	{
+		"chapter": "1",
+		"level": "Level_obyvak",
+		"quest_name": "Jdi do práce.",
+		"target": ["Door", "Prace"]
+	},
+	{
+		"chapter": "1",
+		"level": "Level_ulice",
+		"quest_name": "Jdi domů.",
+		"target": ["Domu"]
+	},
+	{
+		"chapter": "1",
+		"level": "Level_obyvak",
+		"quest_name": "Sestav rodinný rozpočet.",
+		"target": ["Done"]
+	},
+	{
+		"chapter": "1",
+		"level": "Level_obyvak",
+		"quest_name": "Jdi spát.",
+		"target": ["Sleep"]
+	},
+	{
+		"chapter": "2",
+		"level": "Level_obyvak",
+		"quest_name": "Jdi do práce.",
+		"target": ["Door", "Prace"]
+	},
+	{
+		"chapter": "2",
+		"level": "Level_ulice",
+		"quest_name": "Jdi domů.",
+		"target": ["Domu"]
+	},
+	{
+		"chapter": "3",
+		"level": "Level_obyvak",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
+	{
+		"chapter": "3",
+		"level": "Level_obyvak",
+		"quest_name": "Zaplať výdaje.",
+		"target": ["Paied"]
+	},
+	{
+		"chapter": "4",
+		"level": "Level_obyvak",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
+	{
+		"chapter": "4",
+		"level": "Level_obyvak",
+		"quest_name": "Zaplať výdaje.",
+		"target": ["Paied"]
+	},
+	{
+		"chapter": "4",
+		"level": "Level_obyvak",
+		"quest_name": "Zařiď si půjčku.",
+		"target": ["Loan"]
+	},
+	{
+		"chapter": "4",
+		"level": "Level_obyvak",
+		"quest_name": "Zaplať výdaje.",
+		"target": ["Paied"]
+	},
+	{
+		"chapter": "5",
+		"level": "Level_obyvak",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
+	
+]

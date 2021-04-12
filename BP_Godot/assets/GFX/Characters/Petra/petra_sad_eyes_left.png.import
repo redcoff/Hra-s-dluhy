@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/petra_sad_eyes_left.png-b2a219802b8501fa7128c74d9f787054.stex"
+path="res://.import/Petra_sad_eyes_left.png-70ee87c66f0f440f2463744dc88c2199.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/Petra/petra_sad_eyes_left.png"
-dest_files=[ "res://.import/petra_sad_eyes_left.png-b2a219802b8501fa7128c74d9f787054.stex" ]
+source_file="res://assets/GFX/Characters/Petra/Petra_sad_eyes_left.png"
+dest_files=[ "res://.import/Petra_sad_eyes_left.png-70ee87c66f0f440f2463744dc88c2199.stex" ]
 
 [params]
 

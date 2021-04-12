@@ -10,3 +10,6 @@ func _ready():
 
 func _on_HUD_texts_finished():
 	parent.next_level()
+
+func _on_set_environment(par):
+	$Background.texture = load("res://assets/GFX/Background/" + par + ".png")

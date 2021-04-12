@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/petra_sad.png-89758282c825ee96d5c0e971b01344c7.stex"
+path="res://.import/Petra_sad.png-fd7e03309d7009917d2cbc50f4abd970.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/Petra/petra_sad.png"
-dest_files=[ "res://.import/petra_sad.png-89758282c825ee96d5c0e971b01344c7.stex" ]
+source_file="res://assets/GFX/Characters/Petra/Petra_sad.png"
+dest_files=[ "res://.import/Petra_sad.png-fd7e03309d7009917d2cbc50f4abd970.stex" ]
 
 [params]
 

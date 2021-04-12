@@ -21,6 +21,8 @@ extends Control
 signal character_changed
 signal all_texts_finished
 signal character_second_changed
+signal set_environment
+signal character_third_changed
 
 var finished = false; #finished current sentence
 var dialog_index = 0
@@ -28,6 +30,8 @@ var current_text = null #current block of texts.
 var text_index = 0
 var dialog_done = false
 var isMonolog = false
+
+var regex = RegEx.new()
 
 
 var cached_character = {
@@ -64,6 +68,7 @@ var CHAR_PER_SEC = 1/15.0
 var pos
 
 func _ready():
+	regex.compile("\\((.*)\\)")
 	$SpeakAudio1.stream = Sound.character_speak_sound_1
 	$SpeakAudio2.stream = Sound.character_speak_sound_2
 	$SpeakAudio3.stream = Sound.character_speak_sound_3
@@ -90,7 +95,7 @@ func write_next_dialog():
 		return
 	
 func load_dialog(dialog):
-	var dialogSay = dialog.texts[text_index].say
+	var dialogSay = dialog. texts[text_index].say
 	if dialog_index >= dialogSay.size():
 		text_index += 1
 		if dialog.texts.size() == text_index:
@@ -100,11 +105,12 @@ func load_dialog(dialog):
 			dialogSay = dialog.texts[text_index].say
 			dialog_index = 0
 	
+	print(dialogSay[dialog_index])
 	pos = dialog.texts[text_index].position
 	var character_name = dialog.texts[text_index].char
 	var emotion = dialog.texts[text_index].emotion
 	var command = dialog.texts[text_index].command
-	
+
 	if command != null:
 		apply_command(command)
 
@@ -112,7 +118,10 @@ func load_dialog(dialog):
 	show_dialog(character_name, dialogSay[dialog_index], emotion)
 	dialog_index += 1
 	
-	if(character_name != "..." and character_name != "Barman" and character_name != cached_character.char):
+	if(character_name != "..." 
+	and character_name != "Barman" 
+	and character_name != cached_character.char 
+	and emotion != cached_character.emotion):
 		cached_character.char = character_name
 		cached_character.emotion = emotion
 		cached_character.position = pos
@@ -129,10 +138,10 @@ func show_dialog(char_name, say, emotion = ""):
 	var transition_anim = $Transition/AnimationPlayerTransition
 	if char_name == "..." and !$Transition.visible:
 		$Transition.visible = true
-		transition_anim.play_backwards("transition_in")
+		#transition_anim.play_backwards("transition_in")
 		#yield( get_node("Transition/AnimationPlayerTransition"), "animation_finished" )
 	elif char_name != "..." and $Transition.visible: 
-		transition_anim.play("transition_in")
+		#transition_anim.play("transition_in")
 		#yield( get_node("Transition/AnimationPlayerTransition"), "animation_finished" )
 		$Transition.visible = false
 	visible = true
@@ -182,7 +191,38 @@ func finish_dialog():
 
 
 func apply_command(command):
-	if(command == "hide_cache"): get_parent().get_node("Character2").hide()
+	var res = regex.search(command)
+	if res != null and "set_enviro" in command:
+		var par = res.strings[1]
+		emit_signal("set_environment", par)
+	elif res != null and "deduct_money" in command:
+		var par = res.strings[1]
+		Global.current_cash = Global.current_cash - int(par)
+	elif(command == "hide_cache"): 
+		get_parent().get_node("Character2").hide()
+	elif(command == "loose_revenues"):
+		Global.revenues["marek"] = 0
+	elif("set_clock" in command and res!= null):
+		var par = res.strings[1]
+		emit_signal("set_environment", par)
+	elif("set_character" in command):
+		var par_arr = res.strings[1].split(",", true)
+		var character_node = par_arr[0]  
+		var character_name = par_arr[1]
+		var character_emotion = par_arr[2]
+		set_character(character_node, character_name, character_emotion)
+	elif("hide_character" in command):
+		var character_node = res.strings[1]
+		hide_character(character_node)
+		
+func hide_character(character_node):
+	var node = get_parent().get_node(character_node)
+	node.hide()
+
+func set_character(character_node, character_image_name, character_emotion):
+	var node = get_parent().get_node(character_node)
+	node.show()
+	emit_signal("character_third_changed", character_image_name, character_emotion)
 	
 
 func _on_HUD_start_dialog(text = null):
@@ -223,14 +263,19 @@ func _on_Tween_tween_step(object, key, elapsed, value):
 		char_played_cache = char_step
 
 func calculate_position(size, char_pos):
+	var environment_size
+	if Global.ENVIRONMENT == "HTML5":
+		environment_size = OS.window_size
+	else:
+		environment_size = OS.get_screen_size()
 	var pos_x
 	var pos_y
 	if char_pos == "right":
-		pos_x = (OS.get_screen_size().x - (OS.get_screen_size().x / POSITION["left"][0])) - (size.x/POSITION["left"][0])
-		pos_y = (OS.get_screen_size().y /POSITION["left"][1])  - (size.y / POSITION["left"][1]) + OFFSET
+		pos_x = (environment_size.x - (environment_size.x / POSITION["left"][0])) - (size.x/POSITION["left"][0])
+		pos_y = (environment_size.y /POSITION["left"][1])  - (size.y / POSITION["left"][1]) + OFFSET
 	else:
-		pos_x = (OS.get_screen_size().x / POSITION[char_pos][0]) - (size.x/POSITION[char_pos][0])
-		pos_y = (OS.get_screen_size().y /POSITION[char_pos][1])  - (size.y / POSITION[char_pos][1]) + OFFSET
+		pos_x = (environment_size.x / POSITION[char_pos][0]) - (size.x/POSITION[char_pos][0])
+		pos_y = (environment_size.y /POSITION[char_pos][1])  - (size.y / POSITION[char_pos][1]) + OFFSET
 	return Vector2(pos_x, pos_y)
 
 func _on_Character_character_image_changed(size):

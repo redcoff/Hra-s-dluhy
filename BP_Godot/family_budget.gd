@@ -293,12 +293,20 @@ func _on_Done_pressed():
 
 	
 func set_good_budget():
-	$ExpensesContainer/RentContainer/RentValue.text = str(round(value_to_percentage(to_pay["rent"])))
-	$ExpensesContainer/EnergyContainer/EnergyValue.text = str(round(value_to_percentage(to_pay["energy"])))
-	$ExpensesContainer/FoodContainer/FoodValue.text = str(GOOD_BUDGET["food"])
-	$ExpensesContainer/TransportContainer/TransportValue.text = str(GOOD_BUDGET["transport"])
-	$ExpensesContainer/ClothesContainer/ClothesValue.text = str(GOOD_BUDGET["clothes"])
-	$ExpensesContainer/FreetimeContainer/FreetimeValue.text =  str(GOOD_BUDGET["freetime"])
+	for label in get_tree().get_nodes_in_group("expense"):
+		var label_name = label.name.to_lower()
+		label_name.erase(label_name.length() - 5, 5)
+		
+		if label_name == "rent" or label_name == "energy": 
+			var percentage = round(value_to_percentage(to_pay[label_name]))
+			label.set_text(str(percentage))
+			label.text = str(percentage)
+		else:
+			label.text =  str(GOOD_BUDGET[label_name])
+			expenses[label_name] = GOOD_BUDGET[label_name]
+		label_name = label_name.capitalize()
+		var node_label = label_name + "Label"
+		calculate_money(get_node("ExpensesContainer/" + label_name + "Container/" + node_label))
 	calculate()
 
 func show_values():

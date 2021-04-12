@@ -12,11 +12,28 @@ var current_quest_target
 var bad_target_texts
 var hasWallet = false
 
+var ENVIRONMENT = ""
+
+var expenses = {
+	"rent": 14800,
+	"energy": 4000,
+	"food": 4000,
+	"transport": 2000,
+	"clothes": 2000,
+	"freetime": 2000,
+}
+var revenues = {
+	"marek": 22000,
+	"petra": 18000,
+	"save": 4000,
+}
+
 
 func _ready():
-	texts = get_dialog_file('dialogs/dialogs.json')
-	quests = get_dialog_file('dialogs/quests.json')
-	bad_target_texts = get_dialog_file('dialogs/monologs.json')
+	ENVIRONMENT = OS.get_name()
+	texts = get_dialog_file("res://dialogs/dialogs.json")
+	quests = get_dialog_file("res://dialogs/quests.json")
+	bad_target_texts = get_dialog_file("res://dialogs/monologs.json")
 
 func update_dialogSystemIndex():
 	dialogSystemIndex += 1
@@ -76,7 +93,7 @@ func pop_good_target():
 		current_quest_target.pop_front()
 		
 func target_check(curr_target):
-	if curr_target is String:
+	if curr_target is String:  
 		if curr_target == current_quest_target[0]:
 			Global.pop_good_target()
 			return true

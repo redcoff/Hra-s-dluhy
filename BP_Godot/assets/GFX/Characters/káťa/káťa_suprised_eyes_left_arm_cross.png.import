@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/káťa_suprised_eyes_left_arm_cross.png-67f33c3e16a99d9cb4eb2d1dbc163a4c.stex"
+path="res://.import/Káťa_suprised_eyes_left_arm_cross.png-63787cc82b97ca3772afecaeecba4dc0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/káťa/káťa_suprised_eyes_left_arm_cross.png"
-dest_files=[ "res://.import/káťa_suprised_eyes_left_arm_cross.png-67f33c3e16a99d9cb4eb2d1dbc163a4c.stex" ]
+source_file="res://assets/GFX/Characters/Káťa/Káťa_suprised_eyes_left_arm_cross.png"
+dest_files=[ "res://.import/Káťa_suprised_eyes_left_arm_cross.png-63787cc82b97ca3772afecaeecba4dc0.stex" ]
 
 [params]
 

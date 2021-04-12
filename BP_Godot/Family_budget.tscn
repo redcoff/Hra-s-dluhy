@@ -23,12 +23,12 @@ size = 60
 outline_color = Color( 0.996078, 0.968627, 0.996078, 1 )
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2824]
+[sub_resource type="DynamicFont" id=5]
 size = 50
 extra_spacing_bottom = -20
 font_data = ExtResource( 3 )
 
-[sub_resource type="StyleBoxFlat" id=2825]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.870588, 0.870588, 0.870588, 0.556863 )
 draw_center = false
 border_width_bottom = 2
@@ -36,18 +36,18 @@ border_color = Color( 0, 0, 0, 1 )
 corner_detail = 1
 shadow_color = Color( 0, 0, 0, 0.45098 )
 
-[sub_resource type="DynamicFont" id=1452]
+[sub_resource type="DynamicFont" id=7]
 size = 40
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=1453]
+[sub_resource type="DynamicFont" id=8]
 size = 80
 font_data = ExtResource( 3 )
 
-[sub_resource type="Curve" id=1454]
+[sub_resource type="Curve" id=9]
 _data = [ Vector2( 0.00770713, 0.209091 ), 0.0, 0.0, 0, 0, Vector2( 0.146435, 0.572727 ), 2.76937, 0.0, 0, 0, Vector2( 0.304432, 0.409091 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="DynamicFont" id=2823]
+[sub_resource type="DynamicFont" id=10]
 size = 50
 font_data = ExtResource( 1 )
 
@@ -297,18 +297,20 @@ custom_constants/separation = 20
 margin_top = 2.0
 margin_right = 133.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2824 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Nájem:"
 percent_visible = 0.0
 
-[node name="RentValue" type="LineEdit" parent="ExpensesContainer/RentContainer"]
+[node name="RentValue" type="LineEdit" parent="ExpensesContainer/RentContainer" groups=[
+"expense",
+]]
 visible = false
 margin_left = 153.0
 margin_right = 210.0
 margin_bottom = 59.0
-custom_styles/normal = SubResource( 2825 )
-custom_fonts/font = SubResource( 2824 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/minimum_spaces = 3
 align = 1
@@ -322,7 +324,7 @@ margin_right = 204.0
 margin_bottom = 56.0
 grow_horizontal = 0
 grow_vertical = 0
-custom_fonts/font = SubResource( 2824 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = " %"
 percent_visible = 0.0
@@ -331,7 +333,7 @@ percent_visible = 0.0
 margin_left = 224.0
 margin_right = 322.0
 margin_bottom = 59.0
-custom_fonts/font = SubResource( 1452 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "(0 Kč)"
 align = 2
@@ -351,18 +353,20 @@ __meta__ = {
 margin_top = 2.0
 margin_right = 341.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2824 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Energie a služby:"
 percent_visible = 0.0
 
-[node name="EnergyValue" type="LineEdit" parent="ExpensesContainer/EnergyContainer"]
+[node name="EnergyValue" type="LineEdit" parent="ExpensesContainer/EnergyContainer" groups=[
+"expense",
+]]
 visible = false
 margin_left = 361.0
 margin_right = 418.0
 margin_bottom = 59.0
-custom_styles/normal = SubResource( 2825 )
-custom_fonts/font = SubResource( 2824 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/minimum_spaces = 3
 align = 1
@@ -373,7 +377,7 @@ margin_left = 361.0
 margin_top = 2.0
 margin_right = 412.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2824 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = " %"
 percent_visible = 0.0
@@ -382,7 +386,7 @@ percent_visible = 0.0
 margin_left = 432.0
 margin_right = 530.0
 margin_bottom = 59.0
-custom_fonts/font = SubResource( 1452 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "(0 Kč)"
 percent_visible = 0.0
@@ -397,18 +401,20 @@ custom_constants/separation = 20
 margin_top = 2.0
 margin_right = 91.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2824 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Jídlo:"
 percent_visible = 0.0
 
-[node name="FoodValue" type="LineEdit" parent="ExpensesContainer/FoodContainer"]
+[node name="FoodValue" type="LineEdit" parent="ExpensesContainer/FoodContainer" groups=[
+"expense",
+]]
 visible = false
 margin_left = 361.0
 margin_right = 418.0
 margin_bottom = 59.0
-custom_styles/normal = SubResource( 2825 )
-custom_fonts/font = SubResource( 2824 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/minimum_spaces = 3
 align = 1
@@ -419,7 +425,7 @@ margin_left = 111.0
 margin_top = 2.0
 margin_right = 162.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2824 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = " %"
 percent_visible = 0.0
@@ -428,7 +434,7 @@ percent_visible = 0.0
 margin_left = 182.0
 margin_right = 280.0
 margin_bottom = 59.0
-custom_fonts/font = SubResource( 1452 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "(0 Kč)"
 percent_visible = 0.0
@@ -443,18 +449,20 @@ custom_constants/separation = 20
 margin_top = 2.0
 margin_right = 177.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2824 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Doprava:"
 percent_visible = 0.0
 
-[node name="TransportValue" type="LineEdit" parent="ExpensesContainer/TransportContainer"]
+[node name="TransportValue" type="LineEdit" parent="ExpensesContainer/TransportContainer" groups=[
+"expense",
+]]
 visible = false
 margin_left = 361.0
 margin_right = 418.0
 margin_bottom = 59.0
-custom_styles/normal = SubResource( 2825 )
-custom_fonts/font = SubResource( 2824 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/minimum_spaces = 3
 align = 1
@@ -465,7 +473,7 @@ margin_left = 197.0
 margin_top = 2.0
 margin_right = 248.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2824 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = " %"
 percent_visible = 0.0
@@ -474,7 +482,7 @@ percent_visible = 0.0
 margin_left = 268.0
 margin_right = 366.0
 margin_bottom = 59.0
-custom_fonts/font = SubResource( 1452 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "(0 Kč)"
 percent_visible = 0.0
@@ -489,18 +497,20 @@ custom_constants/separation = 20
 margin_top = 2.0
 margin_right = 171.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2824 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Oblečení:"
 percent_visible = 0.0
 
-[node name="ClothesValue" type="LineEdit" parent="ExpensesContainer/ClothesContainer"]
+[node name="ClothesValue" type="LineEdit" parent="ExpensesContainer/ClothesContainer" groups=[
+"expense",
+]]
 visible = false
 margin_left = 361.0
 margin_right = 418.0
 margin_bottom = 59.0
-custom_styles/normal = SubResource( 2825 )
-custom_fonts/font = SubResource( 2824 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/minimum_spaces = 3
 align = 1
@@ -511,7 +521,7 @@ margin_left = 191.0
 margin_top = 2.0
 margin_right = 242.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2824 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = " %"
 percent_visible = 0.0
@@ -520,7 +530,7 @@ percent_visible = 0.0
 margin_left = 262.0
 margin_right = 360.0
 margin_bottom = 59.0
-custom_fonts/font = SubResource( 1452 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "(0 Kč)"
 percent_visible = 0.0
@@ -535,18 +545,20 @@ custom_constants/separation = 20
 margin_top = 2.0
 margin_right = 194.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2824 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Volný čas:"
 percent_visible = 0.0
 
-[node name="FreetimeValue" type="LineEdit" parent="ExpensesContainer/FreetimeContainer"]
+[node name="FreetimeValue" type="LineEdit" parent="ExpensesContainer/FreetimeContainer" groups=[
+"expense",
+]]
 visible = false
 margin_left = 361.0
 margin_right = 418.0
 margin_bottom = 59.0
-custom_styles/normal = SubResource( 2825 )
-custom_fonts/font = SubResource( 2824 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/minimum_spaces = 3
 align = 1
@@ -557,7 +569,7 @@ margin_left = 214.0
 margin_top = 2.0
 margin_right = 265.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2824 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = " %"
 percent_visible = 0.0
@@ -566,7 +578,7 @@ percent_visible = 0.0
 margin_left = 285.0
 margin_right = 383.0
 margin_bottom = 59.0
-custom_fonts/font = SubResource( 1452 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "(0 Kč)"
 percent_visible = 0.0
@@ -584,7 +596,7 @@ __meta__ = {
 [node name="TotalLabel" type="Label" parent="TotalContainer"]
 margin_right = 480.0
 margin_bottom = 118.0
-custom_fonts/font = SubResource( 1453 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Využité peníze:"
 percent_visible = 0.0
@@ -596,7 +608,7 @@ __meta__ = {
 margin_left = 490.0
 margin_right = 605.0
 margin_bottom = 118.0
-custom_fonts/font = SubResource( 1453 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
@@ -611,7 +623,7 @@ __meta__ = {
 visible = false
 position = Vector2( 465.459, 299.892 )
 points = PoolVector2Array( -24.419, 12.935, 23.581, 4.435, 52.081, 32.435 )
-width_curve = SubResource( 1454 )
+width_curve = SubResource( 9 )
 default_color = Color( 0, 0, 0, 1 )
 joint_mode = 2
 begin_cap_mode = 2
@@ -621,7 +633,7 @@ end_cap_mode = 2
 visible = false
 position = Vector2( 467.283, 344.971 )
 points = PoolVector2Array( -30.2431, 27.8564, 15.7569, 33.8564, 48.7569, 4.85645 )
-width_curve = SubResource( 1454 )
+width_curve = SubResource( 9 )
 default_color = Color( 0, 0, 0, 1 )
 joint_mode = 2
 begin_cap_mode = 2
@@ -633,15 +645,15 @@ margin_left = 1631.57
 margin_top = 964.111
 margin_right = 1853.57
 margin_bottom = 1037.11
-custom_fonts/font = SubResource( 2823 )
+custom_fonts/font = SubResource( 10 )
 text = "Hotovo!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tween" type="Tween" parent="."]
-[connection signal="text_changed" from="ExpensesContainer/RentContainer/RentValue" to="." method="_on_RentValue_text_changed"]
 [connection signal="text_changed" from="ExpensesContainer/RentContainer/RentValue" to="ExpensesContainer/RentContainer/RentValue" method="_on_RentValue_text_changed"]
+[connection signal="text_changed" from="ExpensesContainer/RentContainer/RentValue" to="." method="_on_RentValue_text_changed"]
 [connection signal="text_changed" from="ExpensesContainer/EnergyContainer/EnergyValue" to="." method="_on_EnergyValue_text_changed"]
 [connection signal="text_changed" from="ExpensesContainer/FoodContainer/FoodValue" to="." method="_on_FoodValue_text_changed"]
 [connection signal="text_changed" from="ExpensesContainer/TransportContainer/TransportValue" to="." method="_on_TransportValue_text_changed"]

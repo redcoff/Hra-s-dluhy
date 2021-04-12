@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Marek_beard_angry.png-f051040f51e4fd810213eb5ef7622fd2.stex"
+path="res://.import/Marek_beard_angry.png-f710173fff93c233555578da9e7487bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/marek/Marek_beard_angry.png"
-dest_files=[ "res://.import/Marek_beard_angry.png-f051040f51e4fd810213eb5ef7622fd2.stex" ]
+source_file="res://assets/GFX/Characters/Marek/Marek_beard_angry.png"
+dest_files=[ "res://.import/Marek_beard_angry.png-f710173fff93c233555578da9e7487bf.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/káťa_sad_eyes_left.png-1ee3c2c19539d1139bda26a6d0233d80.stex"
+path="res://.import/Káťa_sad_eyes_left.png-ee180ea902364f98eace3998f38fad50.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/káťa/káťa_sad_eyes_left.png"
-dest_files=[ "res://.import/káťa_sad_eyes_left.png-1ee3c2c19539d1139bda26a6d0233d80.stex" ]
+source_file="res://assets/GFX/Characters/Káťa/Káťa_sad_eyes_left.png"
+dest_files=[ "res://.import/Káťa_sad_eyes_left.png-ee180ea902364f98eace3998f38fad50.stex" ]
 
 [params]
 

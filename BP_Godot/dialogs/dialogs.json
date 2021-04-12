@@ -26,16 +26,6 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "beard_suprised",
-				"position": "center",
-				"command": "",
-				"say": 
-				[
-				  "A mám rád.. pivo.",
-				]
-			},
-			{
-				"char": "Marek",
 				"emotion": "beard_sad",
 				"position": "center",
 				"command": "",
@@ -65,7 +55,7 @@
 		[
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "normal_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": [
@@ -101,7 +91,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "suprised",
+				"emotion": "suprised_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": [
@@ -119,7 +109,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "smile",
+				"emotion": "smile_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": [
@@ -137,7 +127,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "smile",
+				"emotion": "normal_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": [
@@ -236,7 +226,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "normal_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -246,7 +236,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "smile",
+				"emotion": "smile_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -288,7 +278,7 @@
 				"char": "...",
 				"emotion": "",
 				"position": "left",
-				"command": "",
+				"command": "set_clock(ten)",
 				"say": 
 				[
 					 "O nějakou dobu později...",
@@ -296,7 +286,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "smile_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -306,7 +296,7 @@
 			},
 			{
 				"char": "Libor",
-				"emotion": "normal_eyes_left",
+				"emotion": "thinking_eyes_left",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -318,7 +308,7 @@
 				"char": "...",
 				"emotion": "",
 				"position": "left",
-				"command": "",
+				"command": "set_clock(twelve)",
 				"say": 
 				[
 					 "...",
@@ -336,7 +326,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "suprised_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -349,7 +339,7 @@
 				"char": "...",
 				"emotion": "",
 				"position": "left",
-				"command": "",
+				"command": "set_clock(three)",
 				"say": 
 				[
 					 "...",
@@ -366,18 +356,28 @@
 				]
 			},
 			{
+				"char": "Libor",
+				"emotion": "normal_eyes_left_drunk",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Tak to máme doma takový skvělý.",
+				]
+			},
+			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "smile_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
 				[
-					 "*hic* a znáš támhleten hehe v..vtip..",
+					 "*hic* A znáš támhleten hehe v..vtip..",
 				]
 			},
 			{
 				"char": "Libor",
-				"emotion": "normal_eyes_left",
+				"emotion": "normal_eyes_left_drunk",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -387,7 +387,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "smile_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -400,7 +400,7 @@
 			},
 			{
 				"char": "Libor",
-				"emotion": "normal_eyes_left",
+				"emotion": "normal_eyes_left_drunk",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -410,7 +410,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "suprised_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -420,7 +420,7 @@
 			},
 			{
 				"char": "Libor",
-				"emotion": "normal_eyes_left",
+				"emotion": "normal_eyes_left_drunk",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -430,7 +430,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "smile_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -447,7 +447,7 @@
 		[
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "suprised_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -457,7 +457,7 @@
 			},
 			{
 				"char": "Libor",
-				"emotion": "normal_eyes_left",
+				"emotion": "normal_eyes_left_drunk",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -467,13 +467,23 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "suprised_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
 				[
 					 "Mě Petra pžř.. pžžž.. pžizabije!",
 					 "hele Libčo, já ttě zvu. Pane bbarman, platím! Aj tady za Libču!"
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal_eyes_left_drunk",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "To nemusííííš.",
 				]
 			},
 			{
@@ -488,18 +498,27 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "smile_drunk_eyes_right",
+				"position": "left",
+				"command": "deduct_money(2000)",
+				"say": 
+				[
+					 "No jasan, tu máte aj dýško!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "smile_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
 				[
-					 "No jasan, tu máte aj dýško!",
 					 "Tak dík, Libčo, seš kámoš."
 				]
 			},
 			{
 				"char": "Libor",
-				"emotion": "normal_eyes_left",
+				"emotion": "normal_eyes_left_drunk",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -509,12 +528,12 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "smile_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
 				[
-					 "Co, si pozval ty mě, já ti mám děkk.. děkovat. Tak mazej radči."
+					 "Haha... Čau!"
 				]
 			},
 		]
@@ -528,7 +547,7 @@
 				"char": "Marek",
 				"emotion": "",
 				"position": "left",
-				"command": "",
+				"command": "set_enviro(ulice_night)",
 				"say": 
 				[
 					 "hhm.. kde to vlastně bydlím??",
@@ -545,7 +564,7 @@
 				"char": "Marek",
 				"emotion": "",
 				"position": "left",
-				"command": "",
+				"command": "set_enviro(obyvak_dark_light_off)",
 				"say": 
 				[
 					 "Ššššš... Musím potišku.",
@@ -555,7 +574,7 @@
 				"char": "Petra",
 				"emotion": "angry_eyes_left",
 				"position": "right",
-				"command": "",
+				"command": "set_enviro(obyvak_dark_light_on)",
 				"say": 
 				[
 					 "Takže takhle se brzo vracíš domů?",
@@ -563,7 +582,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "suprised",
+				"emotion": "suprised_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -583,7 +602,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "suprised",
+				"emotion": "smile_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -603,7 +622,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "suprised",
+				"emotion": "suprised_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -613,7 +632,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "suprised",
+				"emotion": "suprised_drunk_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -632,7 +651,7 @@
 				"char": "...",
 				"emotion": "",
 				"position": "left",
-				"command": "",
+				"command": "set_enviro(obyvak)",
 				"say": 
 				[
 					 "...",
@@ -642,7 +661,7 @@
 				"char": "...",
 				"emotion": "",
 				"position": "left",
-				"command": "",
+				"command": "set_character(Character3,Marek,sleeping)",
 				"say": 
 				[
 					 "Ráno, 8 hodin a 30 minut.",
@@ -672,7 +691,7 @@
 				"char": "Marek",
 				"emotion": "",
 				"position": "left",
-				"command": "",
+				"command": "set_character(Character3,Marek,sleeping_2)",
 				"say": 
 				[
 					 "Eahmmemm.. Chrrrrrrr...",
@@ -680,7 +699,7 @@
 			},
 			{
 				"char": "Petra",
-				"emotion": "mad_eyes_left",
+				"emotion": "worry_eyes_left",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -692,7 +711,7 @@
 				"char": "Marek",
 				"emotion": "",
 				"position": "left",
-				"command": "",
+				"command": "set_character(Character3,Marek,sleeping)",
 				"say": 
 				[
 					 "Chrrrrrrr...",
@@ -700,7 +719,7 @@
 			},
 			{
 				"char": "Petra",
-				"emotion": "mad_eyes_left",
+				"emotion": "angry_eyes_left",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -712,7 +731,7 @@
 				"char": "Marek",
 				"emotion": "suprised",
 				"position": "left",
-				"command": "",
+				"command": "hide_character(Character3)",
 				"say": 
 				[
 					 "Co? co? co se děje? co se děje? co?",
@@ -730,7 +749,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "sad",
+				"emotion": "sad_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -740,7 +759,7 @@
 			},
 			{
 				"char": "Petra",
-				"emotion": "mad_eyes_left",
+				"emotion": "worry_eyes_left",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -750,7 +769,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "",
+				"emotion": "suprised_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -789,7 +808,7 @@
 				"char": "Marek",
 				"emotion": "",
 				"position": "left",
-				"command": "",
+				"command": "set_enviro(ulice_light)",
 				"say": 
 				[
 					 "Jenom co ten bar vidím, je mi zle.",
@@ -895,7 +914,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "normal_eyes_down",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -910,12 +929,12 @@
 				"command": "",
 				"say": 
 				[
-					 "Dneska jsem dostala ve školce jedničku z matiky!",
+					 "Dneska jsem dostala ve škole jedničku z matiky!",
 				]
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "smile_eyes_down",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -935,7 +954,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "mad",
+				"emotion": "sad_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -955,7 +974,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "suprised",
+				"emotion": "suprised_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -985,7 +1004,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "sad",
+				"emotion": "sad_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1006,7 +1025,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "normal_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1026,7 +1045,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "smile_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1046,7 +1065,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "suprised",
+				"emotion": "suprised_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1066,7 +1085,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "normal",
+				"emotion": "normal_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1157,8 +1176,8 @@
 				"say": 
 				[
 				  "Za nájem musíme každý měsíc dát 14 800 Kč.",
-				  "Za energii a další služby musíme platit 4 000 Kč.",
-				  "To jsou věci, díky kterých můžeme v klidu bydlet v teple s horkou vodou a elektřinou.",
+				  "Za energie a další služby musíme platit 4 000 Kč.",
+				  "To jsou věci, díky kterým můžeme v klidu bydlet v teple s horkou vodou a elektřinou.",
 				]
 			},
 		]
@@ -1175,7 +1194,7 @@
 				"command": "",
 				"say": 
 				[
-					"A teď si rozepíšeme co je potřeba zaplatit. To jsou výdaje.",
+					"A teď si rozepíšeme, co je potřeba zaplatit. To jsou výdaje.",
 				]
 			},
 		]
@@ -1244,7 +1263,7 @@
 				"command": "",
 				"say": 
 				[
-				  "Děti rostou docela rychle, takže z oblečení, co mají teď, vyrostou a je potřeba koupit nové. I já bych ráda si koupila něco na sebe.",
+				  "Děti rostou docela rychle, takže z oblečení, co mají teď, vyrostou a je potřeba koupit nové. I já bych si ráda něco koupila na sebe.",
 				]
 			}
 		]
@@ -1323,7 +1342,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "smile",
+				"emotion": "smile_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1343,7 +1362,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "smile",
+				"emotion": "normal_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1409,7 +1428,7 @@
 			},
 			{
 				"char": "Šéf",
-				"emotion": "",
+				"emotion": "angry_eyes_left",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -1419,7 +1438,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "",
+				"emotion": "suprised_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1429,7 +1448,7 @@
 			},
 			{
 				"char": "Šéf",
-				"emotion": "",
+				"emotion": "sad_eyes_left",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -1439,7 +1458,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "",
+				"emotion": "smile_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1449,7 +1468,7 @@
 			},
 			{
 				"char": "Šéf",
-				"emotion": "",
+				"emotion": "smile_eyes_left",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -1459,7 +1478,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "",
+				"emotion": "normal_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1481,7 +1500,7 @@
 				"char": "...",
 				"emotion": "",
 				"position": "left",
-				"command": "",
+				"command": "set_enviro(továrna_boom)",
 				"say": 
 				[
 					"*BOOOOOM*",
@@ -1529,7 +1548,7 @@
 			},
 			{
 				"char": "Šéf",
-				"emotion": "",
+				"emotion": "angry_eyes_left",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -1539,7 +1558,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "",
+				"emotion": "angry_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1549,7 +1568,7 @@
 			},
 			{
 				"char": "Šéf",
-				"emotion": "",
+				"emotion": "angry_eyes_left",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -1622,7 +1641,7 @@
 			},
 			{
 				"char": "Šimon",
-				"emotion": "normal_glasses",
+				"emotion": "normal_glasses_eyes_left",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -1632,7 +1651,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "sad",
+				"emotion": "sad_eyes_down",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1642,7 +1661,7 @@
 			},
 			{
 				"char": "Šimon",
-				"emotion": "normal_glasses",
+				"emotion": "suprised_glasses_eyes_left",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -1651,33 +1670,13 @@
 				]
 			},
 			{
-				"char": "Petra",
-				"emotion": "normal_eyes_left",
-				"position": "right",
-				"command": "",
-				"say": 
-				[
-					 "Ahoj, Máro! Stalo se něco? Vypadáš smutně.."
-				]
-			},
-			{
 				"char": "Marek",
-				"emotion": "sad",
+				"emotion": "sad_eyes_down",
 				"position": "left",
 				"command": "",
 				"say": 
 				[
-					 "Já.. Nedokážu ani popsat, co se stalo..."
-				]
-			},
-			{
-				"char": "Marek",
-				"emotion": "sad",
-				"position": "left",
-				"command": "",
-				"say": 
-				[
-					 "Ale... Vyhodili mě z práce. Protože jsem nedával pozor na směně.. A dnes byl výbuch..."
+					 "Aha dobře... Jo, už jdou."
 				]
 			},
 			{
@@ -1687,12 +1686,42 @@
 				"command": "",
 				"say": 
 				[
+					 "Ahoj, Máro! Stalo se něco? Vypadáš smutně.."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "sad_eyes_right",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Já.. Nedokážu ani popsat, co se stalo..."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "sad_eyes_down",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Ale... Vyhodili mě z práce. Protože jsem nedával pozor na směně.. A dnes byl výbuch..."
+				]
+			},
+			{
+				"char": "Petra",
+				"emotion": "mad_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
 					 "To snad ne! Nestalo se ti nic? Nestalo se nikomu nic?"
 				]
 			},
 			{
 				"char": "Marek",
-				"emotion": "sad",
+				"emotion": "sad_eyes_right",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1714,7 +1743,7 @@
 			},
 			{
 				"char": "Marek",
-				"emotion": "sad",
+				"emotion": "sad_eyes_down",
 				"position": "left",
 				"command": "",
 				"say": 
@@ -1724,7 +1753,7 @@
 			},
 			{
 				"char": "Šimon",
-				"emotion": "suprised_glasses",
+				"emotion": "suprised_glasses_eyes_left",
 				"position": "right",
 				"command": "",
 				"say": 
@@ -1733,10 +1762,20 @@
 				]
 			},
 			{
+				"char": "Marek",
+				"emotion": "smile_eyes_down",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Zvládneme, Šimonku."
+				]
+			},
+			{
 				"char": "Káťa",
 				"emotion": "suprised_eyes_left",
 				"position": "right",
-				"command": "",
+				"command": "loose_revenues",
 				"say": 
 				[
 					 "Tati, jsme tu pro tebe!"
@@ -1787,8 +1826,31 @@
 				"say": 
 				[
 					 "Práci sice nemám, ale to bohužel nebrzdí nijak naše výdaje.",
-					 "Z toho, co máme, musíme výdaje vyplatit."
-				]
+					 "Z toho, co máme, musíme výdaje vyplatit.",
+					 "Nalevo jsou naše příjmy. Z minulého měsíce si Petra navíc schovala 4 000 Kč. Já jsem bohužel utratil všechno, co jsem měl.",
+					 "A napravo naše výdaje.",
+					 "Nejprve zaplatím nájem, energie a služby. ",
+				]   
+			}
+		]
+	},
+	{
+		"chapter":  3,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Teď si musím rozdělit zbytek peněz do jednotlivých výdajů.",
+					 "Nemáme už tolik peněz, abychom se řídili rodinným rozpočtem, který jsme si sestavili.",
+					 "Takže budu muset rozhodnout, kolik peněz si necháme pro zbývající výdaje.",
+					 "Nejprve bych vyřešil jídlo. ",
+				]   
 			}
 		]
 	},
@@ -1805,6 +1867,22 @@
 				"say": 
 				[
 					 "No, mohlo by to být i horší.",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  3,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
 					 "Za pár dní jdu na pohovor. Tak snad to výjde."
 				]
 			}
@@ -1834,8 +1912,25 @@
 				[
 					 "Už dva měsíce jsem nezaměstnaný.",
 					 "Cítím se špatně. Peníze nám opravdu začínají docházet.",
-					 "Jak se to jen mohlo stát?",
-					 "Musím ale zaplatit výdaje."
+					 "Byl jsem na třech pohovorech, ale ve dvou mě nevzali.. U třetí se ještě nevyjádřili.",
+					 "Musím zaplatit výdaje."
+				]
+			}
+		]
+	},
+	{
+		"chapter":  4,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Nejprve nájem, energie a služby.",
 				]
 			}
 		]
@@ -1853,9 +1948,10 @@
 				"say": 
 				[
 					 "To je zlé, to je velmi zlé...",
-					 "Nemáme na zaplacení výdajů.. Hlavně potřebujeme na nájem, energie, služby a jídlo.",
+					 "Nemůžeme zaplatit celé hlavní výdaje, abychom mohli žít v pořádku, natož ještě na jídlo.",
 					 "To je hodně špatné..",
 					 "Vypadá to, že si budeme muset půjčit.",
+					 "Myslím si, že taková krátkodobá půjčka by mohla stačit. Přece během toho si musím nějakou práci najít.",
 				]
 			}
 		]
@@ -1880,7 +1976,7 @@
 	},
 	{
 		"chapter":  4,
-		"level": "Level_obyvak",
+		"level": "Level_notebook",
 		"texts": 
 		[
 			{

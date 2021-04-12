@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/exekutor_normal_eyes_left.png-552f6ff0aefcd2ec33991af44276011b.stex"
+path="res://.import/Exekutor_normal_eyes_left.png-24d537623fc583cf9d5cbdb045d0d4b4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/exekutor/exekutor_normal_eyes_left.png"
-dest_files=[ "res://.import/exekutor_normal_eyes_left.png-552f6ff0aefcd2ec33991af44276011b.stex" ]
+source_file="res://assets/GFX/Characters/Exekutor/Exekutor_normal_eyes_left.png"
+dest_files=[ "res://.import/Exekutor_normal_eyes_left.png-24d537623fc583cf9d5cbdb045d0d4b4.stex" ]
 
 [params]
 

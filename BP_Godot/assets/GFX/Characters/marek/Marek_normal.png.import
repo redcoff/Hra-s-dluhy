@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Marek_normal.png-a02b16667b969e19278413580ee8b8b1.stex"
+path="res://.import/Marek_normal.png-d8704c714b7a8714e8c0c94613d5fd3a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/marek/Marek_normal.png"
-dest_files=[ "res://.import/Marek_normal.png-a02b16667b969e19278413580ee8b8b1.stex" ]
+source_file="res://assets/GFX/Characters/Marek/Marek_normal.png"
+dest_files=[ "res://.import/Marek_normal.png-d8704c714b7a8714e8c0c94613d5fd3a.stex" ]
 
 [params]
 

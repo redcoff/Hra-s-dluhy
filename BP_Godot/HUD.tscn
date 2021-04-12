@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/GFX/HUD/text_spaceA.png" type="Texture" id=2]
@@ -9,9 +9,7 @@
 [ext_resource path="res://assets/GFX/HUD/sipka_pressed.png" type="Texture" id=7]
 [ext_resource path="res://Transition.tscn" type="PackedScene" id=8]
 
-[sub_resource type="DynamicFont" id=1]
-size = 45
-font_data = ExtResource( 1 )
+[sub_resource type="ShaderMaterial" id=1]
 
 [sub_resource type="DynamicFont" id=2]
 size = 45
@@ -21,11 +19,15 @@ font_data = ExtResource( 1 )
 size = 45
 font_data = ExtResource( 1 )
 
-[sub_resource type="StreamTexture" id=4]
+[sub_resource type="DynamicFont" id=4]
+size = 45
+font_data = ExtResource( 1 )
+
+[sub_resource type="StreamTexture" id=5]
 flags = 4
 load_path = "res://.import/sipka.png-47b0d06d471135c61efa50f770d239c1.stex"
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -40,12 +42,11 @@ tracks/0/keys = {
 "values": [ Vector2( -100, -50 ), Vector2( -78, -50 ) ]
 }
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=7]
 size = 45
 font_data = ExtResource( 1 )
 
-[sub_resource type="Animation" id=7]
-resource_name = "show_microbar"
+[sub_resource type="Animation" id=8]
 tracks/0/type = "value"
 tracks/0/path = NodePath("micromenu:rect_position")
 tracks/0/interp = 1
@@ -60,6 +61,7 @@ tracks/0/keys = {
 }
 
 [node name="HUD" type="Control"]
+material = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 6 )
@@ -67,16 +69,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Character3" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 641.879, 464.209 )
+
 [node name="Character2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1345, 243.202 )
+position = Vector2( 1353.98, 171.364 )
 
 [node name="Character" parent="." instance=ExtResource( 4 )]
-position = Vector2( 442.426, 241.608 )
+position = Vector2( 298.751, 172.015 )
 
 [node name="micromenu" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 0.112
-margin_bottom = 0.0399857
+margin_bottom = -120.96
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -98,6 +104,7 @@ margin_top = 10.0
 margin_right = 2142.0
 margin_bottom = 301.0
 rect_scale = Vector2( 0.3, 0.3 )
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -117,7 +124,7 @@ __meta__ = {
 [node name="QuestLabel" type="Label" parent="micromenu/QuestContainer"]
 margin_right = 162.0
 margin_bottom = 61.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Úkol: "
 __meta__ = {
 "_edit_use_anchors_": false
@@ -127,13 +134,14 @@ __meta__ = {
 margin_left = 166.0
 margin_right = 895.0
 margin_bottom = 61.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Placeholder bla bla bla bla"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DialogBox" type="Control" parent="."]
+visible = false
 light_mask = -2147483647
 margin_right = 1920.0
 margin_bottom = 1080.0
@@ -143,6 +151,7 @@ __meta__ = {
 }
 
 [node name="Transition" parent="DialogBox" instance=ExtResource( 8 )]
+visible = true
 
 [node name="TextSpace" type="TextureRect" parent="DialogBox"]
 anchor_left = 0.5
@@ -168,7 +177,7 @@ margin_left = -599.5
 margin_top = -99.5
 margin_right = 600.5
 margin_bottom = 172.5
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
 bbcode_text = "Ahoj, já jsem Marek, pracuju v továrně na výrobu čipů. Toto je naše krásná rodina. A toto je placeholder btw."
 text = "Ahoj, já jsem Marek, pracuju v továrně na výrobu čipů. Toto je naše krásná rodina. A toto je placeholder btw."
@@ -198,7 +207,7 @@ margin_left = -145.56
 margin_top = -150.0
 margin_right = 5.43956
 margin_bottom = -54.0
-texture_normal = SubResource( 4 )
+texture_normal = SubResource( 5 )
 texture_pressed = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -206,14 +215,14 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/TextSpace/Next/NextButton"]
 autoplay = "IDLE"
-anims/IDLE = SubResource( 5 )
+anims/IDLE = SubResource( 6 )
 
 [node name="CharName" type="Label" parent="DialogBox/TextSpace"]
 anchor_left = 1.0
 anchor_right = 1.0
 margin_right = -30.0
 grow_horizontal = 0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "Jméno"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -232,8 +241,10 @@ position = Vector2( 953.744, 863.364 )
 attenuation = 0.0853775
 
 [node name="AnimationPlayerMicromenu" type="AnimationPlayer" parent="."]
-anims/show_microbar = SubResource( 7 )
+anims/show_microbar = SubResource( 8 )
 [connection signal="start_dialog" from="." to="DialogBox" method="_on_HUD_start_dialog"]
+[connection signal="character_image_changed" from="Character3" to="DialogBox" method="_on_Character_character_image_changed"]
+[connection signal="character_second_image_changed" from="Character3" to="DialogBox" method="_on_Character2_character_second_image_changed"]
 [connection signal="character_image_changed" from="Character2" to="DialogBox" method="_on_Character_character_image_changed"]
 [connection signal="character_second_image_changed" from="Character2" to="DialogBox" method="_on_Character2_character_second_image_changed"]
 [connection signal="character_image_changed" from="Character" to="DialogBox" method="_on_Character_character_image_changed"]
@@ -242,6 +253,8 @@ anims/show_microbar = SubResource( 7 )
 [connection signal="all_texts_finished" from="DialogBox" to="Character" method="_on_DialogBox_all_texts_finished"]
 [connection signal="character_changed" from="DialogBox" to="Character" method="_on_DialogBox_character_changed"]
 [connection signal="character_second_changed" from="DialogBox" to="Character2" method="_on_DialogBox_character_second_changed"]
+[connection signal="character_third_changed" from="DialogBox" to="Character3" method="_on_DialogBox_character_third_changed"]
+[connection signal="set_environment" from="DialogBox" to="." method="_on_DialogBox_set_environment"]
 [connection signal="tween_completed" from="DialogBox/TextSpace/Tween" to="DialogBox" method="_on_Tween_tween_completed"]
 [connection signal="tween_step" from="DialogBox/TextSpace/Tween" to="DialogBox" method="_on_Tween_tween_step"]
 [connection signal="pressed" from="DialogBox/TextSpace/Next/NextButton" to="DialogBox" method="_on_NextButton_pressed"]

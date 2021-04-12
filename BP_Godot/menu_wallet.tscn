@@ -1,79 +1,629 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://assets/GFX/Background/peněženka2.png" type="Texture" id=1]
-[ext_resource path="res://assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://menu_wallet.gd" type="Script" id=3]
+[ext_resource path="res://menu_wallet.gd" type="Script" id=1]
+[ext_resource path="res://assets/GFX/Background/peněženka.png" type="Texture" id=2]
+[ext_resource path="res://assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/Shaders/blur.shader" type="Shader" id=4]
+[ext_resource path="res://assets/GFX/Environment/Wallet/exit_pressed.png" type="Texture" id=5]
+[ext_resource path="res://assets/GFX/Environment/Wallet/exit_normal.png" type="Texture" id=6]
 
-[sub_resource type="DynamicFont" id=1]
-size = 60
-font_data = ExtResource( 2 )
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 4 )
+shader_param/amount = null
 
-[sub_resource type="DynamicFont" id=2]
-size = 40
-font_data = ExtResource( 2 )
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 4 )
+shader_param/amount = 3.0
 
 [sub_resource type="DynamicFont" id=3]
-size = 40
-font_data = ExtResource( 2 )
+size = 70
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 50
-font_data = ExtResource( 2 )
+size = 45
+font_data = ExtResource( 3 )
 
-[node name="menu_wallet" type="Node2D"]
-script = ExtResource( 3 )
+[sub_resource type="DynamicFont" id=5]
+size = 45
+font_data = ExtResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
-texture = ExtResource( 1 )
+[sub_resource type="DynamicFont" id=6]
+size = 45
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 42
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 35
+font_data = ExtResource( 3 )
+
+[sub_resource type="Curve" id=10]
+_data = [ Vector2( 0.190114, 0.2 ), 0.0, 0.0, 0, 0 ]
+
+[node name="Menu_wallet" type="Node2D"]
+material = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="BlurRect" type="ColorRect" parent="."]
+material = SubResource( 2 )
+margin_left = 74.0
+margin_top = 47.0
+margin_right = 1844.0
+margin_bottom = 1027.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="finance_label" type="Label" parent="."]
-margin_left = 294.0
-margin_top = 193.888
-margin_right = 654.0
-margin_bottom = 246.888
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.188235, 0.164706, 0.164706, 1 )
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = -1.18921
+margin_right = 1920.0
+margin_bottom = 1078.81
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinanceContainer" type="VBoxContainer" parent="."]
+margin_left = 165.696
+margin_top = 129.805
+margin_right = 795.696
+margin_bottom = 352.805
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="finance_label" type="Label" parent="FinanceContainer"]
+margin_right = 630.0
+margin_bottom = 93.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.952941, 0.952941, 0.952941, 1 )
 text = "Rodinné finance"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="hotovost_label" type="Label" parent="."]
-margin_left = 294.488
-margin_top = 439.845
-margin_right = 510.488
-margin_bottom = 492.845
+[node name="RevenuesContainer" type="VBoxContainer" parent="FinanceContainer"]
+visible = false
+margin_top = 97.0
+margin_right = 630.0
+margin_bottom = 223.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PetraContainer" type="HBoxContainer" parent="FinanceContainer/RevenuesContainer"]
+margin_right = 630.0
+margin_bottom = 61.0
+custom_constants/separation = 20
+
+[node name="PetraNameLabel" type="Label" parent="FinanceContainer/RevenuesContainer/PetraContainer"]
+margin_right = 270.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 4 )
+text = "   Petra: "
+
+[node name="PetraValue" type="Label" parent="FinanceContainer/RevenuesContainer/PetraContainer"]
+margin_left = 290.0
+margin_right = 398.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.501961, 0.815686, 0.356863, 1 )
+text = "0 Kč"
+
+[node name="MarekContainer" type="HBoxContainer" parent="FinanceContainer/RevenuesContainer"]
+margin_top = 65.0
+margin_right = 630.0
+margin_bottom = 126.0
+custom_constants/separation = 20
+
+[node name="MarekNameLabel" type="Label" parent="FinanceContainer/RevenuesContainer/MarekContainer"]
+margin_right = 270.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 4 )
+text = "   Marek: "
+
+[node name="MarekValue" type="Label" parent="FinanceContainer/RevenuesContainer/MarekContainer"]
+margin_left = 290.0
+margin_right = 398.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.501961, 0.815686, 0.356863, 1 )
+text = "0 Kč"
+
+[node name="CashContainer" type="HBoxContainer" parent="."]
+margin_left = 172.413
+margin_top = 423.537
+margin_right = 802.413
+margin_bottom = 484.537
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CashLabel" type="Label" parent="CashContainer"]
+margin_right = 243.0
+margin_bottom = 61.0
 rect_pivot_offset = Vector2( 285.96, 69.6628 )
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.137255, 0.133333, 0.133333, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Hotovost:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="hotovost_number_label" type="Label" parent="."]
-margin_left = 538.008
-margin_top = 439.845
-margin_right = 634.008
-margin_bottom = 492.845
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0.215686, 0.0823529, 0.0823529, 1 )
+[node name="CashValueLabel" type="Label" parent="CashContainer"]
+margin_left = 263.0
+margin_right = 371.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.501961, 0.815686, 0.356863, 1 )
 text = "2000"
+align = 2
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = 1366.73
-margin_top = 807.956
-margin_right = 1558.73
-margin_bottom = 889.956
-custom_fonts/font = SubResource( 4 )
-text = "zavřít"
+[node name="CashLabelCrowns" type="Label" parent="CashContainer"]
+margin_left = 391.0
+margin_right = 445.0
+margin_bottom = 61.0
+rect_pivot_offset = Vector2( 285.96, 69.6628 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Kč"
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ExpensesContainer" type="VBoxContainer" parent="."]
+margin_left = 1107.36
+margin_top = 141.957
+margin_right = 1667.36
+margin_bottom = 724.957
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExpensesLabel" type="Label" parent="ExpensesContainer"]
+margin_right = 560.0
+margin_bottom = 61.0
+rect_pivot_offset = Vector2( 285.96, 69.6628 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.984314, 0.560784, 0.560784, 1 )
+text = "Výdaje"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RentContainer" type="HBoxContainer" parent="ExpensesContainer"]
+margin_top = 81.0
+margin_right = 560.0
+margin_bottom = 138.0
+custom_constants/separation = 20
+alignment = 2
+
+[node name="RentNameLabel" type="Label" parent="ExpensesContainer/RentContainer"]
+margin_left = 90.0
+margin_right = 240.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Nájem "
+
+[node name="RentValue" type="Label" parent="ExpensesContainer/RentContainer" groups=[
+"wallet_expenses",
+]]
+margin_left = 260.0
+margin_right = 360.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.866667, 0.309804, 0.309804, 1 )
+text = "0 Kč"
+
+[node name="PayRentButton" type="Button" parent="ExpensesContainer/RentContainer"]
+margin_left = 380.0
+margin_right = 560.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Zaplatit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnergyContainer" type="HBoxContainer" parent="ExpensesContainer"]
+margin_top = 158.0
+margin_right = 560.0
+margin_bottom = 275.0
+custom_constants/separation = 20
+alignment = 2
+
+[node name="EnergyNameLabel" type="Label" parent="ExpensesContainer/EnergyContainer"]
+margin_right = 240.0
+margin_bottom = 117.0
+rect_min_size = Vector2( 240, 0 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = " Energie  a služby"
+autowrap = true
+
+[node name="EnergyValue" type="Label" parent="ExpensesContainer/EnergyContainer" groups=[
+"wallet_expenses",
+]]
+margin_left = 260.0
+margin_top = 30.0
+margin_right = 360.0
+margin_bottom = 87.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.866667, 0.309804, 0.309804, 1 )
+text = "0 Kč"
+
+[node name="PayEnergyButton" type="Button" parent="ExpensesContainer/EnergyContainer"]
+margin_left = 380.0
+margin_right = 560.0
+margin_bottom = 117.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Zaplatit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FoodContainer" type="HBoxContainer" parent="ExpensesContainer"]
+margin_top = 295.0
+margin_right = 560.0
+margin_bottom = 352.0
+custom_constants/separation = 20
+alignment = 2
+
+[node name="FoodNameLabel" type="Label" parent="ExpensesContainer/FoodContainer"]
+margin_left = 265.0
+margin_right = 440.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Jídlo  "
+
+[node name="FoodValue" type="Label" parent="ExpensesContainer/FoodContainer" groups=[
+"wallet_expenses",
+]]
+margin_left = 460.0
+margin_right = 560.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.866667, 0.309804, 0.309804, 1 )
+text = "0 Kč"
+
+[node name="PayFoodButtonPlus" type="Button" parent="ExpensesContainer/FoodContainer" groups=[
+"expenses_button",
+]]
+visible = false
+margin_left = 368.0
+margin_right = 401.0
+margin_bottom = 124.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PayFoodButtonMinus" type="Button" parent="ExpensesContainer/FoodContainer" groups=[
+"expenses_button",
+]]
+visible = false
+margin_left = 368.0
+margin_right = 401.0
+margin_bottom = 124.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PayFoodButton" type="Button" parent="ExpensesContainer/FoodContainer" groups=[
+"expenses_button",
+]]
+visible = false
+margin_left = 521.0
+margin_right = 659.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Nechat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TransportContainer" type="HBoxContainer" parent="ExpensesContainer"]
+margin_top = 372.0
+margin_right = 560.0
+margin_bottom = 429.0
+custom_constants/separation = 20
+alignment = 2
+
+[node name="TransportNameLabel" type="Label" parent="ExpensesContainer/TransportContainer"]
+margin_left = 215.0
+margin_right = 440.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Doprava  "
+
+[node name="TransportValue" type="Label" parent="ExpensesContainer/TransportContainer" groups=[
+"wallet_expenses",
+]]
+margin_left = 460.0
+margin_right = 560.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.866667, 0.309804, 0.309804, 1 )
+text = "0 Kč"
+
+[node name="PayTransportButtonPlus" type="Button" parent="ExpensesContainer/TransportContainer" groups=[
+"expenses_button",
+]]
+visible = false
+margin_left = 415.0
+margin_right = 448.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PayTransportButtonMinus" type="Button" parent="ExpensesContainer/TransportContainer" groups=[
+"expenses_button",
+]]
+visible = false
+margin_left = 468.0
+margin_right = 501.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PayTransportButton" type="Button" parent="ExpensesContainer/TransportContainer" groups=[
+"expenses_button",
+]]
+visible = false
+margin_left = 521.0
+margin_right = 659.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Nechat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClothesContainer" type="HBoxContainer" parent="ExpensesContainer"]
+margin_top = 449.0
+margin_right = 560.0
+margin_bottom = 506.0
+custom_constants/separation = 20
+alignment = 2
+
+[node name="ClothesNameLabel" type="Label" parent="ExpensesContainer/ClothesContainer"]
+margin_left = 190.0
+margin_right = 440.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Oblečení  "
+
+[node name="ClothesValue" type="Label" parent="ExpensesContainer/ClothesContainer" groups=[
+"wallet_expenses",
+]]
+margin_left = 460.0
+margin_right = 560.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.866667, 0.309804, 0.309804, 1 )
+text = "0 Kč"
+
+[node name="PayClothesButtonPlus" type="Button" parent="ExpensesContainer/ClothesContainer" groups=[
+"expenses_button",
+]]
+visible = false
+margin_left = 415.0
+margin_right = 448.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PayClothesButtonMinus" type="Button" parent="ExpensesContainer/ClothesContainer" groups=[
+"expenses_button",
+]]
+visible = false
+margin_left = 468.0
+margin_right = 501.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PayClothesButton" type="Button" parent="ExpensesContainer/ClothesContainer" groups=[
+"expenses_button",
+]]
+visible = false
+margin_left = 657.0
+margin_right = 795.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Nechat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FreetimeContainer" type="HBoxContainer" parent="ExpensesContainer"]
+margin_top = 526.0
+margin_right = 560.0
+margin_bottom = 583.0
+custom_constants/separation = 20
+alignment = 2
+
+[node name="FreetimeNameLabel" type="Label" parent="ExpensesContainer/FreetimeContainer"]
+margin_left = 165.0
+margin_right = 440.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Volný čas  "
+
+[node name="FreetimeValue" type="Label" parent="ExpensesContainer/FreetimeContainer" groups=[
+"wallet_expenses",
+]]
+margin_left = 460.0
+margin_right = 560.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.866667, 0.309804, 0.309804, 1 )
+text = "0 Kč"
+
+[node name="PayFreetimeButtonPlus" type="Button" parent="ExpensesContainer/FreetimeContainer" groups=[
+"expenses_button",
+]]
+visible = false
+margin_left = 415.0
+margin_right = 448.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PayFreetimeButtonMinus" type="Button" parent="ExpensesContainer/FreetimeContainer" groups=[
+"expenses_button",
+]]
+visible = false
+margin_left = 468.0
+margin_right = 501.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PayFreetimeButton" type="Button" parent="ExpensesContainer/FreetimeContainer" groups=[
+"expenses_button",
+]]
+visible = false
+margin_left = 657.0
+margin_right = 795.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Nechat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoansContainer" type="VBoxContainer" parent="."]
+margin_left = 1147.3
+margin_top = 767.312
+margin_right = 1667.3
+margin_bottom = 924.312
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoansLabel" type="Label" parent="LoansContainer"]
+margin_right = 520.0
+margin_bottom = 61.0
+rect_pivot_offset = Vector2( 285.96, 69.6628 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.984314, 0.560784, 0.560784, 1 )
+text = "Dluhy"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoanContainer" type="HBoxContainer" parent="LoansContainer"]
+margin_top = 81.0
+margin_right = 520.0
+margin_bottom = 138.0
+custom_constants/separation = 20
+alignment = 2
+
+[node name="LoanNameLabel" type="Label" parent="LoansContainer/LoanContainer"]
+margin_right = 200.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Půjčka  "
+
+[node name="LoanValue" type="Label" parent="LoansContainer/LoanContainer"]
+margin_left = 220.0
+margin_right = 320.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.866667, 0.309804, 0.309804, 1 )
+text = "0 Kč"
+
+[node name="PayLoanButton" type="Button" parent="LoansContainer/LoanContainer"]
+margin_left = 340.0
+margin_right = 520.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Zaplatit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="TextureButton" parent="."]
+margin_left = 1731.44
+margin_top = 897.47
+margin_right = 1853.44
+margin_bottom = 1027.47
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2( -3.53107, 54.0075 )
+points = PoolVector2Array( 197.252, 352.134, 660.009, 351.944 )
+width_curve = SubResource( 10 )
+default_color = Color( 0.984314, 0.984314, 0.984314, 1 )
+[connection signal="pressed" from="ExpensesContainer/RentContainer/PayRentButton" to="." method="_on_PayRentButton_pressed"]
+[connection signal="pressed" from="ExpensesContainer/EnergyContainer/PayEnergyButton" to="." method="_on_PayEnergyButton_pressed"]
+[connection signal="pressed" from="ExpensesContainer/FoodContainer/PayFoodButtonPlus" to="." method="_on_PayFoodButtonPlus_pressed"]
+[connection signal="pressed" from="ExpensesContainer/FoodContainer/PayFoodButtonMinus" to="." method="_on_PayFoodButtonMinus_pressed"]
+[connection signal="pressed" from="ExpensesContainer/FoodContainer/PayFoodButton" to="." method="_on_PayFoodButton_pressed"]
+[connection signal="pressed" from="ExpensesContainer/TransportContainer/PayTransportButtonPlus" to="." method="_on_PayTransportButtonPlus_pressed"]
+[connection signal="pressed" from="ExpensesContainer/TransportContainer/PayTransportButtonMinus" to="." method="_on_PayTransportButtonMinus_pressed"]
+[connection signal="pressed" from="ExpensesContainer/TransportContainer/PayTransportButton" to="." method="_on_PayTransportButton_pressed"]
+[connection signal="pressed" from="ExpensesContainer/ClothesContainer/PayClothesButtonPlus" to="." method="_on_PayClothesButtonPlus_pressed"]
+[connection signal="pressed" from="ExpensesContainer/ClothesContainer/PayClothesButtonMinus" to="." method="_on_PayClothesButtonMinus_pressed"]
+[connection signal="pressed" from="ExpensesContainer/ClothesContainer/PayClothesButton" to="." method="_on_PayClothesButton_pressed"]
+[connection signal="pressed" from="ExpensesContainer/FreetimeContainer/PayFreetimeButtonPlus" to="." method="_on_PayFreetimeButtonPlus_pressed"]
+[connection signal="pressed" from="ExpensesContainer/FreetimeContainer/PayFreetimeButtonMinus" to="." method="_on_PayFreetimeButtonMinus_pressed"]
+[connection signal="pressed" from="ExpensesContainer/FreetimeContainer/PayFreetimeButton" to="." method="_on_PayFreetimeButton_pressed"]
+[connection signal="pressed" from="LoansContainer/LoanContainer/PayLoanButton" to="." method="_on_PayLoanButton_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

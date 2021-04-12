@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/marie_thinking.png-f4cef6cb6bb46d6bc4033a11673fc151.stex"
+path="res://.import/Marie_thinking.png-5a915a3e4b173e5e4294733dc04c2844.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/marie/marie_thinking.png"
-dest_files=[ "res://.import/marie_thinking.png-f4cef6cb6bb46d6bc4033a11673fc151.stex" ]
+source_file="res://assets/GFX/Characters/Marie/Marie_thinking.png"
+dest_files=[ "res://.import/Marie_thinking.png-5a915a3e4b173e5e4294733dc04c2844.stex" ]
 
 [params]
 

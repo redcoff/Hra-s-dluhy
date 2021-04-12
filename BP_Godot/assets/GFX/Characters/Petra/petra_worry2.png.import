@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/petra_worry2.png-2c78dab04fd4f2eb9180c2c04068b573.stex"
+path="res://.import/Petra_worry2.png-df5744d0231d2f1ecb21c5d4446a8398.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/Petra/petra_worry2.png"
-dest_files=[ "res://.import/petra_worry2.png-2c78dab04fd4f2eb9180c2c04068b573.stex" ]
+source_file="res://assets/GFX/Characters/Petra/Petra_worry2.png"
+dest_files=[ "res://.import/Petra_worry2.png-df5744d0231d2f1ecb21c5d4446a8398.stex" ]
 
 [params]
 

@@ -1,0 +1,34 @@
+﻿
+{
+	"Door": [
+		"Hmm, tam teď nepotřebuji.",
+		"Co bych tam dělal?",
+		"Tam teď nechci."
+		],
+	"Clock": [
+		"Ještě že tu ty hodiny jsou. Jinak bych si nehlídal čas jít domů.",
+		"Budiž hodiny."
+	],
+	"Notebook": [
+		"V dnešní době je počítač kamarád každého.",
+		"Tenhle noťas jsme kupovali před rokem.",
+		"Stále frčí jak novej.",
+		"Děcka na něm někdy hrajou takovou tu kostičkovanou hru.. Myslím že Majnkroft, nebo tak něco."
+	],
+	"Domu": [
+		"Šak teď jsem odtud vyletl!",
+		"Zpátky nejdu.",
+		"Proč bych se vracel?",
+	],
+	"Prace": [
+		"Co bych tam teď dělal?",
+		"Teď pracovat nemusím.",
+		"Nemám teď pracovní dobu.",
+	],
+	"Sofa": [
+		"Naše milovaná pohovka.",
+		"Ani nevím, jak dlouho jí máme. Ale zažila toho hodně.",
+		"Děti ji nazývají jako kouzelný gauč. Vždycky když na ní usly, tak se teleportovaly do postele v jejich pokojíčku.",
+		"Je moc pohodlná."
+	]
+}

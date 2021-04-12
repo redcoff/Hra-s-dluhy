@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/káťa_sad.png-c8b1a4d2b9c2f8f1723f6388331c3ba3.stex"
+path="res://.import/Káťa_sad.png-518b2412db4254d1b76a5a0a9de59b47.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/káťa/káťa_sad.png"
-dest_files=[ "res://.import/káťa_sad.png-c8b1a4d2b9c2f8f1723f6388331c3ba3.stex" ]
+source_file="res://assets/GFX/Characters/Káťa/Káťa_sad.png"
+dest_files=[ "res://.import/Káťa_sad.png-518b2412db4254d1b76a5a0a9de59b47.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/exekutor_suprised_eyes_left.png-2695c22626804a0ff8f024b4a4e1099e.stex"
+path="res://.import/Exekutor_suprised_eyes_left.png-f4386d0b905916c3fa06d8885e364d9a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/exekutor/exekutor_suprised_eyes_left.png"
-dest_files=[ "res://.import/exekutor_suprised_eyes_left.png-2695c22626804a0ff8f024b4a4e1099e.stex" ]
+source_file="res://assets/GFX/Characters/Exekutor/Exekutor_suprised_eyes_left.png"
+dest_files=[ "res://.import/Exekutor_suprised_eyes_left.png-f4386d0b905916c3fa06d8885e364d9a.stex" ]
 
 [params]
 

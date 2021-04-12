@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Libor_normal_eyes_left.png-6a366df25513b3031da7fa9593e8e07b.stex"
+path="res://.import/Libor_normal_eyes_left.png-546fe1f9f2e12abfe46afd9eb48c219c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/libor/Libor_normal_eyes_left.png"
-dest_files=[ "res://.import/Libor_normal_eyes_left.png-6a366df25513b3031da7fa9593e8e07b.stex" ]
+source_file="res://assets/GFX/Characters/Libor/Libor_normal_eyes_left.png"
+dest_files=[ "res://.import/Libor_normal_eyes_left.png-546fe1f9f2e12abfe46afd9eb48c219c.stex" ]
 
 [params]
 

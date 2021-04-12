@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/exekutor_mad_eyes_left.png-86d80708e7e77db297e465f6fb8d9234.stex"
+path="res://.import/Exekutor_mad_eyes_left.png-a31e166ceeac5eeb94076d9aa2c6c589.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/exekutor/exekutor_mad_eyes_left.png"
-dest_files=[ "res://.import/exekutor_mad_eyes_left.png-86d80708e7e77db297e465f6fb8d9234.stex" ]
+source_file="res://assets/GFX/Characters/Exekutor/Exekutor_mad_eyes_left.png"
+dest_files=[ "res://.import/Exekutor_mad_eyes_left.png-a31e166ceeac5eeb94076d9aa2c6c589.stex" ]
 
 [params]
 

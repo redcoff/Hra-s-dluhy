@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/petra_suprised_eyes_left.png-cfd0c6b6ab75afa184e9f1602b845bde.stex"
+path="res://.import/Petra_suprised_eyes_left.png-aef9e33714412a6d82fe3fc80fb383d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/Petra/petra_suprised_eyes_left.png"
-dest_files=[ "res://.import/petra_suprised_eyes_left.png-cfd0c6b6ab75afa184e9f1602b845bde.stex" ]
+source_file="res://assets/GFX/Characters/Petra/Petra_suprised_eyes_left.png"
+dest_files=[ "res://.import/Petra_suprised_eyes_left.png-aef9e33714412a6d82fe3fc80fb383d0.stex" ]
 
 [params]
 

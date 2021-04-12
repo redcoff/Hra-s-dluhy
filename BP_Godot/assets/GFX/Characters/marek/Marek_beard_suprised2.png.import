@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Marek_beard_suprised2.png-254b6cb8d311c4907c2e4bd6c1fea1f5.stex"
+path="res://.import/Marek_beard_suprised2.png-c214e0e542ca02a46baed110584770d8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/marek/Marek_beard_suprised2.png"
-dest_files=[ "res://.import/Marek_beard_suprised2.png-254b6cb8d311c4907c2e4bd6c1fea1f5.stex" ]
+source_file="res://assets/GFX/Characters/Marek/Marek_beard_suprised2.png"
+dest_files=[ "res://.import/Marek_beard_suprised2.png-c214e0e542ca02a46baed110584770d8.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/věřitel_smile.png-f356bb698e462d6b26c092b23a484f3d.stex"
+path="res://.import/Věřitel_smile.png-81b46784a1f8054d5a3afd96b87063c2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GFX/Characters/věřitel/věřitel_smile.png"
-dest_files=[ "res://.import/věřitel_smile.png-f356bb698e462d6b26c092b23a484f3d.stex" ]
+source_file="res://assets/GFX/Characters/Věřitel/Věřitel_smile.png"
+dest_files=[ "res://.import/Věřitel_smile.png-81b46784a1f8054d5a3afd96b87063c2.stex" ]
 
 [params]
 

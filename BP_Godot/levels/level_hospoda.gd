@@ -24,3 +24,8 @@ func _on_Clock_pressed():
 		
 func _on_HUD_texts_finished():
 	pass
+
+func _on_set_environment(par):
+	print(par)
+	print("res://assets/GFX/Background/hospoda/" + str(par) + ".png")
+	$Background/Clock.texture_normal = load("res://assets/GFX/Background/hospoda/" + str(par) + ".png")
