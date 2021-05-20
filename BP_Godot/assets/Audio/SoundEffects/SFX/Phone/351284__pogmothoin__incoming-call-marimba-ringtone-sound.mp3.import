@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/351284__pogmothoin__incoming-call-marimba-ringtone-sound.mp3-7859e0dacb362f20f1e3320e416e399c.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/SoundEffects/SFX/Phone/351284__pogmothoin__incoming-call-marimba-ringtone-sound.mp3"
+dest_files=[ "res://.import/351284__pogmothoin__incoming-call-marimba-ringtone-sound.mp3-7859e0dacb362f20f1e3320e416e399c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

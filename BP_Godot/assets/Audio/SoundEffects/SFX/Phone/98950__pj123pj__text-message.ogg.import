@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/98950__pj123pj__text-message.ogg-e733d99a9538bb1a9724fc81665c9105.oggstr"
+
+[deps]
+
+source_file="res://assets/Audio/SoundEffects/SFX/Phone/98950__pj123pj__text-message.ogg"
+dest_files=[ "res://.import/98950__pj123pj__text-message.ogg-e733d99a9538bb1a9724fc81665c9105.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

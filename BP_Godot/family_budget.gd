@@ -46,6 +46,7 @@ var parent
 var done = false
 
 func _ready():
+	Sound.play_sound("turn_page")
 	regex.compile("^[0-9]*$")
 	parent = get_parent()
 	set_revenues()
@@ -74,14 +75,15 @@ func _ready():
 		]
 	
 func _process(delta):
-	if Input.is_action_just_pressed("ui_accept"):
-		if not finished and order_index < show_order.size(): 
-			for node in show_order[order_index]:
-				if(node.percent_visible != 1):
-					$Tween.remove_all()
-					node.percent_visible = 1
-			finished = true
-			continue_showing()
+	#if Input.is_action_just_pressed("ui_accept"):
+	#	if not finished and order_index < show_order.size(): 
+	#		for node in show_order[order_index]:
+	#			if(node.percent_visible != 1):
+	#				$Tween.remove_all()
+	#				node.percent_visible = 1
+	#		finished = true
+	#		continue_showing()
+	pass
 	
 func set_revenues():
 	revenues["marek"] = 22000
@@ -126,28 +128,25 @@ func calculate_color(value):
 	print("hue: " + str(hue))
 	return calculate_hsl_to_rgb(hue, 1, 0.4)
 	
-func calculate_hsl_to_rgb(h, s, l):
-	var r
-	var g
-	var b
-	if s == 0:
-		l = b 
-		b = g 
-		g = r
+func calculate_hsl_to_rgb(hue, saturation, lightness):
+	var red
+	var green
+	var blue
+	if saturation == 0:
+		lightness = blue 
+		blue = green
+		green = red
 	else:
 		var q
-		if l < 0.5:
-			q = l * (1 + s)
+		if lightness < 0.5:
+			q = lightness * (1 + saturation)
 		else:
-			q = (l + s) - (l * s)
-		var p = float(2 * l) - q
-		r = hue_to_rgb(p, q, h + 1/3.0)
-		print("g: " + str(r))
-		g = hue_to_rgb(p, q, h)
-		print("r: " + str(g))
-		b = hue_to_rgb(p, q, h - 1/3.0)
-		print("b: " + str(b))
-	return [round(r * 255), round(g * 255), round(b * 255), ]
+			q = (lightness + saturation) - (lightness * saturation)
+		var p = float(2 * lightness) - q
+		red = hue_to_rgb(p, q, hue + 1/3.0)
+		green = hue_to_rgb(p, q, hue)
+		blue = hue_to_rgb(p, q, hue - 1/3.0)
+	return [round(red * 255), round(green * 255), round(blue * 255), ]
 		
 
 func hue_to_rgb(p, q, t):

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/519065__angelkunev__door-unlock.wav-f960c91058017fce36066098e2d0f291.sample"
+
+[deps]
+
+source_file="res://assets/Audio/SoundEffects/SFX/Door/519065__angelkunev__door-unlock.wav"
+dest_files=[ "res://.import/519065__angelkunev__door-unlock.wav-f960c91058017fce36066098e2d0f291.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

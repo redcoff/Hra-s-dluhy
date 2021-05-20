@@ -652,6 +652,7 @@ __meta__ = {
 }
 
 [node name="Tween" type="Tween" parent="."]
+
 [connection signal="text_changed" from="ExpensesContainer/RentContainer/RentValue" to="ExpensesContainer/RentContainer/RentValue" method="_on_RentValue_text_changed"]
 [connection signal="text_changed" from="ExpensesContainer/RentContainer/RentValue" to="." method="_on_RentValue_text_changed"]
 [connection signal="text_changed" from="ExpensesContainer/EnergyContainer/EnergyValue" to="." method="_on_EnergyValue_text_changed"]

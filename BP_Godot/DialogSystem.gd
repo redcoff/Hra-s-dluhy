@@ -44,7 +44,8 @@ var POSITION = {
 	"center": [2.0, 2.0], 
 	"left": [3, 2.0],
 }
-var OFFSET = 100
+var OFFSET = 200
+
 var POSITION_NAME= {
 	"left": {
 		"anchor": [0, 0],
@@ -69,9 +70,9 @@ var pos
 
 func _ready():
 	regex.compile("\\((.*)\\)")
-	$SpeakAudio1.stream = Sound.character_speak_sound_1
-	$SpeakAudio2.stream = Sound.character_speak_sound_2
-	$SpeakAudio3.stream = Sound.character_speak_sound_3
+	#$SpeakAudio1.stream = Sound.character_speak_sound_1
+	#$SpeakAudio2.stream = Sound.character_speak_sound_2
+	#$SpeakAudio3.stream = Sound.character_speak_sound_3
 	
 func _process(delta):
 	$TextSpace/Next/NextButton.visible = finished
@@ -95,7 +96,7 @@ func write_next_dialog():
 		return
 	
 func load_dialog(dialog):
-	var dialogSay = dialog. texts[text_index].say
+	var dialogSay = dialog.texts[text_index].say
 	if dialog_index >= dialogSay.size():
 		text_index += 1
 		if dialog.texts.size() == text_index:
@@ -105,7 +106,6 @@ func load_dialog(dialog):
 			dialogSay = dialog.texts[text_index].say
 			dialog_index = 0
 	
-	print(dialogSay[dialog_index])
 	pos = dialog.texts[text_index].position
 	var character_name = dialog.texts[text_index].char
 	var emotion = dialog.texts[text_index].emotion
@@ -135,15 +135,16 @@ func load_monolog(text):
 #$Transition/AnimationPlayerTransition.play("transition_in")
 
 func show_dialog(char_name, say, emotion = ""):
-	var transition_anim = $Transition/AnimationPlayerTransition
-	if char_name == "..." and !$Transition.visible:
-		$Transition.visible = true
+	var transition = get_parent().get_node("Transition")
+	var transition_anim = transition.get_node('AnimationPlayerTransition')
+	if char_name == "..." and !transition.visible:
+		transition.visible = true
 		#transition_anim.play_backwards("transition_in")
 		#yield( get_node("Transition/AnimationPlayerTransition"), "animation_finished" )
-	elif char_name != "..." and $Transition.visible: 
+	elif char_name != "..." and transition.visible: 
 		#transition_anim.play("transition_in")
 		#yield( get_node("Transition/AnimationPlayerTransition"), "animation_finished" )
-		$Transition.visible = false
+		transition.visible = false
 	visible = true
 
 	if cached_character.char != "" and cached_character.char != char_name:
@@ -155,8 +156,6 @@ func show_dialog(char_name, say, emotion = ""):
 		$TextSpace.texture = load("res://assets/GFX/HUD/text_spaceA.png")
 	set_name_position()
 	set_character_image(char_name, emotion)
-	print("char1: " + get_parent().get_node("Character").get_child(0).texture.resource_path)
-	print("char2(cache): " + get_parent().get_node("Character2").get_child(0).texture.resource_path)
 	$TextSpace/CharName.text = char_name
 	$TextSpace/CharText.bbcode_text = say
 	$TextSpace/CharText.percent_visible = 0
@@ -199,7 +198,9 @@ func apply_command(command):
 		var par = res.strings[1]
 		Global.current_cash = Global.current_cash - int(par)
 	elif(command == "hide_cache"): 
-		get_parent().get_node("Character2").hide()
+		get_parent().get_node("Characters/Character2").hide()
+	elif(command == "delete_cache"): 
+		delete_cached_char()
 	elif(command == "loose_revenues"):
 		Global.revenues["marek"] = 0
 	elif("set_clock" in command and res!= null):
@@ -214,14 +215,41 @@ func apply_command(command):
 	elif("hide_character" in command):
 		var character_node = res.strings[1]
 		hide_character(character_node)
+	elif res != null and "set_loan" in command:
+		var par = res.strings[1]
+		if par == "first_payment":
+			Global.expenses["loan"] = 11226
+	elif "show_letter" in command:
+		get_parent().build_letter()
+	elif "show_execution" in command:
+		get_parent().build_execution() 
+	elif "decision" in command:
+		var par = res.strings[1]
+		get_parent().build_decision(par)
+	elif "show_mobile" in command:
+		var par = res.strings[1]
+		var node_texture_name = par + ".png"
+		var mobile_node = get_parent().get_node("MobileRect")
+		mobile_node.texture = load("res://assets/GFX/Items/mobil_" + node_texture_name)
+		mobile_node.show()
+	elif "hide_mobile" in command:
+		var mobile_node = get_parent().get_node("MobileRect")
+		mobile_node.hide()
+	elif "play_sound" in command:
+		var par = res.strings[1]
+		Sound.play_sound(par);
 		
 func hide_character(character_node):
-	var node = get_parent().get_node(character_node)
+	var node = get_parent().get_node("Characters/" + character_node)
 	node.hide()
 
 func set_character(character_node, character_image_name, character_emotion):
-	var node = get_parent().get_node(character_node)
-	node.show()
+	if character_emotion == "sleeping":
+		Sound.play_sound("snore1")
+	else: 
+		Sound.play_sound("snore2")
+	var node = get_parent().get_node("Characters/" + character_node)
+	node.show()  
 	emit_signal("character_third_changed", character_image_name, character_emotion)
 	
 
@@ -249,42 +277,40 @@ func delete_cached_char():
 var switch = 0
 var step_count = 0
 var char_played_cache = 0
+var rng = RandomNumberGenerator.new()
 
 func _on_Tween_tween_step(object, key, elapsed, value):
+	rng.randomize()
+	var my_random_number = rng.randi_range(0, 100.0)
 	var char_step = $TextSpace/CharText.visible_characters
-	step_count += 1
+	var value_step = int(value*100)
 	
-	#if step_count == 4: 
-	if char_step % 2 and char_played_cache != char_step:
-		$SpeakAudio1.play()
+	if my_random_number / 3 == 1:
+		#$SpeakAudio1.play()
 		char_played_cache = char_step
-	elif char_played_cache != char_step:
-		$SpeakAudio2.play()
+	else:
+		#$SpeakAudio2.play()
 		char_played_cache = char_step
 
-func calculate_position(size, char_pos):
+func calculate_position(size, char_pos, offset):
 	var environment_size
-	if Global.ENVIRONMENT == "HTML5":
-		environment_size = OS.window_size
-	else:
-		environment_size = OS.get_screen_size()
 	var pos_x
 	var pos_y
 	if char_pos == "right":
-		pos_x = (environment_size.x - (environment_size.x / POSITION["left"][0])) - (size.x/POSITION["left"][0])
-		pos_y = (environment_size.y /POSITION["left"][1])  - (size.y / POSITION["left"][1]) + OFFSET
+		pos_x = (1920 - (1920 / POSITION["left"][0])) - (size.x/POSITION["left"][0])
+		pos_y = (1080 /POSITION["left"][1])  - (size.y / POSITION["left"][1]) + offset
 	else:
-		pos_x = (environment_size.x / POSITION[char_pos][0]) - (size.x/POSITION[char_pos][0])
-		pos_y = (environment_size.y /POSITION[char_pos][1])  - (size.y / POSITION[char_pos][1]) + OFFSET
+		pos_x = (1920 / POSITION[char_pos][0]) - (size.x/POSITION[char_pos][0])
+		pos_y = (1080 /POSITION[char_pos][1])  - (size.y / POSITION[char_pos][1]) + (POSITION[char_pos][1] / 3) + offset
 	return Vector2(pos_x, pos_y)
 
-func _on_Character_character_image_changed(size):
-	var node = get_parent().get_node("Character")
-	node.position = calculate_position(size, pos)
+func _on_Character_character_image_changed(size, offset):
+	var node = get_parent().get_node("Characters/Character")
+	node.position = calculate_position(size, pos, offset)
 
-func _on_Character2_character_second_image_changed(size):
-	var node = get_parent().get_node("Character2")
-	node.position = calculate_position(size, cached_character.position)
+func _on_Character2_character_second_image_changed(size, offset):
+	var node = get_parent().get_node("Characters/Character2")
+	node.position = calculate_position(size, cached_character.position, offset)
 
 func set_name_position():
 	$TextSpace/CharName.anchor_left = POSITION_NAME[pos].anchor[0]

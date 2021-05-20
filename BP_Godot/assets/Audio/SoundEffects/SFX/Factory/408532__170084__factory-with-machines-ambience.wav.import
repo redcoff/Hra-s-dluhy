@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/408532__170084__factory-with-machines-ambience.wav-7f522ce4154d16b561ac416c3bd1a761.sample"
+
+[deps]
+
+source_file="res://assets/Audio/SoundEffects/SFX/Factory/408532__170084__factory-with-machines-ambience.wav"
+dest_files=[ "res://.import/408532__170084__factory-with-machines-ambience.wav-7f522ce4154d16b561ac416c3bd1a761.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/GFX/HUD/text_spaceA.png" type="Texture" id=2]
@@ -8,6 +8,13 @@
 [ext_resource path="res://HUD.gd" type="Script" id=6]
 [ext_resource path="res://assets/GFX/HUD/sipka_pressed.png" type="Texture" id=7]
 [ext_resource path="res://Transition.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/GFX/Items/mobil2.png" type="Texture" id=9]
+[ext_resource path="res://assets/GFX/Environment/Micromenu/tutorial.png" type="Texture" id=10]
+[ext_resource path="res://assets/GFX/Environment/Micromenu/credits.png" type="Texture" id=11]
+[ext_resource path="res://assets/GFX/Environment/Micromenu/sound_on.png" type="Texture" id=12]
+[ext_resource path="res://assets/Fonts/Roboto_Mono/static/RobotoMono-BoldItalic.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://assets/Fonts/Roboto_Mono/static/RobotoMono-Italic.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://assets/Fonts/Roboto_Mono/static/RobotoMono-Bold.ttf" type="DynamicFontData" id=15]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -21,13 +28,25 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 45
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 45
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 45
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 45
 font_data = ExtResource( 1 )
 
-[sub_resource type="StreamTexture" id=5]
+[sub_resource type="StreamTexture" id=8]
 flags = 4
 load_path = "res://.import/sipka.png-47b0d06d471135c61efa50f770d239c1.stex"
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=9]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -42,11 +61,11 @@ tracks/0/keys = {
 "values": [ Vector2( -100, -50 ), Vector2( -78, -50 ) ]
 }
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=10]
 size = 45
 font_data = ExtResource( 1 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("micromenu:rect_position")
 tracks/0/interp = 1
@@ -69,20 +88,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Character3" parent="." instance=ExtResource( 4 )]
+[node name="Characters" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Character3" parent="Characters" instance=ExtResource( 4 )]
 visible = false
 position = Vector2( 641.879, 464.209 )
 
-[node name="Character2" parent="." instance=ExtResource( 4 )]
+[node name="Character2" parent="Characters" instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 1353.98, 171.364 )
 
-[node name="Character" parent="." instance=ExtResource( 4 )]
+[node name="Character" parent="Characters" instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 298.751, 172.015 )
 
 [node name="micromenu" type="Control" parent="."]
 anchor_right = 1.0
-anchor_bottom = 0.112
-margin_bottom = -120.96
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -99,11 +125,11 @@ __meta__ = {
 }
 
 [node name="Wallet" type="TextureButton" parent="micromenu"]
-margin_left = 1762.0
-margin_top = 10.0
-margin_right = 2142.0
-margin_bottom = 301.0
-rect_scale = Vector2( 0.3, 0.3 )
+margin_left = 1719.91
+margin_top = -4.18927
+margin_right = 2099.91
+margin_bottom = 286.811
+rect_scale = Vector2( 0.4, 0.4 )
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 5 )
 __meta__ = {
@@ -132,37 +158,81 @@ __meta__ = {
 
 [node name="QuestNameLabel" type="Label" parent="micromenu/QuestContainer"]
 margin_left = 166.0
-margin_right = 895.0
+margin_right = 382.0
 margin_bottom = 61.0
 custom_fonts/font = SubResource( 3 )
-text = "Placeholder bla bla bla bla"
+text = "Jdi ven."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Tutorial" type="TextureButton" parent="micromenu"]
+margin_left = 1626.0
+margin_top = 10.0
+margin_right = 1707.0
+margin_bottom = 154.0
+rect_scale = Vector2( 0.7, 0.7 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 10 )
+
+[node name="Credits" type="TextureButton" parent="micromenu"]
+margin_left = 1460.0
+margin_top = 8.0
+margin_right = 1643.0
+margin_bottom = 152.0
+rect_scale = Vector2( 0.7, 0.7 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sound" type="TextureButton" parent="micromenu"]
+margin_left = 1344.0
+margin_top = 14.0
+margin_right = 1466.0
+margin_bottom = 137.0
+rect_scale = Vector2( 0.7, 0.7 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MobileRect" type="TextureRect" parent="."]
+visible = false
+margin_left = 1351.47
+margin_top = 74.9153
+margin_right = 1954.47
+margin_bottom = 1137.92
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Transition" parent="." instance=ExtResource( 8 )]
+margin_right = 1920.0
+margin_bottom = 1080.0
+
 [node name="DialogBox" type="Control" parent="."]
 visible = false
 light_mask = -2147483647
-margin_right = 1920.0
-margin_bottom = 1080.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 3139.0
+margin_bottom = 1688.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Transition" parent="DialogBox" instance=ExtResource( 8 )]
-visible = true
-
 [node name="TextSpace" type="TextureRect" parent="DialogBox"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -673.5
-margin_top = -493.0
-margin_right = 673.5
-rect_min_size = Vector2( 1024, 400 )
-rect_pivot_offset = Vector2( 55.2236, 52.8873 )
+margin_left = 296.65
+margin_top = 559.396
+margin_right = -3415.35
+margin_bottom = -1715.6
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -177,7 +247,10 @@ margin_left = -599.5
 margin_top = -99.5
 margin_right = 600.5
 margin_bottom = 172.5
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/bold_italics_font = SubResource( 4 )
+custom_fonts/italics_font = SubResource( 5 )
+custom_fonts/bold_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 7 )
 bbcode_enabled = true
 bbcode_text = "Ahoj, já jsem Marek, pracuju v továrně na výrobu čipů. Toto je naše krásná rodina. A toto je placeholder btw."
 text = "Ahoj, já jsem Marek, pracuju v továrně na výrobu čipů. Toto je naše krásná rodina. A toto je placeholder btw."
@@ -207,7 +280,7 @@ margin_left = -145.56
 margin_top = -150.0
 margin_right = 5.43956
 margin_bottom = -54.0
-texture_normal = SubResource( 5 )
+texture_normal = SubResource( 8 )
 texture_pressed = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -215,14 +288,14 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/TextSpace/Next/NextButton"]
 autoplay = "IDLE"
-anims/IDLE = SubResource( 6 )
+anims/IDLE = SubResource( 9 )
 
 [node name="CharName" type="Label" parent="DialogBox/TextSpace"]
 anchor_left = 1.0
 anchor_right = 1.0
 margin_right = -30.0
 grow_horizontal = 0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 10 )
 text = "Jméno"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -230,10 +303,12 @@ __meta__ = {
 
 [node name="SpeakAudio1" type="AudioStreamPlayer2D" parent="DialogBox"]
 position = Vector2( 953.744, 863.364 )
+volume_db = -10.0
 attenuation = 0.0853775
 
 [node name="SpeakAudio2" type="AudioStreamPlayer2D" parent="DialogBox"]
 position = Vector2( 953.744, 863.364 )
+volume_db = -10.0
 attenuation = 0.0853775
 
 [node name="SpeakAudio3" type="AudioStreamPlayer2D" parent="DialogBox"]
@@ -241,19 +316,23 @@ position = Vector2( 953.744, 863.364 )
 attenuation = 0.0853775
 
 [node name="AnimationPlayerMicromenu" type="AnimationPlayer" parent="."]
-anims/show_microbar = SubResource( 8 )
+anims/show_microbar = SubResource( 11 )
+
 [connection signal="start_dialog" from="." to="DialogBox" method="_on_HUD_start_dialog"]
-[connection signal="character_image_changed" from="Character3" to="DialogBox" method="_on_Character_character_image_changed"]
-[connection signal="character_second_image_changed" from="Character3" to="DialogBox" method="_on_Character2_character_second_image_changed"]
-[connection signal="character_image_changed" from="Character2" to="DialogBox" method="_on_Character_character_image_changed"]
-[connection signal="character_second_image_changed" from="Character2" to="DialogBox" method="_on_Character2_character_second_image_changed"]
-[connection signal="character_image_changed" from="Character" to="DialogBox" method="_on_Character_character_image_changed"]
+[connection signal="character_image_changed" from="Characters/Character3" to="DialogBox" method="_on_Character_character_image_changed"]
+[connection signal="character_second_image_changed" from="Characters/Character3" to="DialogBox" method="_on_Character2_character_second_image_changed"]
+[connection signal="character_image_changed" from="Characters/Character2" to="DialogBox" method="_on_Character_character_image_changed"]
+[connection signal="character_second_image_changed" from="Characters/Character2" to="DialogBox" method="_on_Character2_character_second_image_changed"]
+[connection signal="character_image_changed" from="Characters/Character" to="DialogBox" method="_on_Character_character_image_changed"]
 [connection signal="pressed" from="micromenu/Wallet" to="." method="_on_penezenka_pressed"]
+[connection signal="pressed" from="micromenu/Tutorial" to="." method="_on_Tutorial_pressed"]
+[connection signal="pressed" from="micromenu/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="micromenu/Sound" to="." method="_on_Sound_pressed"]
+[connection signal="all_texts_finished" from="DialogBox" to="Characters/Character" method="_on_DialogBox_all_texts_finished"]
 [connection signal="all_texts_finished" from="DialogBox" to="." method="_on_DialogBox_all_texts_finished"]
-[connection signal="all_texts_finished" from="DialogBox" to="Character" method="_on_DialogBox_all_texts_finished"]
-[connection signal="character_changed" from="DialogBox" to="Character" method="_on_DialogBox_character_changed"]
-[connection signal="character_second_changed" from="DialogBox" to="Character2" method="_on_DialogBox_character_second_changed"]
-[connection signal="character_third_changed" from="DialogBox" to="Character3" method="_on_DialogBox_character_third_changed"]
+[connection signal="character_changed" from="DialogBox" to="Characters/Character" method="_on_DialogBox_character_changed"]
+[connection signal="character_second_changed" from="DialogBox" to="Characters/Character2" method="_on_DialogBox_character_second_changed"]
+[connection signal="character_third_changed" from="DialogBox" to="Characters/Character3" method="_on_DialogBox_character_third_changed"]
 [connection signal="set_environment" from="DialogBox" to="." method="_on_DialogBox_set_environment"]
 [connection signal="tween_completed" from="DialogBox/TextSpace/Tween" to="DialogBox" method="_on_Tween_tween_completed"]
 [connection signal="tween_step" from="DialogBox/TextSpace/Tween" to="DialogBox" method="_on_Tween_tween_step"]

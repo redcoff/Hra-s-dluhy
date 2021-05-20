@@ -38,5 +38,6 @@ texture_normal = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="Background/Door" to="." method="_on_Door_pressed"]
 [connection signal="pressed" from="Background/Clock" to="." method="_on_Clock_pressed"]

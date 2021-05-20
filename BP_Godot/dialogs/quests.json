@@ -105,13 +105,85 @@
 		"chapter": "4",
 		"level": "Level_obyvak",
 		"quest_name": "Zaplať výdaje.",
-		"target": ["Paied"]
+		"target": ["Wallet", "Paied"]
 	},
 	{
 		"chapter": "5",
 		"level": "Level_obyvak",
 		"quest_name": "",
 		"target": ["Sleep"]
+	},
+	{
+		"chapter": "5",
+		"level": "Level_obyvak",
+		"quest_name": "Zaplať výdaje.",
+		"target": ["Wallet", "Paied"]
+	},
+	{
+		"chapter": "6",
+		"level": "Level_obyvak",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
+	{
+		"chapter": "6",
+		"level": "Level_obyvak",
+		"quest_name": "Zaplať splátku dluhu.",
+		"target": ["Wallet", "Paied"]
+	},
+	{
+		"chapter": "7",
+		"level": "Level_obyvak",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
+	{
+		"chapter": "7",
+		"level": "Level_obyvak",
+		"quest_name": "Zaplať výdaje.",
+		"target": ["Wallet", "Paied"]
+	},
+	{
+		"chapter": "8",
+		"level": "Level_obyvak",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
+	{
+		"chapter": "8",
+		"level": "Level_obyvak",
+		"quest_name": "Přečti si dopis.",
+		"target": ["Read"]
+	},
+	{
+		"chapter": "8",
+		"level": "Level_obyvak",
+		"quest_name": "Jdi za věřitelem.",
+		"target": ["Door", "Creditor"]
+	},
+	{
+		"chapter": "9",
+		"level": "Level_obyvak",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
+	{
+		"chapter": "9",
+		"level": "Level_obyvak",
+		"quest_name": "Vyber věci, které nejsou v pořádku.",
+		"target": ["Exe_done"]
+	},
+	{
+		"chapter": "10",
+		"level": "Level_hospoda",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
+	{
+		"chapter": "10",
+		"level": "Level_hospoda",
+		"quest_name": "Podívej se po dluhové poradně.",
+		"target": ["Door", "Domu", "Notebook", "Loan"]
 	},
 	
 ]

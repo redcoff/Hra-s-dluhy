@@ -1,57 +1,60 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://credits.gd" type="Script" id=2]
 [ext_resource path="res://assets/GFX/Environment/Credits/bigboss.png" type="Texture" id=3]
 [ext_resource path="res://assets/GFX/Environment/Credits/artist.png" type="Texture" id=4]
 [ext_resource path="res://assets/Shaders/blur.shader" type="Shader" id=5]
+[ext_resource path="res://assets/GFX/Environment/Wallet/exit_disabled.png" type="Texture" id=6]
+[ext_resource path="res://assets/GFX/Environment/Wallet/exit_normal.png" type="Texture" id=7]
+[ext_resource path="res://assets/GFX/Environment/Wallet/exit_pressed.png" type="Texture" id=8]
 
-[sub_resource type="ShaderMaterial" id=6]
+[sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 5 )
 shader_param/amount = 1.355
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 40
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 30
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 40
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=1]
 size = 60
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 40
 font_data = ExtResource( 1 )
 
 [node name="Credits" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="BlurRect" type="ColorRect" parent="."]
-material = SubResource( 6 )
+material = SubResource( 1 )
 margin_right = 1920.0
 margin_bottom = 1080.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 237.255
-margin_top = 111.456
-margin_right = 1693.25
-margin_bottom = 977.456
+[node name="ColorRect" type="ColorRect" parent="BlurRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -727.997
+margin_top = -433.0
+margin_right = 727.997
+margin_bottom = 433.0
 color = Color( 0.0862745, 0.0862745, 0.0862745, 0.768627 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
+[node name="HBoxContainer" type="HBoxContainer" parent="BlurRect/ColorRect"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -65,7 +68,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BigBossContainer" type="VBoxContainer" parent="ColorRect/HBoxContainer"]
+[node name="BigBossContainer" type="VBoxContainer" parent="BlurRect/ColorRect/HBoxContainer"]
 margin_right = 400.0
 margin_bottom = 373.0
 rect_min_size = Vector2( 400, 0 )
@@ -74,46 +77,47 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bigboss_label" type="Label" parent="ColorRect/HBoxContainer/BigBossContainer"]
+[node name="Bigboss_label" type="Label" parent="BlurRect/ColorRect/HBoxContainer/BigBossContainer"]
 margin_right = 400.0
 margin_bottom = 53.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 text = "Anna Vičíková"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BigBoss_text" type="RichTextLabel" parent="ColorRect/HBoxContainer/BigBossContainer"]
+[node name="BigBoss_text" type="RichTextLabel" parent="BlurRect/ColorRect/HBoxContainer/BigBossContainer"]
 margin_top = 73.0
 margin_right = 400.0
 margin_bottom = 373.0
 rect_min_size = Vector2( 0, 300 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 3 )
 text = "Autorka a vývojářka hry."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ArtistContainer" type="VBoxContainer" parent="ColorRect/HBoxContainer"]
+[node name="ArtistContainer" type="VBoxContainer" parent="BlurRect/ColorRect/HBoxContainer"]
 margin_left = 600.0
 margin_right = 1008.0
 margin_bottom = 373.0
 
-[node name="Grafikboss_label" type="Label" parent="ColorRect/HBoxContainer/ArtistContainer"]
+[node name="Grafikboss_label" type="Label" parent="BlurRect/ColorRect/HBoxContainer/ArtistContainer"]
 margin_right = 408.0
 margin_bottom = 53.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Anna Zatloukalová"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Artist_text" type="RichTextLabel" parent="ColorRect/HBoxContainer/ArtistContainer"]
+[node name="Artist_text" type="RichTextLabel" parent="BlurRect/ColorRect/HBoxContainer/ArtistContainer"]
 margin_top = 57.0
 margin_right = 408.0
 margin_bottom = 357.0
 rect_min_size = Vector2( 0, 300 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 3 )
+text = "Ilustrátorka a grafička hry."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -123,22 +127,21 @@ margin_left = 849.07
 margin_top = 149.84
 margin_right = 1065.07
 margin_bottom = 229.84
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 5 )
 text = "TVŮRCI"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ExitButton" type="Button" parent="."]
-margin_left = 874.863
-margin_top = 871.299
-margin_right = 1030.86
-margin_bottom = 930.299
-custom_fonts/font = SubResource( 3 )
-text = "Zavřít"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="ExitButton" type="TextureButton" parent="."]
+margin_left = 899.808
+margin_top = 808.936
+margin_right = 1055.81
+margin_bottom = 938.936
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+texture_disabled = ExtResource( 6 )
 
 [node name="artist" type="Sprite" parent="."]
 position = Vector2( 1626.96, 578.315 )
@@ -147,4 +150,5 @@ texture = ExtResource( 4 )
 [node name="bigboss" type="Sprite" parent="."]
 position = Vector2( 260.399, 576.811 )
 texture = ExtResource( 3 )
+
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]

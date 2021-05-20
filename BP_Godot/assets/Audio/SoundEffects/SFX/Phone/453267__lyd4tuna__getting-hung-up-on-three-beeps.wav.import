@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/453267__lyd4tuna__getting-hung-up-on-three-beeps.wav-c4f92d9e19fd6c0903661031bbc9b828.sample"
+
+[deps]
+
+source_file="res://assets/Audio/SoundEffects/SFX/Phone/453267__lyd4tuna__getting-hung-up-on-three-beeps.wav"
+dest_files=[ "res://.import/453267__lyd4tuna__getting-hung-up-on-three-beeps.wav-c4f92d9e19fd6c0903661031bbc9b828.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

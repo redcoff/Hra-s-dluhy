@@ -57,6 +57,22 @@ space_override = 3
 [node name="Sofa_CollisionPolygon2D" type="CollisionPolygon2D" parent="Sofa"]
 polygon = PoolVector2Array( 713.221, 702.118, 711.634, 682.275, 710.84, 647.352, 715.602, 629.097, 798.941, 576.713, 805.291, 517.186, 821.958, 499.724, 1029.91, 503.693, 1045.78, 522.742, 1067.21, 506.074, 1266.43, 502.105, 1290.24, 521.948, 1289.45, 567.189, 1360.09, 633.86, 1368.02, 731.485, 1364.85, 774.345, 1310.08, 778.313, 1061.66, 780.694, 922.758, 782.282, 925.933, 762.439, 917.996, 737.041, 899.741, 729.104, 825.133, 720.373, 773.542, 717.198, 712.428, 722.754 )
 
+[node name="Photo_Kata" type="Area2D" parent="."]
+space_override = 3
+
+[node name="Sofa_CollisionPolygon2D" type="CollisionPolygon2D" parent="Photo_Kata"]
+position = Vector2( 451.995, 70.4358 )
+scale = Vector2( 0.37429, 0.599268 )
+polygon = PoolVector2Array( 561.042, 466.284, 564.408, 527.254, 576.19, 639.734, 594.704, 655.503, 700.738, 654.451, 794.99, 658.656, 821.919, 655.503, 840.433, 499.922, 837.067, 455.771 )
+
+[node name="Photo_Simon" type="Area2D" parent="."]
+space_override = 3
+
+[node name="Sofa_CollisionPolygon2D" type="CollisionPolygon2D" parent="Photo_Simon"]
+position = Vector2( 601.925, 73.5856 )
+scale = Vector2( 0.37429, 0.599268 )
+polygon = PoolVector2Array( 561.042, 466.284, 564.408, 527.254, 576.19, 639.734, 594.704, 655.503, 700.738, 654.451, 794.99, 658.656, 821.919, 655.503, 840.433, 499.922, 837.067, 455.771 )
+
 [node name="Wallet" type="TextureButton" parent="."]
 margin_left = 688.816
 margin_top = 708.49
@@ -69,9 +85,16 @@ texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="Background/Notebook" to="." method="_on_notebook_pressed"]
 [connection signal="pressed" from="Background/Door" to="." method="_on_door_pressed"]
 [connection signal="input_event" from="Sofa" to="." method="_on_Sofa_input_event"]
-[connection signal="mouse_entered" from="Sofa" to="." method="_on_Sofa_mouse_entered"]
-[connection signal="mouse_exited" from="Sofa" to="." method="_on_Sofa_mouse_exited"]
+[connection signal="mouse_entered" from="Sofa" to="." method="_on_not_button_mouse_entered"]
+[connection signal="mouse_exited" from="Sofa" to="." method="_on_not_button_mouse_exited"]
+[connection signal="input_event" from="Photo_Kata" to="." method="_on_Photo_Kata_input_event"]
+[connection signal="mouse_entered" from="Photo_Kata" to="." method="_on_not_button_mouse_entered"]
+[connection signal="mouse_exited" from="Photo_Kata" to="." method="_on_not_button_mouse_exited"]
+[connection signal="input_event" from="Photo_Simon" to="." method="_on_Photo_Simon_input_event"]
+[connection signal="mouse_entered" from="Photo_Simon" to="." method="_on_not_button_mouse_entered"]
+[connection signal="mouse_exited" from="Photo_Simon" to="." method="_on_not_button_mouse_exited"]
 [connection signal="pressed" from="Wallet" to="." method="_on_Wallet_pressed"]

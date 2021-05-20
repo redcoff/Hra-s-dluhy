@@ -1,11 +1,18 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://menu_wallet.gd" type="Script" id=1]
-[ext_resource path="res://assets/GFX/Background/peněženka.png" type="Texture" id=2]
+[ext_resource path="res://assets/GFX/Background/penezenka/background.png" type="Texture" id=2]
 [ext_resource path="res://assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/Shaders/blur.shader" type="Shader" id=4]
 [ext_resource path="res://assets/GFX/Environment/Wallet/exit_pressed.png" type="Texture" id=5]
 [ext_resource path="res://assets/GFX/Environment/Wallet/exit_normal.png" type="Texture" id=6]
+[ext_resource path="res://assets/GFX/Environment/Wallet/wallet_full.png" type="Texture" id=7]
+[ext_resource path="res://assets/GFX/Environment/Wallet/minus_pressed.png" type="Texture" id=8]
+[ext_resource path="res://assets/GFX/Environment/Wallet/minus.png" type="Texture" id=9]
+[ext_resource path="res://assets/GFX/Environment/Wallet/minus_disabled.png" type="Texture" id=10]
+[ext_resource path="res://assets/GFX/Environment/Wallet/plus.png" type="Texture" id=11]
+[ext_resource path="res://assets/GFX/Environment/Wallet/plus_pressed.png" type="Texture" id=12]
+[ext_resource path="res://assets/GFX/Environment/Wallet/plus_disabled.png" type="Texture" id=13]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 4 )
@@ -39,7 +46,7 @@ font_data = ExtResource( 3 )
 size = 35
 font_data = ExtResource( 3 )
 
-[sub_resource type="Curve" id=10]
+[sub_resource type="Curve" id=9]
 _data = [ Vector2( 0.190114, 0.2 ), 0.0, 0.0, 0, 0 ]
 
 [node name="Menu_wallet" type="Node2D"]
@@ -56,11 +63,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 margin_top = -1.18921
 margin_right = 1920.0
 margin_bottom = 1078.81
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WalletTexture" type="TextureRect" parent="Background"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -501.866
+margin_right = 859.0
+margin_bottom = 89.134
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -88,7 +107,7 @@ __meta__ = {
 visible = false
 margin_top = 97.0
 margin_right = 630.0
-margin_bottom = 223.0
+margin_bottom = 288.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -102,7 +121,7 @@ custom_constants/separation = 20
 margin_right = 270.0
 margin_bottom = 61.0
 custom_fonts/font = SubResource( 4 )
-text = "   Petra: "
+text = "   Petra  "
 
 [node name="PetraValue" type="Label" parent="FinanceContainer/RevenuesContainer/PetraContainer"]
 margin_left = 290.0
@@ -122,7 +141,7 @@ custom_constants/separation = 20
 margin_right = 270.0
 margin_bottom = 61.0
 custom_fonts/font = SubResource( 4 )
-text = "   Marek: "
+text = "   Marek  "
 
 [node name="MarekValue" type="Label" parent="FinanceContainer/RevenuesContainer/MarekContainer"]
 margin_left = 290.0
@@ -132,11 +151,52 @@ custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.501961, 0.815686, 0.356863, 1 )
 text = "0 Kč"
 
+[node name="SaveContainer" type="HBoxContainer" parent="FinanceContainer/RevenuesContainer"]
+margin_top = 130.0
+margin_right = 630.0
+margin_bottom = 191.0
+custom_constants/separation = 20
+
+[node name="SaveNameLabel" type="Label" parent="FinanceContainer/RevenuesContainer/SaveContainer"]
+margin_right = 270.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 4 )
+text = "Našetřeno "
+
+[node name="SaveValue" type="Label" parent="FinanceContainer/RevenuesContainer/SaveContainer"]
+margin_left = 290.0
+margin_right = 398.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.501961, 0.815686, 0.356863, 1 )
+text = "0 Kč"
+
+[node name="PlusLoanContainer" type="HBoxContainer" parent="FinanceContainer/RevenuesContainer"]
+visible = false
+margin_top = 195.0
+margin_right = 630.0
+margin_bottom = 256.0
+custom_constants/separation = 20
+
+[node name="PlusLoanNameLabel" type="Label" parent="FinanceContainer/RevenuesContainer/PlusLoanContainer"]
+margin_right = 270.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 4 )
+text = "  Půjčka  "
+
+[node name="PlusLoanValue" type="Label" parent="FinanceContainer/RevenuesContainer/PlusLoanContainer"]
+margin_left = 290.0
+margin_right = 398.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.501961, 0.815686, 0.356863, 1 )
+text = "0 Kč"
+
 [node name="CashContainer" type="HBoxContainer" parent="."]
 margin_left = 172.413
-margin_top = 423.537
+margin_top = 526.01
 margin_right = 802.413
-margin_bottom = 484.537
+margin_bottom = 587.01
 custom_constants/separation = 20
 __meta__ = {
 "_edit_use_anchors_": false
@@ -180,10 +240,11 @@ __meta__ = {
 }
 
 [node name="ExpensesContainer" type="VBoxContainer" parent="."]
-margin_left = 1107.36
-margin_top = 141.957
-margin_right = 1667.36
-margin_bottom = 724.957
+visible = false
+margin_left = 931.395
+margin_top = 117.176
+margin_right = 1491.4
+margin_bottom = 858.177
 custom_constants/separation = 20
 __meta__ = {
 "_edit_use_anchors_": false
@@ -300,40 +361,34 @@ custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.866667, 0.309804, 0.309804, 1 )
 text = "0 Kč"
 
-[node name="PayFoodButtonPlus" type="Button" parent="ExpensesContainer/FoodContainer" groups=[
+[node name="PayFoodButtonPlus" type="TextureButton" parent="ExpensesContainer/FoodContainer" groups=[
 "expenses_button",
 ]]
 visible = false
-margin_left = 368.0
-margin_right = 401.0
-margin_bottom = 124.0
-custom_fonts/font = SubResource( 8 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "+"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 349.0
+margin_right = 417.0
+margin_bottom = 57.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+texture_disabled = ExtResource( 13 )
 
-[node name="PayFoodButtonMinus" type="Button" parent="ExpensesContainer/FoodContainer" groups=[
+[node name="PayFoodButtonMinus" type="TextureButton" parent="ExpensesContainer/FoodContainer" groups=[
 "expenses_button",
 ]]
 visible = false
-margin_left = 368.0
-margin_right = 401.0
-margin_bottom = 124.0
-custom_fonts/font = SubResource( 8 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 437.0
+margin_right = 512.0
+margin_bottom = 57.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 8 )
+texture_disabled = ExtResource( 10 )
 
 [node name="PayFoodButton" type="Button" parent="ExpensesContainer/FoodContainer" groups=[
 "expenses_button",
 ]]
 visible = false
-margin_left = 521.0
-margin_right = 659.0
+margin_left = 532.0
+margin_right = 670.0
 margin_bottom = 57.0
 custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -367,40 +422,34 @@ custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.866667, 0.309804, 0.309804, 1 )
 text = "0 Kč"
 
-[node name="PayTransportButtonPlus" type="Button" parent="ExpensesContainer/TransportContainer" groups=[
+[node name="PayTransportButtonPlus" type="TextureButton" parent="ExpensesContainer/TransportContainer" groups=[
 "expenses_button",
 ]]
 visible = false
-margin_left = 415.0
-margin_right = 448.0
+margin_left = 507.0
+margin_right = 575.0
 margin_bottom = 57.0
-custom_fonts/font = SubResource( 8 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "+"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+texture_disabled = ExtResource( 13 )
 
-[node name="PayTransportButtonMinus" type="Button" parent="ExpensesContainer/TransportContainer" groups=[
+[node name="PayTransportButtonMinus" type="TextureButton" parent="ExpensesContainer/TransportContainer" groups=[
 "expenses_button",
 ]]
 visible = false
-margin_left = 468.0
-margin_right = 501.0
+margin_left = 595.0
+margin_right = 670.0
 margin_bottom = 57.0
-custom_fonts/font = SubResource( 8 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 8 )
+texture_disabled = ExtResource( 10 )
 
 [node name="PayTransportButton" type="Button" parent="ExpensesContainer/TransportContainer" groups=[
 "expenses_button",
 ]]
 visible = false
-margin_left = 521.0
-margin_right = 659.0
+margin_left = 532.0
+margin_right = 670.0
 margin_bottom = 57.0
 custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -434,33 +483,27 @@ custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.866667, 0.309804, 0.309804, 1 )
 text = "0 Kč"
 
-[node name="PayClothesButtonPlus" type="Button" parent="ExpensesContainer/ClothesContainer" groups=[
+[node name="PayClothesButtonPlus" type="TextureButton" parent="ExpensesContainer/ClothesContainer" groups=[
 "expenses_button",
 ]]
 visible = false
-margin_left = 415.0
-margin_right = 448.0
+margin_left = 602.0
+margin_right = 670.0
 margin_bottom = 57.0
-custom_fonts/font = SubResource( 8 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "+"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+texture_disabled = ExtResource( 13 )
 
-[node name="PayClothesButtonMinus" type="Button" parent="ExpensesContainer/ClothesContainer" groups=[
+[node name="PayClothesButtonMinus" type="TextureButton" parent="ExpensesContainer/ClothesContainer" groups=[
 "expenses_button",
 ]]
 visible = false
-margin_left = 468.0
-margin_right = 501.0
+margin_left = 595.0
+margin_right = 670.0
 margin_bottom = 57.0
-custom_fonts/font = SubResource( 8 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 8 )
+texture_disabled = ExtResource( 10 )
 
 [node name="PayClothesButton" type="Button" parent="ExpensesContainer/ClothesContainer" groups=[
 "expenses_button",
@@ -501,33 +544,27 @@ custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.866667, 0.309804, 0.309804, 1 )
 text = "0 Kč"
 
-[node name="PayFreetimeButtonPlus" type="Button" parent="ExpensesContainer/FreetimeContainer" groups=[
+[node name="PayFreetimeButtonPlus" type="TextureButton" parent="ExpensesContainer/FreetimeContainer" groups=[
 "expenses_button",
 ]]
 visible = false
-margin_left = 415.0
-margin_right = 448.0
+margin_left = 602.0
+margin_right = 670.0
 margin_bottom = 57.0
-custom_fonts/font = SubResource( 8 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "+"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+texture_disabled = ExtResource( 13 )
 
-[node name="PayFreetimeButtonMinus" type="Button" parent="ExpensesContainer/FreetimeContainer" groups=[
+[node name="PayFreetimeButtonMinus" type="TextureButton" parent="ExpensesContainer/FreetimeContainer" groups=[
 "expenses_button",
 ]]
 visible = false
-margin_left = 468.0
-margin_right = 501.0
+margin_left = 595.0
+margin_right = 670.0
 margin_bottom = 57.0
-custom_fonts/font = SubResource( 8 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 8 )
+texture_disabled = ExtResource( 10 )
 
 [node name="PayFreetimeButton" type="Button" parent="ExpensesContainer/FreetimeContainer" groups=[
 "expenses_button",
@@ -543,18 +580,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LoansContainer" type="VBoxContainer" parent="."]
-margin_left = 1147.3
-margin_top = 767.312
-margin_right = 1667.3
-margin_bottom = 924.312
+[node name="LoansContainer" type="VBoxContainer" parent="ExpensesContainer"]
+visible = false
+margin_top = 603.0
+margin_right = 670.0
+margin_bottom = 741.0
 custom_constants/separation = 20
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LoansLabel" type="Label" parent="LoansContainer"]
-margin_right = 520.0
+[node name="LoansLabel" type="Label" parent="ExpensesContainer/LoansContainer"]
+margin_right = 670.0
 margin_bottom = 61.0
 rect_pivot_offset = Vector2( 285.96, 69.6628 )
 custom_fonts/font = SubResource( 5 )
@@ -565,31 +602,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LoanContainer" type="HBoxContainer" parent="LoansContainer"]
+[node name="LoanContainer" type="HBoxContainer" parent="ExpensesContainer/LoansContainer"]
 margin_top = 81.0
-margin_right = 520.0
+margin_right = 670.0
 margin_bottom = 138.0
 custom_constants/separation = 20
 alignment = 2
 
-[node name="LoanNameLabel" type="Label" parent="LoansContainer/LoanContainer"]
-margin_right = 200.0
+[node name="LoanNameLabel" type="Label" parent="ExpensesContainer/LoansContainer/LoanContainer"]
+margin_left = 350.0
+margin_right = 550.0
 margin_bottom = 57.0
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Půjčka  "
 
-[node name="LoanValue" type="Label" parent="LoansContainer/LoanContainer"]
-margin_left = 220.0
-margin_right = 320.0
+[node name="LoanValue" type="Label" parent="ExpensesContainer/LoansContainer/LoanContainer"]
+margin_left = 570.0
+margin_right = 670.0
 margin_bottom = 57.0
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.866667, 0.309804, 0.309804, 1 )
 text = "0 Kč"
 
-[node name="PayLoanButton" type="Button" parent="LoansContainer/LoanContainer"]
-margin_left = 340.0
-margin_right = 520.0
+[node name="PayLoanButton" type="Button" parent="ExpensesContainer/LoansContainer/LoanContainer"]
+visible = false
+margin_left = 490.0
+margin_right = 670.0
 margin_bottom = 57.0
 custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -599,18 +638,22 @@ __meta__ = {
 }
 
 [node name="Button" type="TextureButton" parent="."]
-margin_left = 1731.44
-margin_top = 897.47
-margin_right = 1853.44
-margin_bottom = 1027.47
+margin_left = 1690.46
+margin_top = 877.87
+margin_right = 1812.46
+margin_bottom = 1007.87
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Line2D" type="Line2D" parent="."]
-position = Vector2( -3.53107, 54.0075 )
+position = Vector2( -22.7186, 161.182 )
 points = PoolVector2Array( 197.252, 352.134, 660.009, 351.944 )
-width_curve = SubResource( 10 )
+width_curve = SubResource( 9 )
 default_color = Color( 0.984314, 0.984314, 0.984314, 1 )
+
 [connection signal="pressed" from="ExpensesContainer/RentContainer/PayRentButton" to="." method="_on_PayRentButton_pressed"]
 [connection signal="pressed" from="ExpensesContainer/EnergyContainer/PayEnergyButton" to="." method="_on_PayEnergyButton_pressed"]
 [connection signal="pressed" from="ExpensesContainer/FoodContainer/PayFoodButtonPlus" to="." method="_on_PayFoodButtonPlus_pressed"]
@@ -625,5 +668,5 @@ default_color = Color( 0.984314, 0.984314, 0.984314, 1 )
 [connection signal="pressed" from="ExpensesContainer/FreetimeContainer/PayFreetimeButtonPlus" to="." method="_on_PayFreetimeButtonPlus_pressed"]
 [connection signal="pressed" from="ExpensesContainer/FreetimeContainer/PayFreetimeButtonMinus" to="." method="_on_PayFreetimeButtonMinus_pressed"]
 [connection signal="pressed" from="ExpensesContainer/FreetimeContainer/PayFreetimeButton" to="." method="_on_PayFreetimeButton_pressed"]
-[connection signal="pressed" from="LoansContainer/LoanContainer/PayLoanButton" to="." method="_on_PayLoanButton_pressed"]
+[connection signal="pressed" from="ExpensesContainer/LoansContainer/LoanContainer/PayLoanButton" to="." method="_on_PayLoanButton_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

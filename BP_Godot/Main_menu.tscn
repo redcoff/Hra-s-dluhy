@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/GFX/Menu/playGame_normal.png" type="Texture" id=1]
 [ext_resource path="res://assets/GFX/Menu/playGame_pressed.png" type="Texture" id=2]
@@ -9,6 +9,23 @@
 [ext_resource path="res://assets/GFX/Characters/Marek/Marek_normal.png" type="Texture" id=7]
 [ext_resource path="res://assets/GFX/Characters/Káťa/Káťa_normal.png" type="Texture" id=8]
 [ext_resource path="res://main_menu.gd" type="Script" id=9]
+[ext_resource path="res://FadeRectBackground.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/GFX/Menu/tutorial.png" type="Texture" id=11]
+[ext_resource path="res://assets/GFX/Menu/tutorial_pressed.png" type="Texture" id=12]
+[ext_resource path="res://assets/Fonts/Roboto_Mono/static/RobotoMono-Regular.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://assets/Fonts/Roboto_Mono/static/RobotoMono-Bold.ttf" type="DynamicFontData" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 13 )
 
 [node name="Main_menu" type="Node2D"]
 script = ExtResource( 9 )
@@ -39,6 +56,24 @@ texture = ExtResource( 6 )
 position = Vector2( 441.535, 673.279 )
 texture = ExtResource( 8 )
 
+[node name="name" type="RichTextLabel" parent="Background"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -300.482
+margin_top = 85.4297
+margin_right = 332.518
+margin_bottom = 269.43
+custom_fonts/bold_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[b]Zadluženo[/b]"
+text = "Zadluženo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PlayButton" type="TextureButton" parent="."]
 margin_left = 577.044
 margin_top = 302.381
@@ -60,5 +95,34 @@ texture_pressed = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TutorialButton" type="TextureButton" parent="."]
+margin_left = 594.4
+margin_top = 772.33
+margin_right = 1665.4
+margin_bottom = 995.33
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FadeRectBackground" parent="." instance=ExtResource( 10 )]
+visible = false
+
+[node name="version" type="Label" parent="."]
+margin_left = 1676.08
+margin_top = 1019.99
+margin_right = 1892.08
+margin_bottom = 1072.99
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Verze: 1.3.1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="TutorialButton" to="." method="_on_TutorialButton_pressed"]
+[connection signal="animation_finished" from="FadeRectBackground" to="." method="_on_FadeRectBackground_animation_finished"]

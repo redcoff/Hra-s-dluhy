@@ -1,0 +1,587 @@
+﻿[	
+	{
+		"chapter":  9,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Po měsíci...",
+				]
+			},
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "*Crrrrrrrr*",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Jdu tam!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "...",
+				]
+			},
+			{
+				"char": "?",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Brý den.",
+					 "Exekutor."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_suprised_eyes_right",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Eh, do-dobrý d-den.",
+				]
+			},
+			{
+				"char": "Exekutor",
+				"emotion": "mad_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Na nařízení vám jdu sebrat majetek.",
+					 "Jděte mi z cesty."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_sad_eyes_right",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "E... Mohli bychom..",
+				]
+			},
+			{
+				"char": "Exekutor",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Nemohli.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_sad_eyes_down",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Uhm..",
+				]
+			},
+			{
+				"char": "Šimon",
+				"emotion": "suprised_glasses_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Tati?... Kdo je to ten pán? A proč nám tady dává žlutou pásku?",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_sad_eyes_down",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "To nic, Šimonku, tady pán nám tady jen označí věci, které nebudeme potřebovat a...",
+				]
+			},
+			{
+				"char": "Šimon",
+				"emotion": "sad_glasses_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Ale to je můj plyšák, proč ten pán mi dává pásku na mého plyšáka?",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_suprised_eyes_right",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Šimonku, prosím jdi za Káťou do pokojíčku.",
+				]
+			},
+			{
+				"char": "Exekutor",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Hotovo.",
+				]
+			},
+			{
+				"char": "Exekutor",
+				"emotion": "",
+				"position": "right",
+				"command": "show_execution",
+				"say": 
+				[
+					 "Máte zabavené všechny tyto věci."
+				]
+			},
+			{
+				"char": "Exekutor",
+				"emotion": "",
+				"position": "right",
+				"command": "decision(objection_or_silence)",
+				"say": 
+				[
+					 "To je odemě vše..."
+				]
+			},
+		]
+	},
+	{
+		"chapter":  9,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "beard_suprised_eyes_right",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Počkat!",
+					 "Tady něco nesedí...",
+				]
+			}
+		]
+	},
+	{
+		"chapter":  9,
+		"level": "Level_obyvak",
+		"texts": 
+		[
+			{
+				"char": "Exekutor",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Nashledanou."
+				]
+			},
+			{
+				"char": "Káťa",
+				"emotion": "suprised_eyes_left",
+				"position": "right",
+				"command": "delete_cache",
+				"say": 
+				[
+					 "Tati, kdo to byl?"
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_sad_eyes_down",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Káťo...",
+				]
+			},
+			{
+				"char": "Šimon",
+				"emotion": "suprised_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Tati, proč byl tady ten pán?"
+				]
+			},
+			
+		]
+	},
+	{
+		"chapter":  10,
+		"level": "Level_hospoda",
+		"texts": 
+		[
+			{
+				"char": "...",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Tati!!!",
+					 "...",
+					 "O pár hodin později..."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_sad_eyes_right",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Jsme úplně bez peněz...",
+					 "Nedokážu uživit rodinu. Exekutor nám zabavil věci a ještě k tomu nám strhává peníze z účtu.",
+					 "Fakt nevím co mám dělat... Selhal jsem..."
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "thinking_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "To je mi líto, Máro.",
+					 "Ale neobviňuj se, noták. Není to tvoje vina.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_sad_eyes_down",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "To já jsem přišel o práci a to svoji vinou.",
+					 "Já jsem vzal tu půjčku... Měl jsem být víc opatrný.",
+					 "Kvůli mě nemáme peníze. Přemýšlím, že by rodina byla šťastnější beze mě."
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "suprised_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Ne, tak na toto myšlení zapomeň!",
+					 "Tvoje rodina tě potřebuje! To co jsi řekl, vůbec není pravda!",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_suprised_eyes_right",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Myslíš?",
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "thinking_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Hele, Máro, já jsem teď nedávno viděl jeden léták.",
+					 "Byl to léták nějaké dluhové poradny.",
+					 "Co kdyby jsi to zkusil?",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_sad_eyes_right",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Dluhová poradna?",
+					 "Myslíš, že mi pomůžou?"
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "No minimálně poradit by ti snad mohli.",
+					 "Od toho dluhové poradny jsou.",
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_sad_eyes_down",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Hm.. Díky.",
+				]
+			},
+			{
+				"char": "Libor",
+				"emotion": "thinking_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					 "Tak přestaň tady nasávat to pivo a jdi se na nějakou podívat.",
+					 "Na internetu bys něco mohl najít.",
+					 "Jo a o zaplacení piva si nedělej starosti, zvu tě. Ale slib mi, že se podíváš té poradně."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_sad_eyes_right",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					 "Dobře, dobře... A ještě jednou díky.",
+				]
+			},
+		]
+	},
+	{
+		"chapter":  10,
+		"level": "Level_notebook",
+		"texts": 
+		[
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Jsou tu dvě poradny... Kterou si vyberu?"
+				]
+			}
+		]
+	},
+	{
+		"chapter":  10,
+		"level": "Level_notebook",
+		"texts": 
+		[
+			{
+				"char": "Telefon",
+				"emotion": "",
+				"position": "left",
+				"command": "show_mobile",
+				"say": 
+				[
+					"*Píp* *Píp*"
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Někdo mi volá....",
+					"Marek Novotný, prosím?"
+				]
+			},
+			{
+				"char": "Marie",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"Přeji vám dobrý den, pane Novotný, u telefonu je Marie Bílá z neziskové organizace Naděje Bez Dluhů.",
+					"Dostala se ke mně vaše žádost o poradenství.",
+					"Mohla bych vás poprosit, o osobní setkání v našem sídle?"
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Oh ano, ano, dojdu tam.", 
+					"Kdy bych měl dojít? A mám si něco vzít s sebou?"
+				]
+			},
+			{
+				"char": "Marie",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"Šlo by to zítra v 15.00?"
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Ano, určitě."
+				]
+			},
+			{
+				"char": "Marie",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"Prosím donezte si s sebou veškeré materiály o vašich příjmech, výdajích, dluzích, všechny smlouvy ohledně půjček a podobně."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Donesu."
+				]
+			},
+			{
+				"char": "Marie",
+				"emotion": "",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"Děkuji. Uvidíme se zítra, mějte se krásně."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Moc vám děkuji, nashledanou."
+				]
+			},
+			{
+				"char": "Telefon",
+				"emotion": "",
+				"position": "left",
+				"command": "hide_mobile",
+				"say": 
+				[
+					"*Píp* *Píp*"
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Paní byla moc milá. Musím si nashromáždit materiály a zítra tam dojdu."
+				]
+			},
+		]
+	},
+	{
+		"chapter":  10,
+		"level": "Level_poradna",
+		"texts": 
+		[
+			{
+				"char": "Marie",
+				"emotion": "smile_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"Moc ráda vás poznávám, pane Novotný."
+				]
+			},
+			{
+				"char": "Marek",
+				"emotion": "beard_smile_eyes_right",
+				"position": "left",
+				"command": "",
+				"say": 
+				[
+					"Dobrý den, přinesl jsem ty papíry."
+				]
+			},
+			{
+				"char": "Marie",
+				"emotion": "smile_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"Výborně.",
+					"Nejprve projdeme všechny materiály a zmapujeme všechny vaše závazky.",
+					"Pak až budeme mít přehled, tak kontaktujeme věřitele a exekutora, případně soud.",
+					"Podle získaného stavu si popovídáme o oddlužení.",
+				]
+			},
+			{
+				"char": "Marie",
+				"emotion": "normal_eyes_left",
+				"position": "right",
+				"command": "",
+				"say": 
+				[
+					"Prosím, posaďte se a můžeme začít."
+				]
+			},
+		]
+	},
+	
+]

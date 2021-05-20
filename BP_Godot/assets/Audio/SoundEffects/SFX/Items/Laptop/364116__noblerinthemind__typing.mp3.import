@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/364116__noblerinthemind__typing.mp3-67bbbffb528abf545c84650362f62c11.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/SoundEffects/SFX/Items/Laptop/364116__noblerinthemind__typing.mp3"
+dest_files=[ "res://.import/364116__noblerinthemind__typing.mp3-67bbbffb528abf545c84650362f62c11.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

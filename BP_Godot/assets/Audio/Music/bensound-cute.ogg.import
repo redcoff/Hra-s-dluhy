@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bensound-cute.ogg-33a245dc1849fd29fbb99a87b4062f2d.oggstr"
+
+[deps]
+
+source_file="res://assets/Audio/Music/bensound-cute.ogg"
+dest_files=[ "res://.import/bensound-cute.ogg-33a245dc1849fd29fbb99a87b4062f2d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

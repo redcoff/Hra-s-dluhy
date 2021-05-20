@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/63318__flag2__page-turn-please-turn-over-pto-paper-turn-over.wav-42ceb4830b21699b6d6cdce946f2feaf.sample"
+
+[deps]
+
+source_file="res://assets/Audio/SoundEffects/SFX/Items/Paper/63318__flag2__page-turn-please-turn-over-pto-paper-turn-over.wav"
+dest_files=[ "res://.import/63318__flag2__page-turn-please-turn-over-pto-paper-turn-over.wav-42ceb4830b21699b6d6cdce946f2feaf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

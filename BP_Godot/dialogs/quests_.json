@@ -1,0 +1,20 @@
+﻿[	
+	{
+		"chapter": "9",
+		"level": "Level_obyvak",
+		"quest_name": "Vyber věci, které nejsou v pořádku.",
+		"target": ["Exe_done"]
+	},
+	{
+		"chapter": "10",
+		"level": "Level_hospoda",
+		"quest_name": "",
+		"target": ["Sleep"]
+	},
+	{
+		"chapter": "10",
+		"level": "Level_hospoda",
+		"quest_name": "Podívej se po dluhové poradně.",
+		"target": ["Door", "Domu", "Notebook", "Loan"]
+	},
+]

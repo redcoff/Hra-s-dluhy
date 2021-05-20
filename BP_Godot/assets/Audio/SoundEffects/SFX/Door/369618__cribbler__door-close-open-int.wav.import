@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/369618__cribbler__door-close-open-int.wav-f1e76b9d77d0a78e4bea7a2fd632364e.sample"
+
+[deps]
+
+source_file="res://assets/Audio/SoundEffects/SFX/Door/369618__cribbler__door-close-open-int.wav"
+dest_files=[ "res://.import/369618__cribbler__door-close-open-int.wav-f1e76b9d77d0a78e4bea7a2fd632364e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

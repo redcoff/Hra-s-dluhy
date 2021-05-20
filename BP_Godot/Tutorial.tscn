@@ -1,0 +1,301 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://assets/Shaders/blur.shader" type="Shader" id=1]
+[ext_resource path="res://assets/Fonts/Roboto_Mono/static/RobotoMono-BoldItalic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/GFX/Environment/Tutorial/num.png" type="Texture" id=3]
+[ext_resource path="res://assets/GFX/Environment/Tutorial/space.png" type="Texture" id=4]
+[ext_resource path="res://assets/GFX/Environment/Tutorial/arrow_up2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Fonts/Roboto_Mono/static/RobotoMono-Italic.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/Fonts/Roboto_Mono/static/RobotoMono-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/Fonts/Roboto_Mono/static/RobotoMono-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://assets/GFX/Environment/Tutorial/mouse.png" type="Texture" id=9]
+[ext_resource path="res://assets/GFX/Environment/Wallet/exit_disabled.png" type="Texture" id=10]
+[ext_resource path="res://assets/GFX/Environment/Wallet/exit_pressed.png" type="Texture" id=11]
+[ext_resource path="res://assets/GFX/Environment/Wallet/exit_normal.png" type="Texture" id=12]
+[ext_resource path="res://tutorial.gd" type="Script" id=13]
+[ext_resource path="res://assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://assets/GFX/Items/peněženka malá.png" type="Texture" id=16]
+[ext_resource path="res://assets/GFX/Environment/Micromenu/sound_on.png" type="Texture" id=17]
+[ext_resource path="res://assets/GFX/Environment/Micromenu/tutorial.png" type="Texture" id=18]
+[ext_resource path="res://assets/GFX/Environment/Micromenu/credits.png" type="Texture" id=19]
+
+[sub_resource type="DynamicFont" id=6]
+size = 45
+font_data = ExtResource( 14 )
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/amount = 2.0
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 8 )
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="pseudoHUD" type="ColorRect" parent="."]
+margin_right = 1919.0
+margin_bottom = 119.0
+color = Color( 0, 0, 0, 0.454902 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="credits" type="Sprite" parent="pseudoHUD"]
+position = Vector2( 1524.33, 54.8916 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 19 )
+
+[node name="Label" type="Label" parent="pseudoHUD"]
+margin_left = 31.9541
+margin_top = 28.5905
+margin_right = 451.954
+margin_bottom = 95.5905
+custom_fonts/font = SubResource( 6 )
+text = "Úkol: Jdi ven."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="peněženka malá" type="Sprite" parent="pseudoHUD"]
+position = Vector2( 1796.78, 51.528 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 16 )
+
+[node name="tutorial" type="Sprite" parent="pseudoHUD"]
+position = Vector2( 1655.51, 59.937 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 18 )
+
+[node name="sound_on" type="Sprite" parent="pseudoHUD"]
+position = Vector2( 1386.42, 56.5734 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 17 )
+
+[node name="BlurRect" type="ColorRect" parent="."]
+material = SubResource( 1 )
+margin_top = 117.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="BlurRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -763.997
+margin_top = -493.0
+margin_right = 691.998
+margin_bottom = 373.0
+color = Color( 0.0862745, 0.0862745, 0.0862745, 0.768627 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BlurRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -697.176
+margin_top = -417.0
+margin_right = -215.176
+margin_bottom = -184.0
+custom_fonts/bold_italics_font = SubResource( 2 )
+custom_fonts/italics_font = SubResource( 3 )
+custom_fonts/bold_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Pokud nevíš, co máš právě dělat, koukni na aktuální [b]úkol[/b]."
+text = "Pokud nevíš, co máš právě dělat, koukni na aktuální úkol."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="BlurRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -189.451
+margin_top = -367.595
+margin_right = 275.549
+margin_bottom = -209.595
+custom_fonts/bold_italics_font = SubResource( 2 )
+custom_fonts/italics_font = SubResource( 3 )
+custom_fonts/bold_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Kliknutím na reproduktor vypneš nebo zapneš [b]zvuk[/b] hry."
+text = "Kliknutím na reproduktor vypneš nebo zapneš zvuk hry."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="BlurRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 421.485
+margin_top = -315.897
+margin_right = 659.485
+margin_bottom = -168.897
+custom_fonts/bold_italics_font = SubResource( 2 )
+custom_fonts/italics_font = SubResource( 3 )
+custom_fonts/bold_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center]Kliknutím si zobrazíš [b]tvůrce[/b]."
+text = "Kliknutím si zobrazíš tvůrce."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="BlurRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 498.373
+margin_top = -103.407
+margin_right = 710.373
+margin_bottom = 51.5934
+custom_fonts/bold_italics_font = SubResource( 2 )
+custom_fonts/italics_font = SubResource( 3 )
+custom_fonts/bold_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Kliknutím se zobrazí [b]finance[/b]."
+text = "Kliknutím se zobrazí finance."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="BlurRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -341.135
+margin_top = 182.092
+margin_right = 200.865
+margin_bottom = 340.092
+custom_fonts/bold_italics_font = SubResource( 2 )
+custom_fonts/italics_font = SubResource( 3 )
+custom_fonts/bold_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Stisknutím mezerníku se [b]zobrazí celý text[/b], nebo přepne [b]další text[/b]."
+text = "Stisknutím mezerníku se zobrazí celý text, nebo přepne další text."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="BlurRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -593.624
+margin_top = -145.412
+margin_right = -151.624
+margin_bottom = 50.5883
+custom_fonts/bold_italics_font = SubResource( 2 )
+custom_fonts/italics_font = SubResource( 3 )
+custom_fonts/bold_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Hra se ovládá hlavně [b]myší[/b]. Můžeš zkusit proklikat i [b]předměty[/b] na pozadí!"
+text = "Hra se ovládá hlavně myší. Můžeš zkusit proklikat i předměty na pozadí!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="BlurRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 132.119
+margin_top = -134.354
+margin_right = 391.119
+margin_bottom = 125.646
+custom_fonts/bold_italics_font = SubResource( 2 )
+custom_fonts/italics_font = SubResource( 3 )
+custom_fonts/bold_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Někdy bude potřeba zadat čísla."
+text = "Někdy bude potřeba zadat čísla."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="num" type="Sprite" parent="."]
+position = Vector2( 986.347, 557.468 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="arrow_up2" type="Sprite" parent="."]
+position = Vector2( 161.959, 184.588 )
+rotation = -0.738492
+texture = ExtResource( 5 )
+
+[node name="arrow_up4" type="Sprite" parent="."]
+position = Vector2( 1307.17, 169.692 )
+rotation = 0.87177
+texture = ExtResource( 5 )
+
+[node name="arrow_up3" type="Sprite" parent="."]
+position = Vector2( 1596.8, 177.551 )
+rotation = -0.315106
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="arrow_up5" type="Sprite" parent="."]
+position = Vector2( 1761.62, 349.856 )
+rotation = 0.320693
+scale = Vector2( 1.09305, 2.04506 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="space" type="Sprite" parent="."]
+position = Vector2( 405.296, 835.656 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 4 )
+
+[node name="mouse" type="Sprite" parent="."]
+position = Vector2( 294.572, 523.165 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 9 )
+
+[node name="Exit" type="TextureButton" parent="."]
+margin_left = 1488.89
+margin_top = 811.039
+margin_right = 1610.89
+margin_bottom = 941.039
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 11 )
+texture_disabled = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

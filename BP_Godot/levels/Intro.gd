@@ -6,8 +6,9 @@ var parent
 
 func _ready():
 	parent = get_parent()
-	print("emituju signal start dialog v intru")
+	parent.start_fade('intro')
 	emit_signal("start_dialog")
+	Sound.play_music("intro_music")
 	
 
 func enter():

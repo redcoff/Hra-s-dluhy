@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/GFX/Background/notebook/notebook prázdný.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/GFX/Background/notebook/Bezpoplatku.png" type="Texture" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://assets/GFX/Environment/Wallet/exit_pressed.png" type="Texture" id=8]
 [ext_resource path="res://assets/GFX/Environment/Wallet/exit_normal.png" type="Texture" id=9]
 [ext_resource path="res://assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://assets/GFX/Background/notebook/RychleALevne.png" type="Texture" id=11]
+[ext_resource path="res://assets/GFX/Background/notebook/NadejeBezDluhu.png" type="Texture" id=12]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 7 )
@@ -42,6 +44,7 @@ __meta__ = {
 [node name="BezPoplatkuALevneButton" type="TextureButton" parent="LinkContainer"]
 margin_right = 449.0
 margin_bottom = 85.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -51,6 +54,7 @@ __meta__ = {
 margin_top = 89.0
 margin_right = 449.0
 margin_bottom = 162.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -60,7 +64,37 @@ __meta__ = {
 margin_top = 166.0
 margin_right = 449.0
 margin_bottom = 242.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DebtLinkContainer" type="VBoxContainer" parent="."]
+visible = false
+margin_left = 556.886
+margin_top = 368.111
+margin_right = 1009.89
+margin_bottom = 529.111
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DebtAgencyButton" type="TextureButton" parent="DebtLinkContainer"]
+margin_right = 454.0
+margin_bottom = 83.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NonProfitOrgButton" type="TextureButton" parent="DebtLinkContainer"]
+margin_top = 87.0
+margin_right = 454.0
+margin_bottom = 162.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -76,6 +110,7 @@ __meta__ = {
 }
 
 [node name="PageContainer" type="ScrollContainer" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 250.361
@@ -92,6 +127,7 @@ margin_bottom = 2084.0
 texture = ExtResource( 6 )
 
 [node name="Button" type="TextureButton" parent="."]
+visible = false
 margin_left = 1627.9
 margin_top = 924.255
 margin_right = 1749.9
@@ -100,6 +136,7 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 8 )
 
 [node name="Loan" type="Button" parent="."]
+visible = false
 margin_left = 206.0
 margin_top = 974.0
 margin_right = 362.0
@@ -109,8 +146,11 @@ text = "Vybrat"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="LinkContainer/BezPoplatkuALevneButton" to="." method="_on_BezPoplatkuALevneButton_pressed"]
 [connection signal="pressed" from="LinkContainer/NekrademeButton" to="." method="_on_NekrademeButton_pressed"]
 [connection signal="pressed" from="LinkContainer/AlfaBetaButton" to="." method="_on_AlfaBetaButton_pressed"]
+[connection signal="pressed" from="DebtLinkContainer/DebtAgencyButton" to="." method="_on_DebtAgency_pressed"]
+[connection signal="pressed" from="DebtLinkContainer/NonProfitOrgButton" to="." method="_on_NonProfitOrg_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Loan" to="." method="_on_Loan_pressed"]

@@ -1,7 +1,5 @@
 extends Node
 
-
-var dialogSystemIndex : int = 0
 var chapter : int = 0
 var level : String = ""
 var texts
@@ -11,8 +9,18 @@ var current_cash = 2000
 var current_quest_target
 var bad_target_texts
 var hasWallet = false
+var got_loan = false
+
+var player_data = {
+	"sound": true,
+	"go_to_creditor": false,
+	"say_nothing_to_executor": false,
+	"end": ""
+}
 
 var ENVIRONMENT = ""
+var LOAN_PAYMENT = 8279
+var FIRST_PAYMENT = 11479
 
 var expenses = {
 	"rent": 14800,
@@ -21,11 +29,13 @@ var expenses = {
 	"transport": 2000,
 	"clothes": 2000,
 	"freetime": 2000,
+	"loan": LOAN_PAYMENT
 }
 var revenues = {
 	"marek": 22000,
 	"petra": 18000,
 	"save": 4000,
+	"loan": 0,
 }
 
 
@@ -34,27 +44,6 @@ func _ready():
 	texts = get_dialog_file("res://dialogs/dialogs.json")
 	quests = get_dialog_file("res://dialogs/quests.json")
 	bad_target_texts = get_dialog_file("res://dialogs/monologs.json")
-
-func update_dialogSystemIndex():
-	dialogSystemIndex += 1
-	emit_signal("DialogSystemIndexUpdate")
-	
-func get_dialogSystemIndex() -> int:
-	return dialogSystemIndex
-
-func update_chapter():
-	chapter += 1
-	emit_signal("ChapterUpdate")
-	
-func get_chapter() -> int:
-	return chapter
-	
-func get_level() -> String:
-	return level
-
-func update_level(new_level):
-	level = new_level
-	emit_signal("LevelUpdate")
 
 func get_dialog_file(filename):
 	var file = File.new()
@@ -66,8 +55,6 @@ func get_dialog_file(filename):
 	
 func get_current_dialog():
 	if not texts.empty():
-		print(texts[0].level)
-		print(scene.name)
 		if texts[0].chapter == chapter and texts[0].level == scene.name:
 			return texts.pop_front() 
 
@@ -76,9 +63,7 @@ func get_next_quest():
 	if not quests.empty():
 		current_quest_target = quests[0].target
 		return quests.pop_front()
-	else:
-		print("konec questu")
-	
+
 func get_certain_bad_target_text(bad_target):
 	if bad_target in bad_target_texts:
 		var texts_arr = bad_target_texts[bad_target]
@@ -93,7 +78,7 @@ func pop_good_target():
 		current_quest_target.pop_front()
 		
 func target_check(curr_target):
-	if curr_target is String:  
+	if curr_target is String:    
 		if curr_target == current_quest_target[0]:
 			Global.pop_good_target()
 			return true
@@ -106,3 +91,12 @@ func target_check(curr_target):
 		return false
 	Global.pop_good_target()
 	return true
+
+func skip_dialog(times):
+	for i in range(0, times):
+		texts.pop_front() 
+		
+func skip_quest(times):
+	for i in range(0, times):
+		current_quest_target.clear()
+

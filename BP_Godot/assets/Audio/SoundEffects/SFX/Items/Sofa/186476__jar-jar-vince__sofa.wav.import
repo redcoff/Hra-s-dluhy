@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/186476__jar-jar-vince__sofa.wav-3f40246745a32c20f3aef51b98e43c89.sample"
+
+[deps]
+
+source_file="res://assets/Audio/SoundEffects/SFX/Items/Sofa/186476__jar-jar-vince__sofa.wav"
+dest_files=[ "res://.import/186476__jar-jar-vince__sofa.wav-3f40246745a32c20f3aef51b98e43c89.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

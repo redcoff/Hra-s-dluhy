@@ -1,0 +1,115 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/Shaders/blur.shader" type="Shader" id=1]
+[ext_resource path="res://assets/GFX/Items/Execution/ps_exe.png" type="Texture" id=2]
+[ext_resource path="res://assets/GFX/Items/Execution/rings_exe.png" type="Texture" id=3]
+[ext_resource path="res://assets/GFX/Items/Execution/toy_exe.png" type="Texture" id=4]
+[ext_resource path="res://assets/GFX/Items/Execution/tv_exe.png" type="Texture" id=5]
+[ext_resource path="res://assets/GFX/Items/Execution/bed_exe.png" type="Texture" id=6]
+[ext_resource path="res://assets/GFX/Items/Execution/paint_exe.png" type="Texture" id=7]
+[ext_resource path="res://execution.gd" type="Script" id=8]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/amount = 3.0
+
+[node name="Execution" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="BlurRect" type="ColorRect" parent="."]
+material = SubResource( 1 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tv" type="TextureButton" parent="BlurRect"]
+margin_left = 24.6942
+margin_top = 40.4086
+margin_right = 811.694
+margin_bottom = 606.409
+rect_scale = Vector2( 0.7, 0.7 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ps" type="TextureButton" parent="BlurRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -264.203
+margin_top = -5.27026
+margin_right = 647.797
+margin_bottom = 678.73
+rect_scale = Vector2( 0.7, 0.7 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rings" type="TextureButton" parent="BlurRect"]
+anchor_left = 0.011
+anchor_top = 0.588
+anchor_right = 0.327
+anchor_bottom = 0.925
+margin_left = -0.8127
+margin_top = 0.448547
+margin_right = 0.467285
+margin_bottom = 0.488953
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Toy" type="TextureButton" parent="BlurRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -488.936
+margin_top = 13.2042
+margin_right = 200.064
+margin_bottom = 606.204
+rect_scale = Vector2( 0.7, 0.7 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bed" type="TextureButton" parent="BlurRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1233.12
+margin_top = 601.122
+margin_right = -292.118
+margin_bottom = 1194.12
+rect_scale = Vector2( 0.7, 0.7 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Paint" type="TextureButton" parent="BlurRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -476.956
+margin_top = 473.54
+margin_right = 464.044
+margin_bottom = 1307.54
+rect_scale = Vector2( 0.7, 0.7 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="BlurRect/Tv" to="." method="_on_Tv_pressed"]
+[connection signal="pressed" from="BlurRect/Ps" to="." method="_on_Ps_pressed"]
+[connection signal="pressed" from="BlurRect/Rings" to="." method="_on_Rings_pressed"]
+[connection signal="pressed" from="BlurRect/Toy" to="." method="_on_Toy_pressed"]
+[connection signal="pressed" from="BlurRect/Bed" to="." method="_on_Bed_pressed"]
+[connection signal="pressed" from="BlurRect/Paint" to="." method="_on_Paint_pressed"]
